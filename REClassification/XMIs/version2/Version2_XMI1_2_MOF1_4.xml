@@ -1,0 +1,2058 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<XMI xmi.version="1.2" xmlns:Model="org.omg.xmi.namespace.Model" timestamp="2012-10-11 19:05:52">
+	<XMI.header>
+		<XMI.documentation>
+			<XMI.exporter>Enterprise Architect</XMI.exporter>
+			<XMI.exporterVersion>5.1</XMI.exporterVersion>
+		</XMI.documentation>
+		<XMI.metamodel xmi.name="org.omg.mof.Model" xmi.version="1.4"/>
+	</XMI.header>
+	<XMI.content>
+		<Model:Package name="controller" xmi.id="EAPK_CE741377_0B15_4d1a_A80F_F3A343DD6CBC" isRoot="true" isLeaf="false" isAbstract="false" visibility="public_vis">
+			<Model:Namespace.contents>
+				<Model:Class name="ConsoleControl" xmi.id="EAID_2F2D83B7_ADF2_48a6_9A8D_15E0EA93C3F2" annotation="The ConsoleControl class provides a simple text based interface for the game of turn based pacman. &#xA;" isRoot="false" isLeaf="false" isAbstract="false" isSingleton="false" visibility="public_vis">
+					<Model:Namespace.contents>
+						<Model:Reference xmi.id="rEAID_dstD8ACA3_C50E_4469_9737_B860F8BC5834" name="gamemodel" annotation="The game model" scope="instance_level" visibility="public_vis" isChangeable="true" type="EAID_1E150732_D26B_49c5_8822_26089FED0745" referencedEnd="EAID_dstD8ACA3_C50E_4469_9737_B860F8BC5834">
+							<Model:StructuralFeature.multiplicity>
+								<Model:MultiplicityType lower="0" upper="-1" is_ordered="false" is_unique="true"/>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Reference>
+						<Model:Attribute name="bi" xmi.id="EAID_B2A97B34_9A98_49e7_A1D1_0465F097EA7F" annotation="Buffered input for reading in characters" scope="classifier_level" visibility="private_vis" isChangeable="true" isDerived="false">
+							<Model:TypedElement.type>
+								<Model:PrimitiveType xmi.idref="EAID_7893B6F4_825E_4094_9AED_0E1545998AB3"/>
+							</Model:TypedElement.type>
+							<Model:StructuralFeature.multiplicity>
+								<XMI.field>1</XMI.field>
+								<XMI.field>1</XMI.field>
+								<XMI.field>true</XMI.field>
+								<XMI.field>false</XMI.field>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Attribute>
+						<Model:Attribute name="continueGame" xmi.id="EAID_C19BE4E2_C891_4207_A637_5AA9996DAD88" annotation="Game State" scope="classifier_level" visibility="private_vis" isChangeable="true" isDerived="false">
+							<Model:TypedElement.type>
+								<Model:PrimitiveType xmi.idref="EAID_881D1536_0D19_45b5_9F52_099BF44216CF"/>
+							</Model:TypedElement.type>
+							<Model:StructuralFeature.multiplicity>
+								<XMI.field>1</XMI.field>
+								<XMI.field>1</XMI.field>
+								<XMI.field>true</XMI.field>
+								<XMI.field>false</XMI.field>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Attribute>
+						<Model:Operation xmi.id="EAID_58996F14_48AD_49ca_AF38_9167B9A69E85" name="ConsoleControl" annotation="Creates a Console Controller for use in the tb-pacman game" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents/>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_673E5787_41B1_4c8f_8CA3_EFB9475229B1" name="execute" annotation="Simple execution method. If w,a,s or d are pressed pacman will move in it's respective direction. If q is pressed the game will end.&#xA;@return True if the game is to continue to execute. False if game is complete." scope="instance_level" visibility="private_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_489D1523_2BA9_4dde_A6B1_12988615D25A" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_76B47E6F_FBCD_430e_8208_4C8F294583CF"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_93FDE390_77B2_40be_9764_6951965F98F3" name="run" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_A6C7FC72_4988_41be_A16F_C7407618E34D" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_E5CF2B4B_458B_4c1f_8673_2920BA66F851"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_F3BAC98A_1D14_40a3_AB26_2E00FEC44B74" name="gameOver" annotation="Should a gameOver Event be broadcast, the controller will end the game." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_37FC8BBA_ABFE_4458_BDE8_B6929BCFAFB3" name="event" annotation="event" direction="in_dir">
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_F87B871D_891D_4fba_AF92_551897421257" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_DBFAE1C5_0F15_4957_86DC_980B78D30814"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_117A1EB0_6457_40bc_986D_EB1A81F90729" name="levelComplete" annotation="Prompts the player to start a new game when they beat the level. In the full game, this should probably load the next level." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_82CE76A8_2CBF_42fc_BF3A_3FE0F15404BD" name="e" annotation="e" direction="in_dir">
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_151CD6D8_BDCB_400e_B85E_EC0A1FCB8014" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_55676EEB_E56A_4af7_AE3F_72F6AE1A97D8"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+					</Model:Namespace.contents>
+					<Model:GeneralizableElement.supertypes>
+						<Model:Class xmi.idref="EAID_F2C46A9E_940D_4bfe_BDED_3E29CF4354D8"/>
+					</Model:GeneralizableElement.supertypes>
+				</Model:Class>
+				<Model:PrimitiveType name="BufferedInputStream" xmi.id="EAID_7893B6F4_825E_4094_9AED_0E1545998AB3" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="boolean" xmi.id="EAID_881D1536_0D19_45b5_9F52_099BF44216CF" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="boolean" xmi.id="EAID_76B47E6F_FBCD_430e_8208_4C8F294583CF" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_E5CF2B4B_458B_4c1f_8673_2920BA66F851" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_DBFAE1C5_0F15_4957_86DC_980B78D30814" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_55676EEB_E56A_4af7_AE3F_72F6AE1A97D8" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:Class name="PacShell" xmi.id="EAID_7E7D36DD_A153_4a27_9D1A_35A9FA93BACB" annotation="PacShell class serves to initialise a test level, and all resources needed to run an instance of turn-based pacman &#xA;" isRoot="false" isLeaf="false" isAbstract="false" isSingleton="false" visibility="public_vis">
+					<Model:Namespace.contents>
+						<Model:Operation xmi.id="EAID_8B88E9E4_61A2_4c21_AB8C_694355B7B5A2" name="main" scope="classifier_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_8FEAA717_9ACB_4eb2_B8FC_C50D889C8C9B" name="args" annotation="args" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_6BDD3AEB_A451_4313_8703_2005979FE5C8"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_A4FA8783_29D2_4965_BBFF_AC88E0493CE9" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_73C1A575_DCF2_46e7_87F2_8A0AE0AE20E7"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+					</Model:Namespace.contents>
+				</Model:Class>
+				<Model:PrimitiveType name="String[]" xmi.id="EAID_6BDD3AEB_A451_4313_8703_2005979FE5C8" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_73C1A575_DCF2_46e7_87F2_8A0AE0AE20E7" isRoot="false" isLeaf="false" isAbstract="false"/>
+			</Model:Namespace.contents>
+		</Model:Package>
+		<Model:Package name="model" xmi.id="EAPK_0CF77D5F_7FDB_4aaf_89D8_30368C827648" isRoot="true" isLeaf="false" isAbstract="false" visibility="public_vis">
+			<Model:Namespace.contents>
+				<Model:Class name="Character" xmi.id="EAID_15B3B887_6464_46ce_8B49_5D0A212A6747" annotation="Character models a game entity, be it human or AI controlled, that resides in and can move around a Maze.   This class has methods to move around the maze and to access the maze's tiles. Inheriting classes can implement specific behaviour or characteristics.&#xA;" isRoot="false" isLeaf="false" isAbstract="true" isSingleton="false" visibility="public_vis">
+					<Model:Namespace.contents>
+						<Model:Reference xmi.id="rEAID_dst1EDFB5_48FF_4621_8885_DBF69CDB37F7" name="tile" annotation="A reference to the Tile that the Character is occupying." scope="instance_level" visibility="public_vis" isChangeable="true" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" referencedEnd="EAID_dst1EDFB5_48FF_4621_8885_DBF69CDB37F7">
+							<Model:StructuralFeature.multiplicity>
+								<Model:MultiplicityType lower="0" upper="-1" is_ordered="false" is_unique="true"/>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Reference>
+						<Model:Operation xmi.id="EAID_E034480C_3AA4_4b79_B766_F6CAF3495F87" name="Character" annotation="Constructor of objects of type Character." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents/>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_3C44A861_D171_475d_B3E3_228B82B071B0" name="move" annotation="Moves the Character one Tile in the desired Direction.&#xA;@return True if the move was a success. False if it failed (ie. there is no exit in the Direction." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_B2FFA28E_BE54_4f9e_AA12_39C221AE348C" name="dir" annotation="dir" direction="in_dir">
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_8515C8D9_D562_40c8_968B_34CAFE6F8906" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_29D2FD7C_38D2_489c_88CF_D65B2EDB9FEE"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_43DA8FEA_BB62_4de1_8944_1BE3FC411C6D" name="getNeighbour" annotation="Gets the Tile adjacent to this Character's current Tile in the desired Direction.&#xA;@return The Tile that the exit in that Direction leads to. Returns null if the exit contains a null reference (a wall in the Maze)." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_2B98C988_EB5A_44b1_A2AD_935318496BDE" name="dir" annotation="dir" direction="in_dir">
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_15878C9B_6658_4cf0_877B_6E5DE7F7F47E" name="return" annotation="return" direction="return_dir">
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_CD36E258_6958_48e9_8881_0DC56D06433E" name="setTile" annotation="Sets a new Tile as the Character's current position, provided the tile is not null. If the tile is null, nothing occurs and false is returned.&#xA;@return True if successful." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_A6E2E2D2_32B1_47f9_BE25_503B433A90D5" name="newTile" annotation="newTile" direction="in_dir">
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_A05BDADD_05E7_486e_8A71_B145DB7FDCB0" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_B879B642_577F_4beb_B63B_85B5BA6EDB62"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_95C23521_A386_4df3_B7B3_AC2AA74EA0DD" name="getTile" annotation="Gets the tile that the Character currently resides in.&#xA;@return The current tile." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_402D47FE_5351_4bf0_B9B4_A1C880BDACB8" name="return" annotation="return" direction="return_dir">
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Reference xmi.id="rEAID_src5D1074_6229_480e_B908_768EB1E7BFCC" name="target" scope="instance_level" visibility="public_vis" isChangeable="true" type="EAID_7F74B880_9DDB_4830_A629_A2E7CB59CD49" referencedEnd="EAID_src5D1074_6229_480e_B908_768EB1E7BFCC">
+							<Model:StructuralFeature.multiplicity>
+								<Model:MultiplicityType lower="0" upper="-1" is_ordered="false" is_unique="true"/>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Reference>
+					</Model:Namespace.contents>
+				</Model:Class>
+				<Model:PrimitiveType name="boolean" xmi.id="EAID_29D2FD7C_38D2_489c_88CF_D65B2EDB9FEE" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="boolean" xmi.id="EAID_B879B642_577F_4beb_B63B_85B5BA6EDB62" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:Class name="GameModel" xmi.id="EAID_1E150732_D26B_49c5_8822_26089FED0745" annotation="GameModel is the main class of the game's model. It can see and control all aspects of the game, and can notify the view and controller of changes to the game state through its inheritance of the Observable class. Its functions include loading gameLevels from file, loading them up, controlling the game Characters, executing move functions and beginning and ending the game. &#xA;" isRoot="false" isLeaf="false" isAbstract="false" isSingleton="false" visibility="public_vis">
+					<Model:Namespace.contents>
+						<Model:Reference xmi.id="rEAID_dst40373D_553C_4339_9B53_F66CAEFC6503" name="player" annotation="The game's main human controlled Character." scope="instance_level" visibility="public_vis" isChangeable="true" type="EAID_F06C9AD8_A81B_42a5_B965_649DCE5BFCB4" referencedEnd="EAID_dst40373D_553C_4339_9B53_F66CAEFC6503">
+							<Model:StructuralFeature.multiplicity>
+								<Model:MultiplicityType lower="0" upper="-1" is_ordered="false" is_unique="true"/>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Reference>
+						<Model:Attribute name="ghosts" xmi.id="EAID_EF552C35_C6AC_445b_B681_FF8AAF658F92" annotation="A List of Ghost Characters." scope="classifier_level" visibility="private_vis" isChangeable="true" isDerived="false">
+							<Model:TypedElement.type>
+								<Model:PrimitiveType xmi.idref="EAID_8F581BE5_E909_4f57_8D3B_F4217446B6B7"/>
+							</Model:TypedElement.type>
+							<Model:StructuralFeature.multiplicity>
+								<XMI.field>1</XMI.field>
+								<XMI.field>1</XMI.field>
+								<XMI.field>true</XMI.field>
+								<XMI.field>false</XMI.field>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Attribute>
+						<Model:Reference xmi.id="rEAID_dst6BF7D9_294E_41ad_A66B_652148FDBB1D" name="gamelevel" annotation="The current GameLevel that is loaded." scope="instance_level" visibility="public_vis" isChangeable="true" type="EAID_7C1808EB_6FB4_44c9_89F3_BB1ACE9B73C3" referencedEnd="EAID_dst6BF7D9_294E_41ad_A66B_652148FDBB1D">
+							<Model:StructuralFeature.multiplicity>
+								<Model:MultiplicityType lower="0" upper="-1" is_ordered="false" is_unique="true"/>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Reference>
+						<Model:Attribute name="levels" xmi.id="EAID_CEF5D1B9_866B_4aa5_BF5D_7361BCA72610" annotation="A List of all Level files the game can access and load." scope="classifier_level" visibility="private_vis" isChangeable="true" isDerived="false">
+							<Model:TypedElement.type>
+								<Model:PrimitiveType xmi.idref="EAID_123E48F7_2DD3_4010_931C_D0317D172C9D"/>
+							</Model:TypedElement.type>
+							<Model:StructuralFeature.multiplicity>
+								<XMI.field>1</XMI.field>
+								<XMI.field>1</XMI.field>
+								<XMI.field>true</XMI.field>
+								<XMI.field>false</XMI.field>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Attribute>
+						<Model:Attribute name="listeners" xmi.id="EAID_15DDD249_9789_4603_94C3_96082F258FFD" annotation="A list of all listeners to this game object" scope="classifier_level" visibility="private_vis" isChangeable="true" isDerived="false">
+							<Model:TypedElement.type>
+								<Model:PrimitiveType xmi.idref="EAID_7CB3BB4D_0C2A_4b2c_B93C_C1CAE8736706"/>
+							</Model:TypedElement.type>
+							<Model:StructuralFeature.multiplicity>
+								<XMI.field>1</XMI.field>
+								<XMI.field>1</XMI.field>
+								<XMI.field>true</XMI.field>
+								<XMI.field>false</XMI.field>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Attribute>
+						<Model:Operation xmi.id="EAID_6C8BF018_302F_422d_AE73_B88E3AFA5910" name="GameModel" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents/>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_788A1DA7_C96C_4cb3_8A64_8AF6B84F9BD8" name="GameModel" annotation="Loads a game using the given GameLevel. This function is mostly for testing purposes, as the full game will use a list of file names to generate levels.&#xA;@param levelListFilename" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents/>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_5A0E0F3B_1EF5_4cf7_931B_6ECECD644DC8" name="loadLevel" annotation="Loads a level from file and loads all of its attributes." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_E4852897_1672_43df_A645_087A4922D87A" name="fileName" annotation="fileName" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_4D9E3A02_FCA4_4308_A069_2EE486AEA60C"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_BE1086D5_DC75_4f75_B960_2C7FC407AB2F" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_93B4380D_6BC4_4956_84A0_CA5CCF52710B"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_7989AF30_D891_40c7_A567_12137E9AEF06" name="makeMove" annotation="Makes the Player move in the specified Direction, then immediately calls updateGhosts() to move the ghosts.&#xA;@return True if the move was executed. False if the move couldn't execute (ie. there is a wall in that direction)." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_3237606D_C4F9_4a20_A7B2_995AFC433BD1" name="dir" annotation="dir" direction="in_dir">
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_52444D5D_FF98_45f7_A901_4E9E4F6B99FA" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_A9DE12E6_7A77_4299_9553_95E77B1242CE"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_2101726E_B795_4163_8F42_E68D3CD26164" name="updateGhosts" annotation="After a Player has moved, this method iterates through the ghosts List and calls upon their update methods (ie. determine direction of travel, then move self.)" scope="instance_level" visibility="private_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_2750D00F_2039_4494_8047_DEFB5AA6B954" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_C3E7AA41_3406_42c3_9BB4_F288499B785B"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_281F2051_1BA8_44c4_B278_53EFD50A003D" name="stateCheck" annotation="Checks the various events (player death, level complete) that can happen during the game, and sends events accordingly." scope="instance_level" visibility="private_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_5D129F76_3831_4214_AFCC_729BE5944424" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_35143CC1_984B_495f_8D4D_5DB28107A482"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_CA82C7F0_BE21_462b_AC4B_05BABF22193C" name="getPlayer" annotation="@return The Player Character" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_41C0B972_AE30_4c6f_9187_CFEA26C30B9C" name="return" annotation="return" direction="return_dir">
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_741322A4_4C37_4e70_930E_FB6DC0A1099D" name="getGhost" annotation="@return The Ghost at the specified index." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_8E317169_097E_4e7f_AB44_E370F63549DA" name="id" annotation="id" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_9A3DCD44_D1F6_4bf5_A3BB_55C45D1F5E22"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_8FDF61D5_1A7E_4a72_9600_FED609712D10" name="return" annotation="return" direction="return_dir">
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_06F29936_0E29_4112_92AF_9C6CA66EC928" name="getNumGhosts" annotation="@return the number of ghosts currently in the maze." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_6F510311_953C_4947_A009_E61DDD03C706" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_966335FA_3988_4346_9BFD_A012BDB2B87A"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_9D7754E0_EE4E_4834_8EB9_FA7AA8F2564D" name="resetLevel" annotation="Has the level reset to its initial load state (ie. Characters return start positions, all Tiles have dots put back in them, lives reset.)" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_4C1CB8C7_9F7B_4f7d_AB47_5CE0D7D890D7" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_7D65E99A_A6C8_45cc_A7DD_14604A7D1AE6"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_62731893_4AD1_44a3_98B5_1D295D68E99C" name="addGameListener" annotation="Adds a game listener to the list of objects listening on this GameModel." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_AE73057D_8C04_4a59_ABCA_C0C688FF6D97" name="listener" annotation="listener" direction="in_dir">
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_67159D62_7071_4ce6_A427_506663F100D2" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_D454D76C_ED47_4f4e_9306_4E6E521B9952"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_A10D1512_7CC7_460e_99AD_91D11F8C1D71" name="removeGameListener" annotation="Removes a game listener to the list of objects listening on this GameModel." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_88D38B72_9B40_48e3_929C_0178D749EB8B" name="listener" annotation="listener" direction="in_dir">
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_D988A6FF_57FA_4f1d_8BBA_ADBC2A876684" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_8DD00469_5EAC_43db_9FE4_B159331E305D"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_923A42D7_98B8_4eac_9EEB_D396019F6792" name="getMaze" annotation="@return The currently loaded Maze." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_B99EEB06_E67B_4d68_A1FF_31412D7E47AC" name="return" annotation="return" direction="return_dir">
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Reference xmi.id="rEAID_srcB04940_5ABA_47af_BBE1_1F8B74F4ADF7" name="source" scope="instance_level" visibility="public_vis" isChangeable="true" type="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3" referencedEnd="EAID_srcB04940_5ABA_47af_BBE1_1F8B74F4ADF7">
+							<Model:StructuralFeature.multiplicity>
+								<Model:MultiplicityType lower="0" upper="-1" is_ordered="false" is_unique="true"/>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Reference>
+						<Model:Reference xmi.id="rEAID_srcD8ACA3_C50E_4469_9737_B860F8BC5834" name="model" scope="instance_level" visibility="public_vis" isChangeable="true" type="EAID_2F2D83B7_ADF2_48a6_9A8D_15E0EA93C3F2" referencedEnd="EAID_srcD8ACA3_C50E_4469_9737_B860F8BC5834">
+							<Model:StructuralFeature.multiplicity>
+								<Model:MultiplicityType lower="0" upper="-1" is_ordered="false" is_unique="true"/>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Reference>
+					</Model:Namespace.contents>
+				</Model:Class>
+				<Model:PrimitiveType name="List&lt;Ghost&gt;" xmi.id="EAID_8F581BE5_E909_4f57_8D3B_F4217446B6B7" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="List&lt;String&gt;" xmi.id="EAID_123E48F7_2DD3_4010_931C_D0317D172C9D" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="List&lt;GameListener&gt;" xmi.id="EAID_7CB3BB4D_0C2A_4b2c_B93C_C1CAE8736706" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="String" xmi.id="EAID_4D9E3A02_FCA4_4308_A069_2EE486AEA60C" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_93B4380D_6BC4_4956_84A0_CA5CCF52710B" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="boolean" xmi.id="EAID_A9DE12E6_7A77_4299_9553_95E77B1242CE" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_C3E7AA41_3406_42c3_9BB4_F288499B785B" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_35143CC1_984B_495f_8D4D_5DB28107A482" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_9A3DCD44_D1F6_4bf5_A3BB_55C45D1F5E22" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_966335FA_3988_4346_9BFD_A012BDB2B87A" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_7D65E99A_A6C8_45cc_A7DD_14604A7D1AE6" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_D454D76C_ED47_4f4e_9306_4E6E521B9952" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_8DD00469_5EAC_43db_9FE4_B159331E305D" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:EnumerationType name="Direction" xmi.id="EAID_32A300AA_6A97_409f_8984_20B4D8F783CB" annotation="The Direction enumeration is used to identify the cardinal directions. &#xA;" isRoot="false" isLeaf="false" isAbstract="false" visibility="public_vis">
+					<Model:EnumerationType.labels>NORTH</Model:EnumerationType.labels>
+					<Model:EnumerationType.labels>SOUTH</Model:EnumerationType.labels>
+					<Model:EnumerationType.labels>EAST</Model:EnumerationType.labels>
+					<Model:EnumerationType.labels>WEST</Model:EnumerationType.labels>
+				</Model:EnumerationType>
+				<Model:Class name="Maze" xmi.id="EAID_381B9583_BE0A_4589_ACF2_56B5841E9237" annotation="The Maze class stores a grid of game tiles. It includes functionality to add and remove tiles from the grid, and automatically adds and removes the corresponding exits to these tiles. Walls within the maze are simply modelled by the absence of exits. This allows for one sided walls, portals, wrap around and all sorts of other awesomeness. Maze class also supports iteration over the contained tiles. &#xA;" isRoot="false" isLeaf="false" isAbstract="false" isSingleton="false" visibility="public_vis">
+					<Model:Namespace.contents>
+						<Model:Reference xmi.id="rEAID_dstEE42FA_B9AC_480b_88C3_57FD33AA4373" name="tile" annotation="stores the grid of maze tiles, indexed by their x,y coordinates" scope="instance_level" visibility="public_vis" isChangeable="true" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" referencedEnd="EAID_dstEE42FA_B9AC_480b_88C3_57FD33AA4373">
+							<Model:StructuralFeature.multiplicity>
+								<Model:MultiplicityType lower="0" upper="-1" is_ordered="false" is_unique="true"/>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Reference>
+						<Model:Attribute name="maxX" xmi.id="EAID_22379160_70EF_4b69_BD4A_83F099DA753C" annotation="stores the maximum rows in the maze (from 0 to 1 less than this value)" scope="classifier_level" visibility="private_vis" isChangeable="true" isDerived="false">
+							<Model:TypedElement.type>
+								<Model:PrimitiveType xmi.idref="EAID_8975757B_C84C_46fa_B7E8_B79B60ED7B95"/>
+							</Model:TypedElement.type>
+							<Model:StructuralFeature.multiplicity>
+								<XMI.field>1</XMI.field>
+								<XMI.field>1</XMI.field>
+								<XMI.field>true</XMI.field>
+								<XMI.field>false</XMI.field>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Attribute>
+						<Model:Attribute name="maxY" xmi.id="EAID_AAD3A7E2_0C62_46fe_B80C_7C79D26A934E" annotation="stores the maximum columns in the maze (from 0 to 1 less than this value)" scope="classifier_level" visibility="private_vis" isChangeable="true" isDerived="false">
+							<Model:TypedElement.type>
+								<Model:PrimitiveType xmi.idref="EAID_CF780072_7034_42e3_A608_3DF68355FC8A"/>
+							</Model:TypedElement.type>
+							<Model:StructuralFeature.multiplicity>
+								<XMI.field>1</XMI.field>
+								<XMI.field>1</XMI.field>
+								<XMI.field>true</XMI.field>
+								<XMI.field>false</XMI.field>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Attribute>
+						<Model:Attribute name="passDots" xmi.id="EAID_6C9970B8_8C2C_41e2_9A22_38F1BD0B1D35" annotation="the required dots remaining to pass the maze" scope="classifier_level" visibility="private_vis" isChangeable="true" isDerived="false">
+							<Model:TypedElement.type>
+								<Model:PrimitiveType xmi.idref="EAID_10B99113_1C71_4517_81D6_50F49FB08E33"/>
+							</Model:TypedElement.type>
+							<Model:StructuralFeature.multiplicity>
+								<XMI.field>1</XMI.field>
+								<XMI.field>1</XMI.field>
+								<XMI.field>true</XMI.field>
+								<XMI.field>false</XMI.field>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Attribute>
+						<Model:Operation xmi.id="EAID_2799230F_33B5_445a_8F80_C50813098CD0" name="Maze" annotation="Generates a new maze with the specified maximum size" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents/>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_F42B19CE_1A25_44fb_B832_8089F2ACBAE2" name="addTile" annotation="Adds a new tile to the maze at the specified x, y position, given that the position is currently empty. Automatically adds exits to adjacent tiles.&#xA;@return	true if the add was successful, false if the position is already filled or invalid position passed" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_1F891A15_A3F3_4d95_B0BC_4659791F2A75" name="x" annotation="x" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_A4A29845_6551_4a45_B91F_61B9068E3991"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_8FB2300D_46C7_47da_897C_24F705360990" name="y" annotation="y" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_B6B62372_7F98_444f_BEF7_D4932EA3BAA7"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_14DDBB51_7251_4e0c_93A5_AD41F21F78C7" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_6246B0A6_02E8_4253_9013_66DB67959681"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_D4C07A30_A185_452b_9353_79AF26E6DEE5" name="removeTile" annotation="Removes the tile at the specified x, y coordinates&#xA;@return	true if the tile was successfully removed, false if no tile existed at the given position" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_8CA540EE_2FDF_4e43_A83A_E094028FD2B8" name="x" annotation="x" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_950644E2_A679_43d1_8AD9_1FF132592C4C"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_C05B24DC_7DCC_4c0f_BC26_CE64667F8636" name="y" annotation="y" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_FDB0501D_AD1F_4ff9_BBB7_FC910E3FEC53"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_96EF486A_667F_455e_AA86_AD598A0285ED" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_9008BC7D_FB20_4125_A050_9E6E1E7B3A15"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_35EDA51A_EC61_4588_8353_C8589149CA87" name="getTile" annotation="Returns the tile at the specified x, y coordinates&#xA;@return	null if no tile was found at the specified location or if the index was invalid" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_4A385B41_27DA_4223_877C_908FC1552B87" name="x" annotation="x" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_E4D18115_0D47_42dc_869C_9D6E10A2E421"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_1A41559B_9B15_4b45_981E_88E7E71F8140" name="y" annotation="y" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_82DE0F14_0FAE_49c7_8AAD_69944E5AD324"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_717C1622_EB33_4e31_8332_5A69BC7DFCAC" name="return" annotation="return" direction="return_dir">
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_0085FBB0_0A44_49bf_BBE4_7539DF66BFF2" name="getNeighbour" annotation="Gets the tile neighbouring a given tile in the maze.&#xA;@return	null if no neighbour exists, or the neighbour tile" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_ABBF2B92_7741_4505_B021_431E5BBD0724" name="curTile" annotation="curTile" direction="in_dir">
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_7DDBAB59_BAEF_4b0c_8516_A069CCE2BB81" name="dir" annotation="dir" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_32A300AA_6A97_409f_8984_20B4D8F783CB"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_B958A69F_B488_4c03_BC94_41A929A2AFA1" name="return" annotation="return" direction="return_dir">
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_EF092D12_38C0_432f_BCF3_FAC46663C1AC" name="clearMaze" annotation="Clears the maze of all tiles." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_CEFFA7A0_3AFA_4a66_B73A_C11019A484BA" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_09F6ABAF_EB9C_4c3a_96BD_5A0476AE6557"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_B7605806_2CC4_4906_8752_4E102A1FC8E0" name="dotsRemaining" annotation="@return the number of unvisited tiles (dots) remaining in the maze" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_F983E305_F965_4be3_848E_95A20CC4BC9B" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_60F9F5C4_8955_4522_8722_332A79863919"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_A6AE489E_A00F_4420_BBAD_CB3DA8C5AAEF" name="isComplete" annotation="@return	true if the maze has the less than or equal to the remaining number of dots required to clear the maze, false if the maze cleared" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_3A61FD13_0AE6_4dae_9584_6D4CFF31E3B9" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_354D80B1_5AC4_4bfe_9A1A_E38EE867F58E"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_FACB3359_5AB2_43b8_B318_DC3A1F4ED95E" name="addExit" annotation="Adds an exit to the specified tile in the specified direction. Also can add a return exit from the neighbouring tile to the current tile. Requires that another tile already exists in the specified direction.&#xA;@return	false if the add failed for any reason (ie. tile does not exist, neighbour does not exist, exits already exist)" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_71A07571_2E64_45a8_8747_97EA641ED31E" name="x" annotation="x" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_C438AAF3_E6CA_443f_8BCB_AA2FEB3F05B1"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_01F756FD_55E6_45d9_BECD_DA1EAF4631C7" name="y" annotation="y" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_81414203_DA55_4c87_AA55_2B30CDD284C0"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_81696584_2C9D_4cd0_9676_18C40B177D6D" name="dir" annotation="dir" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_32A300AA_6A97_409f_8984_20B4D8F783CB"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_B49B1120_6753_43b1_BAE4_3D1EC3B31FCE" name="linkBack" annotation="linkBack" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_7941F8B4_10AF_4644_965C_1A4379744DB4"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_4378B0AA_65F7_4b86_B1D1_171607566F9F" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_DBECA5E7_39CD_4d74_A5D4_2B7067A628E3"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_03E7C254_9450_4c40_837D_3B08CB5B9B13" name="removeExit" annotation="Removes an exit from the specified tile. Also can remove the return exit from the neighbouring tile to the current tile. Requires that the tile exist, and that it has an exit in the given direction.&#xA;@return	false if the remove failed for any reason (ie. tile does not exist, exits do not exist)" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_88544852_3BFD_40cd_82D1_90F8380227C5" name="x" annotation="x" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_F446AC6A_EB9E_407e_848A_D5E768D1C876"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_6BC511E4_C834_4205_8E48_06D905C39EDD" name="y" annotation="y" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_5A623C11_D7E7_47a3_8D33_485CBF36A950"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_C4788809_F7AD_4986_8012_12ECB4935A10" name="dir" annotation="dir" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_32A300AA_6A97_409f_8984_20B4D8F783CB"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_A92F4EA0_C7AA_48f0_B706_7C3A641B7544" name="linkBack" annotation="linkBack" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_06ADAAA1_740C_4c4f_B3A3_B2F6D91BD909"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_FD9DAE32_8CDB_4d45_8CB5_86A9D6B05B8F" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_E8020456_2F7D_4c8b_85ED_5583BBDAED01"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_1E841FAD_8E6C_4f16_9D18_971A17879C25" name="getMaxX" annotation="@return the maximum x coordinate in this maze (from 0 to maxX - 1)" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_04847205_B589_4c6b_B9DD_242353E81651" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_D9964135_97F5_4499_A95B_00596C8F2E7C"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_2C7FE270_4184_466b_BEA5_0C765395BFA2" name="getMaxY" annotation="@return the maximum y coordinate in this maze (from 0 to maxY - 1)" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_7B3BB0EE_2BEB_4e24_8CCB_842016756F24" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_3DF335EA_4A06_486d_9C1F_EE5E4C53AEA0"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_8FD9C2C6_507B_44d2_8D67_38C1EF87BB2C" name="iterator" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_ACB5C046_4C8A_43c5_B862_00C5F8475BE3" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_E711EEF0_1E37_4ed0_BE9A_9011063254FD"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_E3762B02_3517_461e_AF94_23461A9CFE1F" name="setPassDots" annotation="Sets the number of dots remaining needed to pass the maze" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_5CCD7CD6_F502_4262_86AF_37012F8C4668" name="dots" annotation="dots" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_DA7101FA_EB53_45a3_8617_70CF8EBB5FB5"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_F051F760_1633_4224_93A5_75181B1A06DD" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_17F10CCC_819F_4f2b_AF81_A60115EB9E76"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_8B64732B_F2C2_4110_BE31_94DC10B46C8D" name="getPassDots" annotation="@return the number of dots remaining needed to pass the maze" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_F54F7D8B_6AB0_4415_8CEC_F7DD8F6FC332" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_B5058D69_EEF7_43e6_A8E0_613E0A420F2E"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Reference xmi.id="rEAID_srcE87C15_BDF0_4a8c_9B9C_1E97A2779A57" name="maze" scope="instance_level" visibility="public_vis" isChangeable="true" type="EAID_7C1808EB_6FB4_44c9_89F3_BB1ACE9B73C3" referencedEnd="EAID_srcE87C15_BDF0_4a8c_9B9C_1E97A2779A57">
+							<Model:StructuralFeature.multiplicity>
+								<Model:MultiplicityType lower="0" upper="-1" is_ordered="false" is_unique="true"/>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Reference>
+					</Model:Namespace.contents>
+				</Model:Class>
+				<Model:PrimitiveType name="int" xmi.id="EAID_8975757B_C84C_46fa_B7E8_B79B60ED7B95" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_CF780072_7034_42e3_A608_3DF68355FC8A" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_10B99113_1C71_4517_81D6_50F49FB08E33" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_A4A29845_6551_4a45_B91F_61B9068E3991" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_B6B62372_7F98_444f_BEF7_D4932EA3BAA7" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="boolean" xmi.id="EAID_6246B0A6_02E8_4253_9013_66DB67959681" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_950644E2_A679_43d1_8AD9_1FF132592C4C" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_FDB0501D_AD1F_4ff9_BBB7_FC910E3FEC53" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="boolean" xmi.id="EAID_9008BC7D_FB20_4125_A050_9E6E1E7B3A15" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_E4D18115_0D47_42dc_869C_9D6E10A2E421" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_82DE0F14_0FAE_49c7_8AAD_69944E5AD324" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_09F6ABAF_EB9C_4c3a_96BD_5A0476AE6557" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_60F9F5C4_8955_4522_8722_332A79863919" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="boolean" xmi.id="EAID_354D80B1_5AC4_4bfe_9A1A_E38EE867F58E" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_C438AAF3_E6CA_443f_8BCB_AA2FEB3F05B1" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_81414203_DA55_4c87_AA55_2B30CDD284C0" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="boolean" xmi.id="EAID_7941F8B4_10AF_4644_965C_1A4379744DB4" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="boolean" xmi.id="EAID_DBECA5E7_39CD_4d74_A5D4_2B7067A628E3" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_F446AC6A_EB9E_407e_848A_D5E768D1C876" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_5A623C11_D7E7_47a3_8D33_485CBF36A950" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="boolean" xmi.id="EAID_06ADAAA1_740C_4c4f_B3A3_B2F6D91BD909" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="boolean" xmi.id="EAID_E8020456_2F7D_4c8b_85ED_5583BBDAED01" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_D9964135_97F5_4499_A95B_00596C8F2E7C" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_3DF335EA_4A06_486d_9C1F_EE5E4C53AEA0" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="Iterator&lt;Tile&gt;" xmi.id="EAID_E711EEF0_1E37_4ed0_BE9A_9011063254FD" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_DA7101FA_EB53_45a3_8617_70CF8EBB5FB5" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_17F10CCC_819F_4f2b_AF81_A60115EB9E76" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_B5058D69_EEF7_43e6_A8E0_613E0A420F2E" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:Class name="GameLevel" xmi.id="EAID_7C1808EB_6FB4_44c9_89F3_BB1ACE9B73C3" annotation="GameLevel contains all the information needed for a complete level for turn based pacman. This includes the game maze itself, as well as the starting tiles for the player and the ghosts &#xA;" isRoot="false" isLeaf="false" isAbstract="false" isSingleton="false" visibility="public_vis">
+					<Model:Namespace.contents>
+						<Model:Reference xmi.id="rEAID_dstE87C15_BDF0_4a8c_9B9C_1E97A2779A57" name="maze" annotation="stores the game grid" scope="instance_level" visibility="public_vis" isChangeable="true" type="EAID_381B9583_BE0A_4589_ACF2_56B5841E9237" referencedEnd="EAID_dstE87C15_BDF0_4a8c_9B9C_1E97A2779A57">
+							<Model:StructuralFeature.multiplicity>
+								<Model:MultiplicityType lower="0" upper="-1" is_ordered="false" is_unique="true"/>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Reference>
+						<Model:Reference xmi.id="rEAID_dst994F1D_2AEC_4582_A961_29F5E26BDD30" name="tile" annotation="stores the starting location of the player" scope="instance_level" visibility="public_vis" isChangeable="true" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" referencedEnd="EAID_dst994F1D_2AEC_4582_A961_29F5E26BDD30">
+							<Model:StructuralFeature.multiplicity>
+								<Model:MultiplicityType lower="0" upper="-1" is_ordered="false" is_unique="true"/>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Reference>
+						<Model:Attribute name="ghostStarts" xmi.id="EAID_E6596805_D76C_4483_8BCC_46D0E117CE2D" annotation="stores the starting location of the ghosts" scope="classifier_level" visibility="private_vis" isChangeable="true" isDerived="false">
+							<Model:TypedElement.type>
+								<Model:PrimitiveType xmi.idref="EAID_1F172663_0E93_4ea4_9BCD_EEA601221A8D"/>
+							</Model:TypedElement.type>
+							<Model:StructuralFeature.multiplicity>
+								<XMI.field>1</XMI.field>
+								<XMI.field>1</XMI.field>
+								<XMI.field>true</XMI.field>
+								<XMI.field>false</XMI.field>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Attribute>
+						<Model:Operation xmi.id="EAID_A1CCFB42_CADD_4ec2_BB57_565BE575600B" name="GameLevel" annotation="Generates a new level with the given maze. This maze should not be replaced once the level object has been created." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents/>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_42EA4433_80A7_4469_AF0A_8192753C5D8B" name="isComplete" annotation="@return true if every tile on the maze has been visited, false if not" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_3F5DC3F5_F467_4ceb_AA83_B7144C0E8B5B" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_F49365E2_2EF5_4f32_807B_AC4E30D1DC16"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_2BE5CCD6_7895_4b3b_B143_18AB0D29C7E6" name="getMaze" annotation="Returns the underlying maze structure. This will most likely be required by the view to draw the game area.&#xA;@return the underlying maze structure" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_9C7A974E_4DA1_4748_85D5_4D3D2B6305E9" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_381B9583_BE0A_4589_ACF2_56B5841E9237"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_521D91F0_614B_4a41_9B49_CF810B884505" name="setPlayerStart" annotation="Sets the player start to the passed tile. No function if null." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_4761CF2C_3EC9_4e4a_9B61_591A8BE37E95" name="start" annotation="start" direction="in_dir">
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_21E73E10_3912_4b98_AA9B_6FA0DA60117D" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_9E7D8D82_77C0_4c6f_9861_DA5F12993E81"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_5A862C6E_22BD_4f5e_9A79_87C2BC3F5F16" name="clearPlayerStart" annotation="Clears the player starting point." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_0DF8630F_915F_4991_9D69_2B62306EA8E5" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_7C412CBD_471F_494a_8B0E_4EE71374759D"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_AD3D8C90_FF0F_4602_8900_B6AE30C6F351" name="addGhostStart" annotation="Adds a new ghost starting point." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_BDA0678A_B496_478d_BDE9_95EBE62E1C1C" name="start" annotation="start" direction="in_dir">
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_A4BB98A3_6B9D_44eb_88B9_69BF4A040363" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_135BE02A_AC9C_43cd_8A5B_5BF3CF92D4D4"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_720010CB_C9F6_4902_9541_AB851256D97F" name="clearGhostStart" annotation="Removes the specified ghost start from the level.&#xA;@param ghost	the index of the ghost start to remove&#xA;@return	false if an invalid index was passed, true if the remove was successful" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_B2D22C8A_CAFB_4a6f_AD41_D7C0DDCA654A" name="index" annotation="index" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_399946F5_102C_45b3_8B9A_355CCBEC9291"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_A2B8738D_84B5_4b7d_A9C5_E622617CA3D0" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_1E43F3B2_7C5B_42a5_97DB_49CA5D130059"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_FA6356B4_64CC_4bd3_99B3_487CC53F44D9" name="getGhosts" annotation="@return the number of ghost starts present in the level." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_B98243DA_E0C1_4354_917A_09154F7A38D2" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_90899C3F_6002_4c16_A45C_0F53870164F0"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_3FF9C45A_580C_411f_8C7E_4DF0FD6B3269" name="getPlayerStart" annotation="@return	the starting tile of the player, or null if none has been defined" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_5AF9640E_6D43_4049_B62D_B59C0608804F" name="return" annotation="return" direction="return_dir">
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_A6A4DFB3_6FC0_4c20_AAE7_9DD2415FC75A" name="getGhostStart" annotation="Returns the specified ghost starting point.&#xA;@return	null if invalid index is passed, or a ghost starting tile otherwise" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_B40B0B48_D38B_4352_B43E_1D5A11FF52C3" name="index" annotation="index" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_37A331FD_3AEB_4625_A9C1_87F9B14ABE3B"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_2B66EBB4_186C_44b0_920F_554FF253FC8C" name="return" annotation="return" direction="return_dir">
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Reference xmi.id="rEAID_src6BF7D9_294E_41ad_A66B_652148FDBB1D" name="level" scope="instance_level" visibility="public_vis" isChangeable="true" type="EAID_1E150732_D26B_49c5_8822_26089FED0745" referencedEnd="EAID_src6BF7D9_294E_41ad_A66B_652148FDBB1D">
+							<Model:StructuralFeature.multiplicity>
+								<Model:MultiplicityType lower="0" upper="-1" is_ordered="false" is_unique="true"/>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Reference>
+					</Model:Namespace.contents>
+				</Model:Class>
+				<Model:PrimitiveType name="List&lt;Tile&gt;" xmi.id="EAID_1F172663_0E93_4ea4_9BCD_EEA601221A8D" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="boolean" xmi.id="EAID_F49365E2_2EF5_4f32_807B_AC4E30D1DC16" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_9E7D8D82_77C0_4c6f_9861_DA5F12993E81" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_7C412CBD_471F_494a_8B0E_4EE71374759D" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_135BE02A_AC9C_43cd_8A5B_5BF3CF92D4D4" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_399946F5_102C_45b3_8B9A_355CCBEC9291" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="boolean" xmi.id="EAID_1E43F3B2_7C5B_42a5_97DB_49CA5D130059" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_90899C3F_6002_4c16_A45C_0F53870164F0" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_37A331FD_3AEB_4625_A9C1_87F9B14ABE3B" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:Class name="Ghost" xmi.id="EAID_7F74B880_9DDB_4830_A629_A2E7CB59CD49" annotation="A Ghost character. Its main purpose in Turn-Based Pacman is to select and chase another Character type around the Maze. &#xA;" isRoot="false" isLeaf="false" isAbstract="false" isSingleton="false" visibility="public_vis">
+					<Model:Namespace.contents>
+						<Model:Reference xmi.id="rEAID_dst5D1074_6229_480e_B908_768EB1E7BFCC" name="character" annotation="The Character that the ghost is meant to chase." scope="instance_level" visibility="public_vis" isChangeable="true" type="EAID_15B3B887_6464_46ce_8B49_5D0A212A6747" referencedEnd="EAID_dst5D1074_6229_480e_B908_768EB1E7BFCC">
+							<Model:StructuralFeature.multiplicity>
+								<Model:MultiplicityType lower="0" upper="-1" is_ordered="false" is_unique="true"/>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Reference>
+						<Model:Operation xmi.id="EAID_D9775A50_575B_4df6_8BD8_BC1DF1BDB5C7" name="Ghost" annotation="Constructor for objects of type Ghost. Creates a new Ghost type character." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents/>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_4C273E4F_8501_4205_8E6C_C4FEFE59693D" name="getNextMove" annotation="Determines the tile that the ghost should move to next.&#xA;@return 	the adjacent tile in the direction the ghost should move in, or null if no move should be made" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_00B513EE_1C1F_4a1d_97A4_C01B031E5B07" name="return" annotation="return" direction="return_dir">
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+					</Model:Namespace.contents>
+					<Model:GeneralizableElement.supertypes>
+						<Model:Class xmi.idref="EAID_15B3B887_6464_46ce_8B49_5D0A212A6747"/>
+					</Model:GeneralizableElement.supertypes>
+				</Model:Class>
+				<Model:Class name="Tile" xmi.id="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" annotation="Tile class represents one movement square within the game world. Each tile stores a list of neighbouring tiles, as well as a flag which stores whether the tile has been visited by the player or not. &#xA;" isRoot="false" isLeaf="false" isAbstract="false" isSingleton="false" visibility="public_vis">
+					<Model:Namespace.contents>
+						<Model:Attribute name="visited" xmi.id="EAID_9798F968_9B7B_4dbc_B688_0F882F702EBC" annotation="stores whether the tile has been visited by the player" scope="classifier_level" visibility="private_vis" isChangeable="true" isDerived="false">
+							<Model:TypedElement.type>
+								<Model:PrimitiveType xmi.idref="EAID_81992DC8_E251_472d_9AB4_BD50104D5C87"/>
+							</Model:TypedElement.type>
+							<Model:StructuralFeature.multiplicity>
+								<XMI.field>1</XMI.field>
+								<XMI.field>1</XMI.field>
+								<XMI.field>true</XMI.field>
+								<XMI.field>false</XMI.field>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Attribute>
+						<Model:Attribute name="xCoord" xmi.id="EAID_49846276_AB93_46ac_97BC_4F5C35D3F1D3" annotation="stores the x coordinate of the tile in relation to the maze grid" scope="classifier_level" visibility="private_vis" isChangeable="true" isDerived="false">
+							<Model:TypedElement.type>
+								<Model:PrimitiveType xmi.idref="EAID_CDF4C472_4B1B_4082_B226_3DF86576D300"/>
+							</Model:TypedElement.type>
+							<Model:StructuralFeature.multiplicity>
+								<XMI.field>1</XMI.field>
+								<XMI.field>1</XMI.field>
+								<XMI.field>true</XMI.field>
+								<XMI.field>false</XMI.field>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Attribute>
+						<Model:Attribute name="yCoord" xmi.id="EAID_C8293AE0_438F_48b8_8DA6_EAFF69A22740" annotation="stores the y coordinate of the tile in relation to the maze grid" scope="classifier_level" visibility="private_vis" isChangeable="true" isDerived="false">
+							<Model:TypedElement.type>
+								<Model:PrimitiveType xmi.idref="EAID_64203183_CC70_4047_8491_15ACA80BAC0A"/>
+							</Model:TypedElement.type>
+							<Model:StructuralFeature.multiplicity>
+								<XMI.field>1</XMI.field>
+								<XMI.field>1</XMI.field>
+								<XMI.field>true</XMI.field>
+								<XMI.field>false</XMI.field>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Attribute>
+						<Model:Attribute name="exits" xmi.id="EAID_1AEFA3AD_29AD_4dc9_A267_2C28B1C11338" annotation="the list of possible exits from the tile (only cardinal direction allowed)" scope="classifier_level" visibility="private_vis" isChangeable="true" isDerived="false">
+							<Model:TypedElement.type>
+								<Model:PrimitiveType xmi.idref="EAID_EB862E0B_F585_438a_9298_3B6461D4B911"/>
+							</Model:TypedElement.type>
+							<Model:StructuralFeature.multiplicity>
+								<XMI.field>1</XMI.field>
+								<XMI.field>1</XMI.field>
+								<XMI.field>true</XMI.field>
+								<XMI.field>false</XMI.field>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Attribute>
+						<Model:Operation xmi.id="EAID_F4E498BA_2A88_481d_BB33_908819FCDC44" name="Tile" annotation="Constructs a new tile at the given coordinates. The new tile has no neighbours, and has not been visited." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents/>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_04CB5ABA_090D_40fd_B9FE_E3AD4ED70087" name="hasDot" annotation="@return true if the tile has not been visited, false if it has" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_CB2B4992_49DD_49c2_81C7_8895640BF740" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_9C411DAE_E4EB_45e6_B179_869E49CBF7EE"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_AF56BDDD_62B8_40d6_B568_35C548EF5476" name="getXCoord" annotation="@return the x coordinate of the tile in relation to the maze grid" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_47FA56F0_0C6B_46aa_A954_35DB6B82C895" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_E1CD75DA_BA46_490a_A03B_B92C16A836BF"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_2B5A9C15_7CB4_4fd1_ADF9_E7CFB1EEC4F1" name="getYCoord" annotation="@return the y coordinate of the tile in relation to the maze grid" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_47563782_1E72_497a_BD16_D380E9AAAA4D" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_B8511B59_5E3F_4534_9C6E_988A02BC514C"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_455470AD_880D_458d_90F6_3EA332F10F12" name="clearDot" annotation="Sets the visited status of the tile to true (ie. no dot should be drawn)." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_FE937060_B1FA_4304_B6EF_7A0534D50C99" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_8277DABA_5C96_40bc_BCD0_7CB218FF7D96"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_C0AD7BE8_D96B_4562_B3BE_E016CBC73FAD" name="resetDot" annotation="Sets the visited status of the tile to false (ie. a dot should be drawn)" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_8C1F3E74_FCDA_499f_887D_68C99BCB26CF" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_A66058D3_DB4D_4ac7_994B_F535EC222FA0"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_3CE3DC2B_E024_472a_AE3E_102F635EF04F" name="setExit" annotation="Adds an exit to the tile. An exit may not be added to a direction with an existing exit unless the original exit is removed first.&#xA;@return	returns true if the add was successful, false if a duplicate key was encountered" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_D2501632_BADB_4e37_A60D_880C114330B6" name="dir" annotation="dir" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_32A300AA_6A97_409f_8984_20B4D8F783CB"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_A2136DE9_62B0_4ff7_92F4_36D00B90D81F" name="tile" annotation="tile" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_38A2C697_4BED_4d0a_B7D2_23C0E79E1DF8" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_5E7115B0_A27E_4fdb_929D_2BA7F2E4F4B8"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_D9E321E0_E92B_440a_BF20_168CA88768BC" name="removeExit" annotation="Removes a given exit from the tile.&#xA;@return	false if the exit did not exist, true otherwise" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_D2FDA2F8_7CF2_4412_B9AC_2A8D6A26155B" name="dir" annotation="dir" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_32A300AA_6A97_409f_8984_20B4D8F783CB"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_F22BF7B9_3FCE_4024_B794_9DCDCD828B1B" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_FB161F05_D237_4946_83FA_2936D2EED1D7"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_85918F10_E962_43a9_9EE9_22B923BA8E72" name="getExit" annotation="Gets the exit in the specified direction.&#xA;@return	returns the tile in the given direction, or null if no exit exists" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_AA141E62_73C0_48d1_A15B_5AB6EDD3DCE4" name="dir" annotation="dir" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_32A300AA_6A97_409f_8984_20B4D8F783CB"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_EBB724BD_818F_4582_A7CE_BA8BB97B4317" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_553946B7_91E1_4bda_B2EB_246A59540F50" name="shortName" annotation="Returns of a string of the tile's x and y coordinates. Mostly for debug purposes.&#xA;@return	a string in the format of &quot;Tile X:n Y:n&quot;" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_3CD58CD2_E261_4ab8_A00A_53A2C203B752" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_0524ADE4_D241_41ae_95E6_60F2027CC9ED"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_7A183822_82FB_4319_BC1F_C0D9AC3B758C" name="toString" annotation="@return a long string description of the tile and it's exits" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_C8A4B53E_7E28_41dc_9224_AA740EBF3272" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_4A66AA2B_4824_4a07_8187_8357217163C6"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Reference xmi.id="rEAID_src2DC048_8C8D_46de_998B_E6B5027314B9" name="tileArray" scope="instance_level" visibility="public_vis" isChangeable="true" type="EAID_CCF4EC16_183A_45c6_87D0_48199ACAB7F6" referencedEnd="EAID_src2DC048_8C8D_46de_998B_E6B5027314B9">
+							<Model:StructuralFeature.multiplicity>
+								<Model:MultiplicityType lower="0" upper="-1" is_ordered="false" is_unique="true"/>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Reference>
+						<Model:Reference xmi.id="rEAID_src1EDFB5_48FF_4621_8885_DBF69CDB37F7" name="currentTile" scope="instance_level" visibility="public_vis" isChangeable="true" type="EAID_15B3B887_6464_46ce_8B49_5D0A212A6747" referencedEnd="EAID_src1EDFB5_48FF_4621_8885_DBF69CDB37F7">
+							<Model:StructuralFeature.multiplicity>
+								<Model:MultiplicityType lower="0" upper="-1" is_ordered="false" is_unique="true"/>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Reference>
+						<Model:Reference xmi.id="rEAID_srcEE42FA_B9AC_480b_88C3_57FD33AA4373" name="mazeTiles" scope="instance_level" visibility="public_vis" isChangeable="true" type="EAID_381B9583_BE0A_4589_ACF2_56B5841E9237" referencedEnd="EAID_srcEE42FA_B9AC_480b_88C3_57FD33AA4373">
+							<Model:StructuralFeature.multiplicity>
+								<Model:MultiplicityType lower="0" upper="-1" is_ordered="false" is_unique="true"/>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Reference>
+						<Model:Reference xmi.id="rEAID_src994F1D_2AEC_4582_A961_29F5E26BDD30" name="playerStart" scope="instance_level" visibility="public_vis" isChangeable="true" type="EAID_7C1808EB_6FB4_44c9_89F3_BB1ACE9B73C3" referencedEnd="EAID_src994F1D_2AEC_4582_A961_29F5E26BDD30">
+							<Model:StructuralFeature.multiplicity>
+								<Model:MultiplicityType lower="0" upper="-1" is_ordered="false" is_unique="true"/>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Reference>
+					</Model:Namespace.contents>
+				</Model:Class>
+				<Model:PrimitiveType name="boolean" xmi.id="EAID_81992DC8_E251_472d_9AB4_BD50104D5C87" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_CDF4C472_4B1B_4082_B226_3DF86576D300" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_64203183_CC70_4047_8491_15ACA80BAC0A" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="Map&lt;Direction, Tile&gt;" xmi.id="EAID_EB862E0B_F585_438a_9298_3B6461D4B911" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="boolean" xmi.id="EAID_9C411DAE_E4EB_45e6_B179_869E49CBF7EE" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_E1CD75DA_BA46_490a_A03B_B92C16A836BF" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_B8511B59_5E3F_4534_9C6E_988A02BC514C" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_8277DABA_5C96_40bc_BCD0_7CB218FF7D96" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_A66058D3_DB4D_4ac7_994B_F535EC222FA0" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="boolean" xmi.id="EAID_5E7115B0_A27E_4fdb_929D_2BA7F2E4F4B8" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="boolean" xmi.id="EAID_FB161F05_D237_4946_83FA_2936D2EED1D7" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="String" xmi.id="EAID_0524ADE4_D241_41ae_95E6_60F2027CC9ED" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="String" xmi.id="EAID_4A66AA2B_4824_4a07_8187_8357217163C6" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:Class name="GameEvent" xmi.id="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3" annotation="GameEvent represents an event generated by a GameModel object. This class stores the source GameModel, and can be used to pass additional details on the event. &#xA;" isRoot="false" isLeaf="false" isAbstract="false" isSingleton="false" visibility="public_vis">
+					<Model:Namespace.contents>
+						<Model:Reference xmi.id="rEAID_dstB04940_5ABA_47af_BBE1_1F8B74F4ADF7" name="gamemodel" annotation="Stores the GameModel that sent this event" scope="instance_level" visibility="public_vis" isChangeable="true" type="EAID_1E150732_D26B_49c5_8822_26089FED0745" referencedEnd="EAID_dstB04940_5ABA_47af_BBE1_1F8B74F4ADF7">
+							<Model:StructuralFeature.multiplicity>
+								<Model:MultiplicityType lower="0" upper="-1" is_ordered="false" is_unique="true"/>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Reference>
+						<Model:Operation xmi.id="EAID_E0339493_685B_4920_9B01_279BFBF3F5BB" name="GameEvent" annotation="The eventType is specified upon the object's creation.&#xA;@param eventType" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents/>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_A5775E47_2505_4aa8_9CBB_1F88DA6B6838" name="getSource" annotation="Returns the source GameModel of the event.&#xA;@return	the source of the event" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_78446256_9461_4af1_982B_66E7D730D597" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_1E150732_D26B_49c5_8822_26089FED0745"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+					</Model:Namespace.contents>
+				</Model:Class>
+				<Model:Class name="MazeIterator" xmi.id="EAID_CCF4EC16_183A_45c6_87D0_48199ACAB7F6" annotation="MazeIterator allows client classes to iterate through the tiles stored in a maze without any knowledge of the underlying data structure. Tiles are returned in a left to right, top to bottom manner, given that (0,0) is in the top left of the coordinate system, and x and y increase across and down. &#xA;" isRoot="false" isLeaf="false" isAbstract="false" isSingleton="false" visibility="public_vis">
+					<Model:Namespace.contents>
+						<Model:Reference xmi.id="rEAID_dst2DC048_8C8D_46de_998B_E6B5027314B9" name="tile" annotation="the reference to the array of tiles" scope="instance_level" visibility="public_vis" isChangeable="true" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" referencedEnd="EAID_dst2DC048_8C8D_46de_998B_E6B5027314B9">
+							<Model:StructuralFeature.multiplicity>
+								<Model:MultiplicityType lower="0" upper="-1" is_ordered="false" is_unique="true"/>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Reference>
+						<Model:Attribute name="maxX" xmi.id="EAID_4FBB6EE5_5608_4dc8_819E_BC8739CB6F5A" annotation="the x coordinate boundary for the array" scope="classifier_level" visibility="private_vis" isChangeable="true" isDerived="false">
+							<Model:TypedElement.type>
+								<Model:PrimitiveType xmi.idref="EAID_226EC70D_8E73_48a2_9EAD_B1C79EF8226B"/>
+							</Model:TypedElement.type>
+							<Model:StructuralFeature.multiplicity>
+								<XMI.field>1</XMI.field>
+								<XMI.field>1</XMI.field>
+								<XMI.field>true</XMI.field>
+								<XMI.field>false</XMI.field>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Attribute>
+						<Model:Attribute name="maxY" xmi.id="EAID_69E57BE1_260E_484d_82F8_9A9043F5AE73" annotation="the y coordinate boundary for the array" scope="classifier_level" visibility="private_vis" isChangeable="true" isDerived="false">
+							<Model:TypedElement.type>
+								<Model:PrimitiveType xmi.idref="EAID_0CA8C8C8_39F9_40d6_812B_87E2B674AD2F"/>
+							</Model:TypedElement.type>
+							<Model:StructuralFeature.multiplicity>
+								<XMI.field>1</XMI.field>
+								<XMI.field>1</XMI.field>
+								<XMI.field>true</XMI.field>
+								<XMI.field>false</XMI.field>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Attribute>
+						<Model:Attribute name="xPointer" xmi.id="EAID_2148A580_95BF_4275_A8A2_53019D54D3E1" annotation="the x coordinate next to be retrieved" scope="classifier_level" visibility="private_vis" isChangeable="true" isDerived="false">
+							<Model:TypedElement.type>
+								<Model:PrimitiveType xmi.idref="EAID_37E631C9_BE43_40e9_9C9E_A78A870A9B2D"/>
+							</Model:TypedElement.type>
+							<Model:StructuralFeature.multiplicity>
+								<XMI.field>1</XMI.field>
+								<XMI.field>1</XMI.field>
+								<XMI.field>true</XMI.field>
+								<XMI.field>false</XMI.field>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Attribute>
+						<Model:Attribute name="yPointer" xmi.id="EAID_A39B0F9C_9E94_450d_83C2_6421F2FAD4F8" annotation="the y coordinate next to be retrieved" scope="classifier_level" visibility="private_vis" isChangeable="true" isDerived="false">
+							<Model:TypedElement.type>
+								<Model:PrimitiveType xmi.idref="EAID_3BCFD48A_D3B1_40b1_A371_1D501E660EAD"/>
+							</Model:TypedElement.type>
+							<Model:StructuralFeature.multiplicity>
+								<XMI.field>1</XMI.field>
+								<XMI.field>1</XMI.field>
+								<XMI.field>true</XMI.field>
+								<XMI.field>false</XMI.field>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Attribute>
+						<Model:Operation xmi.id="EAID_250942AA_8505_432e_A448_75369F598FE2" name="MazeIterator" annotation="Constructs a new MazeIterator" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents/>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_636D5EDC_BAAD_4638_ABCD_9D4281BCE6E8" name="hasNext" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_36D45C6A_E817_4c68_96E6_15A3D88E69DB" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_2A992B6B_9BDF_40ae_9425_BC6AE1195FF3"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_46D0B250_ACFA_4830_BA9C_D69C6D207DCF" name="next" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_BC170F4D_B67F_468d_B0F2_E50FC92D06E2" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_2A905305_2510_4462_9034_6B6D61C815B5" name="remove" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_1C4C97A5_D354_46ce_84D3_29E2CED49016" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_C90E5F51_E23D_4849_B128_BC99AD3F750E"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+					</Model:Namespace.contents>
+				</Model:Class>
+				<Model:PrimitiveType name="int" xmi.id="EAID_226EC70D_8E73_48a2_9EAD_B1C79EF8226B" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_0CA8C8C8_39F9_40d6_812B_87E2B674AD2F" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_37E631C9_BE43_40e9_9C9E_A78A870A9B2D" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_3BCFD48A_D3B1_40b1_A371_1D501E660EAD" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="boolean" xmi.id="EAID_2A992B6B_9BDF_40ae_9425_BC6AE1195FF3" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_C90E5F51_E23D_4849_B128_BC99AD3F750E" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:Class name="Player" xmi.id="EAID_F06C9AD8_A81B_42a5_B965_649DCE5BFCB4" annotation="A Player type Character. This Character is human controlled.&#xA;" isRoot="false" isLeaf="false" isAbstract="false" isSingleton="false" visibility="public_vis">
+					<Model:Namespace.contents>
+						<Model:Attribute name="lives" xmi.id="EAID_42DE0A2A_0EEB_476d_B2D3_45081A79C0FB" annotation="The number of lives that a Player has. Zero Lives means game over." scope="classifier_level" visibility="private_vis" isChangeable="true" isDerived="false">
+							<Model:TypedElement.type>
+								<Model:PrimitiveType xmi.idref="EAID_13CDB59C_41F1_402b_9262_25B06636B75A"/>
+							</Model:TypedElement.type>
+							<Model:StructuralFeature.multiplicity>
+								<XMI.field>1</XMI.field>
+								<XMI.field>1</XMI.field>
+								<XMI.field>true</XMI.field>
+								<XMI.field>false</XMI.field>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Attribute>
+						<Model:Operation xmi.id="EAID_E0861147_2B81_4534_BD38_45E8B1CB906D" name="Player" annotation="Creates a new PLayer object and places it in the Maze." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents/>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_B587527A_ECC2_49fe_B774_869EAE724306" name="loseLife" annotation="Decrement's the number of lives this Player has.&#xA;@return True if the Player has lost his last life." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_DC6ADC74_EC7B_40c5_A9C4_28EEDBF38C64" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_1099C875_2393_4981_B6A7_5603FC68AD06"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_D5FA5246_5AF8_4055_8D3F_B1F16E3E2BE2" name="getLives" annotation="Retrieves the number of lives this Player has.&#xA;@return number of lives." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_399F95B2_B4AB_4239_A517_6A1FAEF78758" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_A7045FA2_2FAB_4b8e_B8DC_9BCB7BBC5BAB"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_1C57F437_6C26_482c_89A7_FF332BFFBFC3" name="setLives" annotation="Sets the players live to the specified value, given that it is positive" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_98F42FC5_E9D7_4ec5_9B39_3094807DD97E" name="lives" annotation="lives" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_E9385F9A_6C6F_4475_84FE_E3F4890D8B0C"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_853EACC2_FA98_43d4_A4CB_54CD414469A3" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_123F2791_7572_4486_8C9E_33F28FDC047A"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_47BE4211_72F9_4fd4_BCF0_E1E7152058C7" name="isDead" annotation="Checks the number of lives this Player has and determines if its zero.&#xA;@return True if there are zero lives left." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_C94D69BA_DF29_4e42_80B3_97EC607CB934" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_C378719A_E981_4b53_A95A_39F6926617CB"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_EA48F54A_8C24_499a_9C55_EF01E020A460" name="setTile" annotation="Sets a new Tile as the Character's current position, provided the tile is not null. If the tile is null, nothing occurs and false is returned.&#xA;@return True if successful." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_601CB33A_9B43_4599_80D7_4D6A596C3F12" name="newTile" annotation="newTile" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_79CE5AF9_877E_4a5d_A2F5_08B62B2080CF" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_7DCB93E6_E108_45ad_8D9E_D9C1238621E2"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Reference xmi.id="rEAID_src40373D_553C_4339_9B53_F66CAEFC6503" name="player" scope="instance_level" visibility="public_vis" isChangeable="true" type="EAID_1E150732_D26B_49c5_8822_26089FED0745" referencedEnd="EAID_src40373D_553C_4339_9B53_F66CAEFC6503">
+							<Model:StructuralFeature.multiplicity>
+								<Model:MultiplicityType lower="0" upper="-1" is_ordered="false" is_unique="true"/>
+							</Model:StructuralFeature.multiplicity>
+						</Model:Reference>
+					</Model:Namespace.contents>
+					<Model:GeneralizableElement.supertypes>
+						<Model:Class xmi.idref="EAID_15B3B887_6464_46ce_8B49_5D0A212A6747"/>
+					</Model:GeneralizableElement.supertypes>
+				</Model:Class>
+				<Model:PrimitiveType name="int" xmi.id="EAID_13CDB59C_41F1_402b_9262_25B06636B75A" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="boolean" xmi.id="EAID_1099C875_2393_4981_B6A7_5603FC68AD06" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_A7045FA2_2FAB_4b8e_B8DC_9BCB7BBC5BAB" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="int" xmi.id="EAID_E9385F9A_6C6F_4475_84FE_E3F4890D8B0C" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_123F2791_7572_4486_8C9E_33F28FDC047A" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="boolean" xmi.id="EAID_C378719A_E981_4b53_A95A_39F6926617CB" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="boolean" xmi.id="EAID_7DCB93E6_E108_45ad_8D9E_D9C1238621E2" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:Class name="GameListenerAdapter" xmi.id="EAID_F2C46A9E_940D_4bfe_BDED_3E29CF4354D8" annotation="GameListenerAdapter defines the functions that a class may want implement while listening to the GameModel class.  Derived from the GameListener Interface by Alex Craig &#xA;" isRoot="false" isLeaf="false" isAbstract="true" isSingleton="false" visibility="public_vis">
+					<Model:Namespace.contents>
+						<Model:Operation xmi.id="EAID_4FA213EE_4E51_4853_B13E_16428CEACACF" name="playerMove" annotation="This function will be called whenever the player successfully makes a move.&#xA;@param GameEvent	stores the source and additional details on the event" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_54AFBE07_FDE6_48b6_94F2_358B0535AF8A" name="event" annotation="event" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_DEF8C051_61C3_43a1_BD44_879EDA0D28D5" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_997729B8_314F_41f9_A220_110732F15BBD"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_2C969031_0BEE_4677_A659_AFCD2BAB89A5" name="playerDeath" annotation="This function will be called whenever the player dies.&#xA;@param GameEvent	stores the source and additional details on the event" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_22F4BA97_0FD9_4007_ACE0_107993014A75" name="event" annotation="event" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_F1D55251_5692_4fc7_9EA1_DC9574AE3CD8" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_E821EAE6_5EA3_4270_92DD_D3B7ADF024FA"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_6A690015_BC39_4312_A720_BF10BCD44218" name="gameOver" annotation="This function will be called if the player loses all their lives.&#xA;@param GameEvent	stores the source and additional details on the event" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_3D2BC2BF_11D0_4b5c_83B0_5DD68245F940" name="event" annotation="event" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_86DB9A97_1B58_4579_8D54_89E48BC096B9" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_924B5CBD_66EC_45d2_877C_CA7895475264"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_43E3C88D_C4A0_49a3_9852_731B8D56B58E" name="levelComplete" annotation="This function will be called when every dot on the grid has been collected.&#xA;@param GameEvent	stores the source and additional details on the event" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_E5185E1C_510A_41fd_BF19_EBEB68515D6D" name="event" annotation="event" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_38129A97_C5B0_4187_BB6E_DED20DE70179" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_EFE6678F_0A49_45bf_B340_DE56FEA08A18"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+					</Model:Namespace.contents>
+				</Model:Class>
+				<Model:PrimitiveType name="void" xmi.id="EAID_997729B8_314F_41f9_A220_110732F15BBD" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_E821EAE6_5EA3_4270_92DD_D3B7ADF024FA" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_924B5CBD_66EC_45d2_877C_CA7895475264" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_EFE6678F_0A49_45bf_B340_DE56FEA08A18" isRoot="false" isLeaf="false" isAbstract="false"/>
+			</Model:Namespace.contents>
+		</Model:Package>
+		<Model:Package name="view" xmi.id="EAPK_E7B6015A_09D4_4860_B2D3_564096901C0D" isRoot="true" isLeaf="false" isAbstract="false" visibility="public_vis">
+			<Model:Namespace.contents>
+				<Model:Class name="ConsoleView" xmi.id="EAID_50CE3F9F_A082_4fe7_93BB_26A31E13641F" annotation="The ConsoleView class provides a simple, text based way to visualise the game of turn based pacman. In it's current implementation, this class does not support accurate display of one sided walls and portals. This class is primarily for early game play testing purposes. &#xA;" isRoot="false" isLeaf="false" isAbstract="false" isSingleton="false" visibility="public_vis">
+					<Model:Namespace.contents>
+						<Model:Operation xmi.id="EAID_2BF14C1B_88B5_460b_B024_3CAF6ECC63B6" name="ConsoleView" annotation="Default Constructor" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents/>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_842B0E83_CE63_47d1_ABAC_B33DCD41943D" name="ConsoleView" annotation="Constructs the ConsolveView, and starts it listening to a given GameModel." scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents/>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_F282186F_57EA_4215_A4D9_2E4C4EFB0AEF" name="drawMaze" annotation="Draws a graphical representation of a pacman maze to the console.&#xA;@param maze	the maze to draw" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_649CC2A9_DBC4_4485_BBE8_8EE4980FDE48" name="model" annotation="model" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_1E150732_D26B_49c5_8822_26089FED0745"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_E3AE19E1_E378_48d2_B743_542E7F5DAC9E" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_9ED60ADA_8541_4ee7_BF88_1CDEF90DFED9"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_270A4A06_F304_417b_9875_3C1E8ECEC121" name="playerMove" annotation="This function will be called whenever the player successfully makes a move.&#xA;@param GameEvent	stores the source and additional details on the event" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_7ADE78C0_2A79_48cf_BD27_F3C457B0A813" name="event" annotation="event" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_6C4124AD_0DD0_41dc_972B_E23298D4B8CC" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_B4414BD6_F7A4_47b9_A4E1_8272F5171A48"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_C8121B53_4033_4e3b_BEE3_971C13C9A2E7" name="playerDeath" annotation="This function will be called whenever the player dies.&#xA;@param GameEvent	stores the source and additional details on the event" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_7C7A8BBA_0E8A_4b95_9C36_AC4E51D3D144" name="event" annotation="event" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_9EC988DC_D5A4_46a8_9CDB_ECAD0DAFBB36" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_5A28F3E7_A5E4_4abe_B591_EB23B2433D9B"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_F5E173FA_688F_401b_AB33_DD94F461618A" name="gameOver" annotation="This function will be called if the player loses all their lives.&#xA;@param GameEvent	stores the source and additional details on the event" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_BE887763_D8B2_4877_96EB_48C70F356881" name="event" annotation="event" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_15236863_E5EC_41ed_BF97_327358190D7D" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_C49048A0_67D3_4542_999C_05386239808B"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+						<Model:Operation xmi.id="EAID_7F3B35B9_8929_4bd8_A9A4_247C16B34D3B" name="levelComplete" annotation="This function will be called when every dot on the grid has been collected.&#xA;@param GameEvent	stores the source and additional details on the event" scope="instance_level" visibility="public_vis" isQuery="false">
+							<Model:Namespace.contents>
+								<Model:Parameter xmi.id="EAID_ABCBC4AB_5851_4777_8545_F108EACD88B1" name="event" annotation="event" direction="in_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+								<Model:Parameter xmi.id="EAID_8A56E838_5CCC_4d49_B63C_EF3BB151CF23" name="return" annotation="return" direction="return_dir">
+									<Model:TypedElement.type>
+										<sType xmi.idref="EAID_F49367C6_38B0_49c2_B44F_201DD5426D46"/>
+									</Model:TypedElement.type>
+									<Model:StructuralFeature.multiplicity>
+										<XMI.field>1</XMI.field>
+										<XMI.field>1</XMI.field>
+										<XMI.field>false</XMI.field>
+										<XMI.field>false</XMI.field>
+									</Model:StructuralFeature.multiplicity>
+								</Model:Parameter>
+							</Model:Namespace.contents>
+						</Model:Operation>
+					</Model:Namespace.contents>
+				</Model:Class>
+				<Model:PrimitiveType name="void" xmi.id="EAID_9ED60ADA_8541_4ee7_BF88_1CDEF90DFED9" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_B4414BD6_F7A4_47b9_A4E1_8272F5171A48" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_5A28F3E7_A5E4_4abe_B591_EB23B2433D9B" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_C49048A0_67D3_4542_999C_05386239808B" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<Model:PrimitiveType name="void" xmi.id="EAID_F49367C6_38B0_49c2_B44F_201DD5426D46" isRoot="false" isLeaf="false" isAbstract="false"/>
+			</Model:Namespace.contents>
+		</Model:Package>
+	</XMI.content>
+	<XMI.extensions xmi.extender="Enterprise Architect 2.5"/>
+</XMI>

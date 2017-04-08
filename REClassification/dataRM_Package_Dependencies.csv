@@ -1,0 +1,9 @@
+Name,Root.Component View,Root.src.atm.physical,Root.src.atm.transaction,Root.src.atm,Root.src.banking,Root.src,Root.Unknown Externals,Root
+Root.Component View,0,0,0,0,0,0,0,0
+Root.src.atm.physical,0,0,0,1,1,0,1,0
+Root.src.atm.transaction,0,0,0,1,1,0,1,0
+Root.src.atm,0,1,0,0,0,0,1,0
+Root.src.banking,0,0,1,1,0,0,1,0
+Root.src,0,0,0,0,0,0,0,0
+Root.Unknown Externals,0,0,0,0,0,0,0,0
+Root,0,0,0,0,0,0,0,0

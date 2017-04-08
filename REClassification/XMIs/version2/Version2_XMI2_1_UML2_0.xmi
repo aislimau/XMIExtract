@@ -1,0 +1,994 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xmi:XMI xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.0" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:thecustomprofile="http://www.sparxsystems.com/profiles/thecustomprofile/1.0" xmlns:EAUML="http://www.sparxsystems.com/profiles/EAUML/1.0">
+	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5"/>
+	<uml:Model xmi:type="uml:Model" name="EA_Model" visibility="public">
+		<ownedMember xmi:type="uml:Package" xmi:id="EAPK_E1B76704_9F36_468c_B2DC_8CCB19979583" name="Class Model" visibility="public">
+			<ownedMember xmi:type="uml:Package" xmi:id="EAPK_CE741377_0B15_4d1a_A80F_F3A343DD6CBC" name="controller" visibility="public">
+				<ownedMember xmi:type="uml:Class" xmi:id="EAID_2F2D83B7_ADF2_48a6_9A8D_15E0EA93C3F2" name="ConsoleControl" visibility="public">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_2E0543DA_8CF6_40a2_94C8_DEA0A1B741FE" name="model" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<type xmi:idref="EAID_1E150732_D26B_49c5_8822_26089FED0745"/>
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000001_8CF6_40a2_94C8_DEA0A1B741FE" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000002_8CF6_40a2_94C8_DEA0A1B741FE" value="1"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_B2A97B34_9A98_49e7_A1D1_0465F097EA7F" name="bi" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000003_9A98_49e7_A1D1_0465F097EA7F" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000004_9A98_49e7_A1D1_0465F097EA7F" value="1"/>
+						<type xmi:idref="EAJava_BufferedInputStream"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_C19BE4E2_C891_4207_A637_5AA9996DAD88" name="continueGame" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000005_C891_4207_A637_5AA9996DAD88" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000006_C891_4207_A637_5AA9996DAD88" value="1"/>
+						<type xmi:idref="EAJava_boolean"/>
+					</ownedAttribute>
+					<ownedOperation xmi:id="EAID_58996F14_48AD_49ca_AF38_9167B9A69E85" name="ConsoleControl" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_960F0FD1_71F4_4b92_BF94_7972D2C8D48B" name="model" type="EAID_1E150732_D26B_49c5_8822_26089FED0745" direction="in"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_673E5787_41B1_4c8f_8CA3_EFB9475229B1" name="execute" visibility="private" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_41B1_4c8f_8CA3_EFB9475229B1" name="return" direction="return" type="EAJava_boolean"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_93FDE390_77B2_40be_9764_6951965F98F3" name="run" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_77B2_40be_9764_6951965F98F3" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_F3BAC98A_1D14_40a3_AB26_2E00FEC44B74" name="gameOver" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_37FC8BBA_ABFE_4458_BDE8_B6929BCFAFB3" name="event" type="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_1D14_40a3_AB26_2E00FEC44B74" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_117A1EB0_6457_40bc_986D_EB1A81F90729" name="levelComplete" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_82CE76A8_2CBF_42fc_BF3A_3FE0F15404BD" name="e" type="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_6457_40bc_986D_EB1A81F90729" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<generalization xmi:type="uml:Generalization" xmi:id="EAID_9ED1389C_C1FF_461a_A3F5_6EA01420D2C8" general="EAID_F2C46A9E_940D_4bfe_BDED_3E29CF4354D8"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dst781123_2412_465c_B7C2_114129583AB8" name="model" visibility="private" association="EAID_EA781123_2412_465c_B7C2_114129583AB8" isOrdered="false" isDerived="false" isDerivedUnion="false" isUnique="true" aggregation="none">
+						<type xmi:idref="EAID_1E150732_D26B_49c5_8822_26089FED0745"/>
+					</ownedAttribute>
+				</ownedMember>
+				<ownedMember xmi:type="uml:Association" xmi:id="EAID_EA781123_2412_465c_B7C2_114129583AB8" visibility="public">
+					<memberEnd xmi:idref="EAID_dst781123_2412_465c_B7C2_114129583AB8"/>
+					<memberEnd xmi:idref="EAID_src781123_2412_465c_B7C2_114129583AB8"/>
+					<ownedEnd xmi:type="uml:Property" xmi:id="EAID_src781123_2412_465c_B7C2_114129583AB8" visibility="public" association="EAID_EA781123_2412_465c_B7C2_114129583AB8" isOrdered="false" isDerived="false" isDerivedUnion="false" isUnique="true" aggregation="none">
+						<type xmi:idref="EAID_2F2D83B7_ADF2_48a6_9A8D_15E0EA93C3F2"/>
+					</ownedEnd>
+				</ownedMember>
+				<ownedMember xmi:type="uml:Class" xmi:id="EAID_7E7D36DD_A153_4a27_9D1A_35A9FA93BACB" name="PacShell" visibility="public">
+					<ownedOperation xmi:id="EAID_8B88E9E4_61A2_4c21_AB8C_694355B7B5A2" name="main" visibility="public" concurrency="sequential" isStatic="true">
+						<ownedParameter xmi:id="EAID_8FEAA717_9ACB_4eb2_B8FC_C50D889C8C9B" name="args" direction="in" type="EAJava_String[]"/>
+						<ownedParameter xmi:id="EAID_RT000000_61A2_4c21_AB8C_694355B7B5A2" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+				</ownedMember>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Package" xmi:id="EAPK_0CF77D5F_7FDB_4aaf_89D8_30368C827648" name="model" visibility="public">
+				<ownedElement xmi:type="uml:Realization" xmi:id="EAID_F25B8EB7_F961_4215_BD9C_A8BEB9DE5034" visibility="public" supplier="EAID_70945F0F_B1FB_4fb1_AA43_C0152D0C1F8A" realizingClassifier="EAID_70945F0F_B1FB_4fb1_AA43_C0152D0C1F8A" client="EAID_F2C46A9E_940D_4bfe_BDED_3E29CF4354D8"/>
+				<ownedMember xmi:type="uml:Class" xmi:id="EAID_15B3B887_6464_46ce_8B49_5D0A212A6747" name="Character" visibility="public" isAbstract="true">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_6BA13AA9_4993_4b31_9E14_01CDADC42DF6" name="currentTile" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<type xmi:idref="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2"/>
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000007_4993_4b31_9E14_01CDADC42DF6" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000008_4993_4b31_9E14_01CDADC42DF6" value="1"/>
+					</ownedAttribute>
+					<ownedOperation xmi:id="EAID_E034480C_3AA4_4b79_B766_F6CAF3495F87" name="Character" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_24CC3D56_51DC_453d_93EA_ACF10D785EC3" name="startTile" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" direction="in"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_3C44A861_D171_475d_B3E3_228B82B071B0" name="move" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_B2FFA28E_BE54_4f9e_AA12_39C221AE348C" name="dir" type="EAID_32A300AA_6A97_409f_8984_20B4D8F783CB" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_D171_475d_B3E3_228B82B071B0" name="return" direction="return" type="EAJava_boolean"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_43DA8FEA_BB62_4de1_8944_1BE3FC411C6D" name="getNeighbour" visibility="public" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_2B98C988_EB5A_44b1_A2AD_935318496BDE" name="dir" type="EAID_32A300AA_6A97_409f_8984_20B4D8F783CB" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_BB62_4de1_8944_1BE3FC411C6D" name="return" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" direction="return"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_CD36E258_6958_48e9_8881_0DC56D06433E" name="setTile" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_A6E2E2D2_32B1_47f9_BE25_503B433A90D5" name="newTile" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_6958_48e9_8881_0DC56D06433E" name="return" direction="return" type="EAJava_boolean"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_95C23521_A386_4df3_B7B3_AC2AA74EA0DD" name="getTile" visibility="public" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_A386_4df3_B7B3_AC2AA74EA0DD" name="return" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" direction="return"/>
+					</ownedOperation>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dst101D2C_9E4B_44df_847F_80B0E1D312B7" name="currentTile" visibility="private" association="EAID_8D101D2C_9E4B_44df_847F_80B0E1D312B7" isOrdered="false" isDerived="false" isDerivedUnion="false" isUnique="true" aggregation="none">
+						<type xmi:idref="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2"/>
+					</ownedAttribute>
+				</ownedMember>
+				<ownedMember xmi:type="uml:Association" xmi:id="EAID_8D101D2C_9E4B_44df_847F_80B0E1D312B7" visibility="public">
+					<memberEnd xmi:idref="EAID_dst101D2C_9E4B_44df_847F_80B0E1D312B7"/>
+					<memberEnd xmi:idref="EAID_src101D2C_9E4B_44df_847F_80B0E1D312B7"/>
+					<ownedEnd xmi:type="uml:Property" xmi:id="EAID_src101D2C_9E4B_44df_847F_80B0E1D312B7" visibility="public" association="EAID_8D101D2C_9E4B_44df_847F_80B0E1D312B7" isOrdered="false" isDerived="false" isDerivedUnion="false" isUnique="true" aggregation="none">
+						<type xmi:idref="EAID_15B3B887_6464_46ce_8B49_5D0A212A6747"/>
+					</ownedEnd>
+				</ownedMember>
+				<ownedMember xmi:type="uml:Association" xmi:id="EAID_C439C8C8_0F49_4d68_9273_561198512937" visibility="public">
+					<memberEnd xmi:idref="EAID_dst39C8C8_0F49_4d68_9273_561198512937"/>
+					<memberEnd xmi:idref="EAID_src39C8C8_0F49_4d68_9273_561198512937"/>
+					<ownedEnd xmi:type="uml:Property" xmi:id="EAID_src39C8C8_0F49_4d68_9273_561198512937" visibility="public" association="EAID_C439C8C8_0F49_4d68_9273_561198512937" isOrdered="false" isDerived="false" isDerivedUnion="false" isUnique="true" aggregation="none">
+						<type xmi:idref="EAID_7F74B880_9DDB_4830_A629_A2E7CB59CD49"/>
+					</ownedEnd>
+				</ownedMember>
+				<ownedMember xmi:type="uml:Enumeration" xmi:id="EAID_32A300AA_6A97_409f_8984_20B4D8F783CB" name="Direction" visibility="public">
+					<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="EAID_5791DE2C_5CFB_409b_A3F5_DEC69A793917" name="NORTH" visibility="public"/>
+					<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="EAID_A553048B_315F_4af4_8B2A_E9CD22C015E6" name="SOUTH" visibility="public"/>
+					<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="EAID_20069F23_F90A_4151_A9E5_6AF9CF82FA32" name="EAST" visibility="public"/>
+					<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="EAID_5E1363D8_1134_4dce_B669_AF145DA0C9E4" name="WEST" visibility="public"/>
+					<ownedOperation xmi:id="EAID_6BA17769_38C1_4b41_8B3E_8EDF8F4378BE" name="getOpposite" visibility="public" type="EAID_32A300AA_6A97_409f_8984_20B4D8F783CB" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_38C1_4b41_8B3E_8EDF8F4378BE" name="return" type="EAID_32A300AA_6A97_409f_8984_20B4D8F783CB" direction="return"/>
+					</ownedOperation>
+				</ownedMember>
+				<ownedMember xmi:type="uml:Class" xmi:id="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3" name="GameEvent" visibility="public">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_716997B7_12B7_4ef1_B66B_4E3CFABF7B33" name="source" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<type xmi:idref="EAID_1E150732_D26B_49c5_8822_26089FED0745"/>
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000009_12B7_4ef1_B66B_4E3CFABF7B33" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000010_12B7_4ef1_B66B_4E3CFABF7B33" value="1"/>
+					</ownedAttribute>
+					<ownedOperation xmi:id="EAID_E0339493_685B_4920_9B01_279BFBF3F5BB" name="GameEvent" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_53AB00E8_112D_4ecb_A067_40ABEAAAE060" name="source" type="EAID_1E150732_D26B_49c5_8822_26089FED0745" direction="in"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_A5775E47_2505_4aa8_9CBB_1F88DA6B6838" name="getSource" visibility="public" type="EAID_1E150732_D26B_49c5_8822_26089FED0745" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_2505_4aa8_9CBB_1F88DA6B6838" name="return" type="EAID_1E150732_D26B_49c5_8822_26089FED0745" direction="return"/>
+					</ownedOperation>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dst541E01_0D7E_444b_A0DC_0CE766512121" name="source" visibility="private" association="EAID_79541E01_0D7E_444b_A0DC_0CE766512121" isOrdered="false" isDerived="false" isDerivedUnion="false" isUnique="true" aggregation="none">
+						<type xmi:idref="EAID_1E150732_D26B_49c5_8822_26089FED0745"/>
+					</ownedAttribute>
+				</ownedMember>
+				<ownedMember xmi:type="uml:Association" xmi:id="EAID_79541E01_0D7E_444b_A0DC_0CE766512121" visibility="public">
+					<memberEnd xmi:idref="EAID_dst541E01_0D7E_444b_A0DC_0CE766512121"/>
+					<memberEnd xmi:idref="EAID_src541E01_0D7E_444b_A0DC_0CE766512121"/>
+					<ownedEnd xmi:type="uml:Property" xmi:id="EAID_src541E01_0D7E_444b_A0DC_0CE766512121" visibility="public" association="EAID_79541E01_0D7E_444b_A0DC_0CE766512121" isOrdered="false" isDerived="false" isDerivedUnion="false" isUnique="true" aggregation="none">
+						<type xmi:idref="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3"/>
+					</ownedEnd>
+				</ownedMember>
+				<ownedMember xmi:type="uml:Class" xmi:id="EAID_7C1808EB_6FB4_44c9_89F3_BB1ACE9B73C3" name="GameLevel" visibility="public">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_691622F4_3720_4143_B250_F420A1A3E9DA" name="maze" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<type xmi:idref="EAID_381B9583_BE0A_4589_ACF2_56B5841E9237"/>
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000011_3720_4143_B250_F420A1A3E9DA" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000012_3720_4143_B250_F420A1A3E9DA" value="1"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_FE5C58B3_D4F6_43ca_B9FA_36CD23B610D5" name="playerStart" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<type xmi:idref="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2"/>
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000013_D4F6_43ca_B9FA_36CD23B610D5" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000014_D4F6_43ca_B9FA_36CD23B610D5" value="1"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E6596805_D76C_4483_8BCC_46D0E117CE2D" name="ghostStarts" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000015_D76C_4483_8BCC_46D0E117CE2D" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000016_D76C_4483_8BCC_46D0E117CE2D" value="1"/>
+						<type xmi:idref="EAJava_List&lt;Tile&gt;"/>
+					</ownedAttribute>
+					<ownedOperation xmi:id="EAID_A1CCFB42_CADD_4ec2_BB57_565BE575600B" name="GameLevel" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_430E8DD0_0C8D_4aa5_A910_6B628F18E89B" name="maze" type="EAID_381B9583_BE0A_4589_ACF2_56B5841E9237" direction="in"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_42EA4433_80A7_4469_AF0A_8192753C5D8B" name="isComplete" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_80A7_4469_AF0A_8192753C5D8B" name="return" direction="return" type="EAJava_boolean"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_2BE5CCD6_7895_4b3b_B143_18AB0D29C7E6" name="getMaze" visibility="public" type="EAID_381B9583_BE0A_4589_ACF2_56B5841E9237" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_7895_4b3b_B143_18AB0D29C7E6" name="return" type="EAID_381B9583_BE0A_4589_ACF2_56B5841E9237" direction="return"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_521D91F0_614B_4a41_9B49_CF810B884505" name="setPlayerStart" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_4761CF2C_3EC9_4e4a_9B61_591A8BE37E95" name="start" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_614B_4a41_9B49_CF810B884505" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_5A862C6E_22BD_4f5e_9A79_87C2BC3F5F16" name="clearPlayerStart" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_22BD_4f5e_9A79_87C2BC3F5F16" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_AD3D8C90_FF0F_4602_8900_B6AE30C6F351" name="addGhostStart" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_BDA0678A_B496_478d_BDE9_95EBE62E1C1C" name="start" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_FF0F_4602_8900_B6AE30C6F351" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_720010CB_C9F6_4902_9541_AB851256D97F" name="clearGhostStart" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_B2D22C8A_CAFB_4a6f_AD41_D7C0DDCA654A" name="index" direction="in" type="EAJava_int"/>
+						<ownedParameter xmi:id="EAID_RT000000_C9F6_4902_9541_AB851256D97F" name="return" direction="return" type="EAJava_boolean"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_FA6356B4_64CC_4bd3_99B3_487CC53F44D9" name="getGhosts" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_64CC_4bd3_99B3_487CC53F44D9" name="return" direction="return" type="EAJava_int"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_3FF9C45A_580C_411f_8C7E_4DF0FD6B3269" name="getPlayerStart" visibility="public" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_580C_411f_8C7E_4DF0FD6B3269" name="return" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" direction="return"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_A6A4DFB3_6FC0_4c20_AAE7_9DD2415FC75A" name="getGhostStart" visibility="public" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_B40B0B48_D38B_4352_B43E_1D5A11FF52C3" name="index" direction="in" type="EAJava_int"/>
+						<ownedParameter xmi:id="EAID_RT000000_6FC0_4c20_AAE7_9DD2415FC75A" name="return" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" direction="return"/>
+					</ownedOperation>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dst66865A_B1AA_4ab7_B94F_ACC2BC35DAEA" name="playerStart" visibility="private" association="EAID_C066865A_B1AA_4ab7_B94F_ACC2BC35DAEA" isOrdered="false" isDerived="false" isDerivedUnion="false" isUnique="true" aggregation="none">
+						<type xmi:idref="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dst431176_BDA5_458e_A193_8B28A56C1C40" name="maze" visibility="private" association="EAID_CB431176_BDA5_458e_A193_8B28A56C1C40" isOrdered="false" isDerived="false" isDerivedUnion="false" isUnique="true" aggregation="none">
+						<type xmi:idref="EAID_381B9583_BE0A_4589_ACF2_56B5841E9237"/>
+					</ownedAttribute>
+				</ownedMember>
+				<ownedMember xmi:type="uml:Association" xmi:id="EAID_C066865A_B1AA_4ab7_B94F_ACC2BC35DAEA" visibility="public">
+					<memberEnd xmi:idref="EAID_dst66865A_B1AA_4ab7_B94F_ACC2BC35DAEA"/>
+					<memberEnd xmi:idref="EAID_src66865A_B1AA_4ab7_B94F_ACC2BC35DAEA"/>
+					<ownedEnd xmi:type="uml:Property" xmi:id="EAID_src66865A_B1AA_4ab7_B94F_ACC2BC35DAEA" visibility="public" association="EAID_C066865A_B1AA_4ab7_B94F_ACC2BC35DAEA" isOrdered="false" isDerived="false" isDerivedUnion="false" isUnique="true" aggregation="none">
+						<type xmi:idref="EAID_7C1808EB_6FB4_44c9_89F3_BB1ACE9B73C3"/>
+					</ownedEnd>
+				</ownedMember>
+				<ownedMember xmi:type="uml:Association" xmi:id="EAID_CB431176_BDA5_458e_A193_8B28A56C1C40" visibility="public">
+					<memberEnd xmi:idref="EAID_dst431176_BDA5_458e_A193_8B28A56C1C40"/>
+					<memberEnd xmi:idref="EAID_src431176_BDA5_458e_A193_8B28A56C1C40"/>
+					<ownedEnd xmi:type="uml:Property" xmi:id="EAID_src431176_BDA5_458e_A193_8B28A56C1C40" visibility="public" association="EAID_CB431176_BDA5_458e_A193_8B28A56C1C40" isOrdered="false" isDerived="false" isDerivedUnion="false" isUnique="true" aggregation="none">
+						<type xmi:idref="EAID_7C1808EB_6FB4_44c9_89F3_BB1ACE9B73C3"/>
+					</ownedEnd>
+				</ownedMember>
+				<ownedMember xmi:type="uml:Association" xmi:id="EAID_4FBA617C_4D2C_4024_9CAB_1403C138D8FC" visibility="public">
+					<memberEnd xmi:idref="EAID_dstBA617C_4D2C_4024_9CAB_1403C138D8FC"/>
+					<memberEnd xmi:idref="EAID_srcBA617C_4D2C_4024_9CAB_1403C138D8FC"/>
+					<ownedEnd xmi:type="uml:Property" xmi:id="EAID_srcBA617C_4D2C_4024_9CAB_1403C138D8FC" visibility="public" association="EAID_4FBA617C_4D2C_4024_9CAB_1403C138D8FC" isOrdered="false" isDerived="false" isDerivedUnion="false" isUnique="true" aggregation="none">
+						<type xmi:idref="EAID_1E150732_D26B_49c5_8822_26089FED0745"/>
+					</ownedEnd>
+				</ownedMember>
+				<ownedMember xmi:type="uml:Class" xmi:id="EAID_F2C46A9E_940D_4bfe_BDED_3E29CF4354D8" name="GameListenerAdapter" visibility="public" isAbstract="true">
+					<ownedOperation xmi:id="EAID_4FA213EE_4E51_4853_B13E_16428CEACACF" name="playerMove" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_54AFBE07_FDE6_48b6_94F2_358B0535AF8A" name="event" type="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_4E51_4853_B13E_16428CEACACF" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_2C969031_0BEE_4677_A659_AFCD2BAB89A5" name="playerDeath" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_22F4BA97_0FD9_4007_ACE0_107993014A75" name="event" type="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_0BEE_4677_A659_AFCD2BAB89A5" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_6A690015_BC39_4312_A720_BF10BCD44218" name="gameOver" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_3D2BC2BF_11D0_4b5c_83B0_5DD68245F940" name="event" type="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_BC39_4312_A720_BF10BCD44218" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_43E3C88D_C4A0_49a3_9852_731B8D56B58E" name="levelComplete" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_E5185E1C_510A_41fd_BF19_EBEB68515D6D" name="event" type="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_C4A0_49a3_9852_731B8D56B58E" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+				</ownedMember>
+				<ownedMember xmi:type="uml:Class" xmi:id="EAID_1E150732_D26B_49c5_8822_26089FED0745" name="GameModel" visibility="public">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_B73A9111_BAD9_40c0_AE5D_0564775BF90B" name="player" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<type xmi:idref="EAID_F06C9AD8_A81B_42a5_B965_649DCE5BFCB4"/>
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000017_BAD9_40c0_AE5D_0564775BF90B" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000018_BAD9_40c0_AE5D_0564775BF90B" value="1"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_EF552C35_C6AC_445b_B681_FF8AAF658F92" name="ghosts" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000019_C6AC_445b_B681_FF8AAF658F92" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000020_C6AC_445b_B681_FF8AAF658F92" value="1"/>
+						<type xmi:idref="EAJava_List&lt;Ghost&gt;"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_1EE7CFDD_C01A_4060_90C2_E6EB238DE441" name="level" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<type xmi:idref="EAID_7C1808EB_6FB4_44c9_89F3_BB1ACE9B73C3"/>
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000021_C01A_4060_90C2_E6EB238DE441" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000022_C01A_4060_90C2_E6EB238DE441" value="1"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_CEF5D1B9_866B_4aa5_BF5D_7361BCA72610" name="levels" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000023_866B_4aa5_BF5D_7361BCA72610" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000024_866B_4aa5_BF5D_7361BCA72610" value="1"/>
+						<type xmi:idref="EAJava_List&lt;String&gt;"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_15DDD249_9789_4603_94C3_96082F258FFD" name="listeners" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000025_9789_4603_94C3_96082F258FFD" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000026_9789_4603_94C3_96082F258FFD" value="1"/>
+						<type xmi:idref="EAJava_List&lt;GameListener&gt;"/>
+					</ownedAttribute>
+					<ownedOperation xmi:id="EAID_6C8BF018_302F_422d_AE73_B88E3AFA5910" name="GameModel" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_A8FD89FA_1296_45b0_8909_DD182B642A4E" name="levelListFilename" direction="in" type="EAJava_String"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_788A1DA7_C96C_4cb3_8A64_8AF6B84F9BD8" name="GameModel" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_11076ACB_21F7_419e_854F_071B2758F876" name="level" type="EAID_7C1808EB_6FB4_44c9_89F3_BB1ACE9B73C3" direction="in"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_5A0E0F3B_1EF5_4cf7_931B_6ECECD644DC8" name="loadLevel" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_E4852897_1672_43df_A645_087A4922D87A" name="fileName" direction="in" type="EAJava_String"/>
+						<ownedParameter xmi:id="EAID_RT000000_1EF5_4cf7_931B_6ECECD644DC8" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_7989AF30_D891_40c7_A567_12137E9AEF06" name="makeMove" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_3237606D_C4F9_4a20_A7B2_995AFC433BD1" name="dir" type="EAID_32A300AA_6A97_409f_8984_20B4D8F783CB" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_D891_40c7_A567_12137E9AEF06" name="return" direction="return" type="EAJava_boolean"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_2101726E_B795_4163_8F42_E68D3CD26164" name="updateGhosts" visibility="private" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_B795_4163_8F42_E68D3CD26164" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_281F2051_1BA8_44c4_B278_53EFD50A003D" name="stateCheck" visibility="private" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_1BA8_44c4_B278_53EFD50A003D" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_CA82C7F0_BE21_462b_AC4B_05BABF22193C" name="getPlayer" visibility="public" type="EAID_F06C9AD8_A81B_42a5_B965_649DCE5BFCB4" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_BE21_462b_AC4B_05BABF22193C" name="return" type="EAID_F06C9AD8_A81B_42a5_B965_649DCE5BFCB4" direction="return"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_741322A4_4C37_4e70_930E_FB6DC0A1099D" name="getGhost" visibility="public" type="EAID_7F74B880_9DDB_4830_A629_A2E7CB59CD49" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_8E317169_097E_4e7f_AB44_E370F63549DA" name="id" direction="in" type="EAJava_int"/>
+						<ownedParameter xmi:id="EAID_RT000000_4C37_4e70_930E_FB6DC0A1099D" name="return" type="EAID_7F74B880_9DDB_4830_A629_A2E7CB59CD49" direction="return"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_06F29936_0E29_4112_92AF_9C6CA66EC928" name="getNumGhosts" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_0E29_4112_92AF_9C6CA66EC928" name="return" direction="return" type="EAJava_int"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_9D7754E0_EE4E_4834_8EB9_FA7AA8F2564D" name="resetLevel" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_EE4E_4834_8EB9_FA7AA8F2564D" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_62731893_4AD1_44a3_98B5_1D295D68E99C" name="addGameListener" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_AE73057D_8C04_4a59_ABCA_C0C688FF6D97" name="listener" type="EAID_70945F0F_B1FB_4fb1_AA43_C0152D0C1F8A" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_4AD1_44a3_98B5_1D295D68E99C" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_A10D1512_7CC7_460e_99AD_91D11F8C1D71" name="removeGameListener" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_88D38B72_9B40_48e3_929C_0178D749EB8B" name="listener" type="EAID_70945F0F_B1FB_4fb1_AA43_C0152D0C1F8A" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_7CC7_460e_99AD_91D11F8C1D71" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_923A42D7_98B8_4eac_9EEB_D396019F6792" name="getMaze" visibility="public" type="EAID_381B9583_BE0A_4589_ACF2_56B5841E9237" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_98B8_4eac_9EEB_D396019F6792" name="return" type="EAID_381B9583_BE0A_4589_ACF2_56B5841E9237" direction="return"/>
+					</ownedOperation>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dstBA617C_4D2C_4024_9CAB_1403C138D8FC" name="level" visibility="private" association="EAID_4FBA617C_4D2C_4024_9CAB_1403C138D8FC" isOrdered="false" isDerived="false" isDerivedUnion="false" isUnique="true" aggregation="none">
+						<type xmi:idref="EAID_7C1808EB_6FB4_44c9_89F3_BB1ACE9B73C3"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dst21EC31_0E83_4775_B8E0_30C6988039BD" name="player" visibility="private" association="EAID_5121EC31_0E83_4775_B8E0_30C6988039BD" isOrdered="false" isDerived="false" isDerivedUnion="false" isUnique="true" aggregation="none">
+						<type xmi:idref="EAID_F06C9AD8_A81B_42a5_B965_649DCE5BFCB4"/>
+					</ownedAttribute>
+				</ownedMember>
+				<ownedMember xmi:type="uml:Association" xmi:id="EAID_5121EC31_0E83_4775_B8E0_30C6988039BD" visibility="public">
+					<memberEnd xmi:idref="EAID_dst21EC31_0E83_4775_B8E0_30C6988039BD"/>
+					<memberEnd xmi:idref="EAID_src21EC31_0E83_4775_B8E0_30C6988039BD"/>
+					<ownedEnd xmi:type="uml:Property" xmi:id="EAID_src21EC31_0E83_4775_B8E0_30C6988039BD" visibility="public" association="EAID_5121EC31_0E83_4775_B8E0_30C6988039BD" isOrdered="false" isDerived="false" isDerivedUnion="false" isUnique="true" aggregation="none">
+						<type xmi:idref="EAID_1E150732_D26B_49c5_8822_26089FED0745"/>
+					</ownedEnd>
+				</ownedMember>
+				<ownedMember xmi:type="uml:Class" xmi:id="EAID_7F74B880_9DDB_4830_A629_A2E7CB59CD49" name="Ghost" visibility="public">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_313EEDF5_9A93_4015_8706_1A2D9A9CCFB4" name="target" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<type xmi:idref="EAID_15B3B887_6464_46ce_8B49_5D0A212A6747"/>
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000027_9A93_4015_8706_1A2D9A9CCFB4" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000028_9A93_4015_8706_1A2D9A9CCFB4" value="1"/>
+					</ownedAttribute>
+					<ownedOperation xmi:id="EAID_D9775A50_575B_4df6_8BD8_BC1DF1BDB5C7" name="Ghost" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_42BABB17_E5F0_4a69_9230_10F5085FF7C9" name="startTile" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" direction="in"/>
+						<ownedParameter xmi:id="EAID_C214380B_F3B9_4979_A2C8_0540666FF519" name="target" type="EAID_15B3B887_6464_46ce_8B49_5D0A212A6747" direction="in"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_4C273E4F_8501_4205_8E6C_C4FEFE59693D" name="getNextMove" visibility="public" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_8501_4205_8E6C_C4FEFE59693D" name="return" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" direction="return"/>
+					</ownedOperation>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dst39C8C8_0F49_4d68_9273_561198512937" name="target" visibility="private" association="EAID_C439C8C8_0F49_4d68_9273_561198512937" isOrdered="false" isDerived="false" isDerivedUnion="false" isUnique="true" aggregation="none">
+						<type xmi:idref="EAID_15B3B887_6464_46ce_8B49_5D0A212A6747"/>
+					</ownedAttribute>
+					<generalization xmi:type="uml:Generalization" xmi:id="EAID_DB498129_77A0_42d6_81F8_B171DEBFA9A4" general="EAID_15B3B887_6464_46ce_8B49_5D0A212A6747"/>
+				</ownedMember>
+				<ownedMember xmi:type="uml:Class" xmi:id="EAID_381B9583_BE0A_4589_ACF2_56B5841E9237" name="Maze" visibility="public">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_692C2332_FBD8_4eaa_843F_07C7DBA3082E" name="mazeTiles" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<type xmi:idref="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2"/>
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000029_FBD8_4eaa_843F_07C7DBA3082E" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000030_FBD8_4eaa_843F_07C7DBA3082E" value="1"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_22379160_70EF_4b69_BD4A_83F099DA753C" name="maxX" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000031_70EF_4b69_BD4A_83F099DA753C" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000032_70EF_4b69_BD4A_83F099DA753C" value="1"/>
+						<type xmi:idref="EAJava_int"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_AAD3A7E2_0C62_46fe_B80C_7C79D26A934E" name="maxY" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000033_0C62_46fe_B80C_7C79D26A934E" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000034_0C62_46fe_B80C_7C79D26A934E" value="1"/>
+						<type xmi:idref="EAJava_int"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_6C9970B8_8C2C_41e2_9A22_38F1BD0B1D35" name="passDots" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000035_8C2C_41e2_9A22_38F1BD0B1D35" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000036_8C2C_41e2_9A22_38F1BD0B1D35" value="1"/>
+						<type xmi:idref="EAJava_int"/>
+					</ownedAttribute>
+					<ownedOperation xmi:id="EAID_2799230F_33B5_445a_8F80_C50813098CD0" name="Maze" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_AC93B744_51CE_43be_B733_0F3C878AE5F9" name="maxX" direction="in" type="EAJava_int"/>
+						<ownedParameter xmi:id="EAID_38FBFC65_CA64_40ed_AC65_51CE831C2B25" name="maxY" direction="in" type="EAJava_int"/>
+						<ownedParameter xmi:id="EAID_B18BC4FB_06E6_45e6_A688_31C97CAB710B" name="filled" direction="in" type="EAJava_boolean"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_F42B19CE_1A25_44fb_B832_8089F2ACBAE2" name="addTile" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_1F891A15_A3F3_4d95_B0BC_4659791F2A75" name="x" direction="in" type="EAJava_int"/>
+						<ownedParameter xmi:id="EAID_8FB2300D_46C7_47da_897C_24F705360990" name="y" direction="in" type="EAJava_int"/>
+						<ownedParameter xmi:id="EAID_RT000000_1A25_44fb_B832_8089F2ACBAE2" name="return" direction="return" type="EAJava_boolean"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_D4C07A30_A185_452b_9353_79AF26E6DEE5" name="removeTile" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_8CA540EE_2FDF_4e43_A83A_E094028FD2B8" name="x" direction="in" type="EAJava_int"/>
+						<ownedParameter xmi:id="EAID_C05B24DC_7DCC_4c0f_BC26_CE64667F8636" name="y" direction="in" type="EAJava_int"/>
+						<ownedParameter xmi:id="EAID_RT000000_A185_452b_9353_79AF26E6DEE5" name="return" direction="return" type="EAJava_boolean"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_35EDA51A_EC61_4588_8353_C8589149CA87" name="getTile" visibility="public" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_4A385B41_27DA_4223_877C_908FC1552B87" name="x" direction="in" type="EAJava_int"/>
+						<ownedParameter xmi:id="EAID_1A41559B_9B15_4b45_981E_88E7E71F8140" name="y" direction="in" type="EAJava_int"/>
+						<ownedParameter xmi:id="EAID_RT000000_EC61_4588_8353_C8589149CA87" name="return" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" direction="return"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_0085FBB0_0A44_49bf_BBE4_7539DF66BFF2" name="getNeighbour" visibility="public" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_ABBF2B92_7741_4505_B021_431E5BBD0724" name="curTile" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" direction="in"/>
+						<ownedParameter xmi:id="EAID_7DDBAB59_BAEF_4b0c_8516_A069CCE2BB81" name="dir" type="EAID_32A300AA_6A97_409f_8984_20B4D8F783CB" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_0A44_49bf_BBE4_7539DF66BFF2" name="return" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" direction="return"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_EF092D12_38C0_432f_BCF3_FAC46663C1AC" name="clearMaze" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_38C0_432f_BCF3_FAC46663C1AC" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_B7605806_2CC4_4906_8752_4E102A1FC8E0" name="dotsRemaining" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_2CC4_4906_8752_4E102A1FC8E0" name="return" direction="return" type="EAJava_int"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_A6AE489E_A00F_4420_BBAD_CB3DA8C5AAEF" name="isComplete" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_A00F_4420_BBAD_CB3DA8C5AAEF" name="return" direction="return" type="EAJava_boolean"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_FACB3359_5AB2_43b8_B318_DC3A1F4ED95E" name="addExit" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_71A07571_2E64_45a8_8747_97EA641ED31E" name="x" direction="in" type="EAJava_int"/>
+						<ownedParameter xmi:id="EAID_01F756FD_55E6_45d9_BECD_DA1EAF4631C7" name="y" direction="in" type="EAJava_int"/>
+						<ownedParameter xmi:id="EAID_81696584_2C9D_4cd0_9676_18C40B177D6D" name="dir" type="EAID_32A300AA_6A97_409f_8984_20B4D8F783CB" direction="in"/>
+						<ownedParameter xmi:id="EAID_B49B1120_6753_43b1_BAE4_3D1EC3B31FCE" name="linkBack" direction="in" type="EAJava_boolean"/>
+						<ownedParameter xmi:id="EAID_RT000000_5AB2_43b8_B318_DC3A1F4ED95E" name="return" direction="return" type="EAJava_boolean"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_03E7C254_9450_4c40_837D_3B08CB5B9B13" name="removeExit" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_88544852_3BFD_40cd_82D1_90F8380227C5" name="x" direction="in" type="EAJava_int"/>
+						<ownedParameter xmi:id="EAID_6BC511E4_C834_4205_8E48_06D905C39EDD" name="y" direction="in" type="EAJava_int"/>
+						<ownedParameter xmi:id="EAID_C4788809_F7AD_4986_8012_12ECB4935A10" name="dir" type="EAID_32A300AA_6A97_409f_8984_20B4D8F783CB" direction="in"/>
+						<ownedParameter xmi:id="EAID_A92F4EA0_C7AA_48f0_B706_7C3A641B7544" name="linkBack" direction="in" type="EAJava_boolean"/>
+						<ownedParameter xmi:id="EAID_RT000000_9450_4c40_837D_3B08CB5B9B13" name="return" direction="return" type="EAJava_boolean"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_1E841FAD_8E6C_4f16_9D18_971A17879C25" name="getMaxX" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_8E6C_4f16_9D18_971A17879C25" name="return" direction="return" type="EAJava_int"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_2C7FE270_4184_466b_BEA5_0C765395BFA2" name="getMaxY" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_4184_466b_BEA5_0C765395BFA2" name="return" direction="return" type="EAJava_int"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_8FD9C2C6_507B_44d2_8D67_38C1EF87BB2C" name="iterator" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_507B_44d2_8D67_38C1EF87BB2C" name="return" direction="return" type="EAJava_Iterator&lt;Tile&gt;"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_E3762B02_3517_461e_AF94_23461A9CFE1F" name="setPassDots" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_5CCD7CD6_F502_4262_86AF_37012F8C4668" name="dots" direction="in" type="EAJava_int"/>
+						<ownedParameter xmi:id="EAID_RT000000_3517_461e_AF94_23461A9CFE1F" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_8B64732B_F2C2_4110_BE31_94DC10B46C8D" name="getPassDots" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_F2C2_4110_BE31_94DC10B46C8D" name="return" direction="return" type="EAJava_int"/>
+					</ownedOperation>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dst0D17C6_0D40_4811_8E1E_CD0194BCD677" name="mazeTiles" visibility="private" association="EAID_9A0D17C6_0D40_4811_8E1E_CD0194BCD677" isOrdered="false" isDerived="false" isDerivedUnion="false" isUnique="true" aggregation="none">
+						<type xmi:idref="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2"/>
+					</ownedAttribute>
+				</ownedMember>
+				<ownedMember xmi:type="uml:Association" xmi:id="EAID_9A0D17C6_0D40_4811_8E1E_CD0194BCD677" visibility="public">
+					<memberEnd xmi:idref="EAID_dst0D17C6_0D40_4811_8E1E_CD0194BCD677"/>
+					<memberEnd xmi:idref="EAID_src0D17C6_0D40_4811_8E1E_CD0194BCD677"/>
+					<ownedEnd xmi:type="uml:Property" xmi:id="EAID_src0D17C6_0D40_4811_8E1E_CD0194BCD677" visibility="public" association="EAID_9A0D17C6_0D40_4811_8E1E_CD0194BCD677" isOrdered="false" isDerived="false" isDerivedUnion="false" isUnique="true" aggregation="none">
+						<type xmi:idref="EAID_381B9583_BE0A_4589_ACF2_56B5841E9237"/>
+					</ownedEnd>
+				</ownedMember>
+				<ownedMember xmi:type="uml:Class" xmi:id="EAID_CCF4EC16_183A_45c6_87D0_48199ACAB7F6" name="MazeIterator" visibility="public">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E26E6994_76BB_430e_A868_51CE36A1D9A4" name="tileArray" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<type xmi:idref="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2"/>
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000037_76BB_430e_A868_51CE36A1D9A4" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000038_76BB_430e_A868_51CE36A1D9A4" value="1"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_4FBB6EE5_5608_4dc8_819E_BC8739CB6F5A" name="maxX" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000039_5608_4dc8_819E_BC8739CB6F5A" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000040_5608_4dc8_819E_BC8739CB6F5A" value="1"/>
+						<type xmi:idref="EAJava_int"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_69E57BE1_260E_484d_82F8_9A9043F5AE73" name="maxY" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000041_260E_484d_82F8_9A9043F5AE73" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000042_260E_484d_82F8_9A9043F5AE73" value="1"/>
+						<type xmi:idref="EAJava_int"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_2148A580_95BF_4275_A8A2_53019D54D3E1" name="xPointer" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000043_95BF_4275_A8A2_53019D54D3E1" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000044_95BF_4275_A8A2_53019D54D3E1" value="1"/>
+						<type xmi:idref="EAJava_int"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_A39B0F9C_9E94_450d_83C2_6421F2FAD4F8" name="yPointer" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000045_9E94_450d_83C2_6421F2FAD4F8" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000046_9E94_450d_83C2_6421F2FAD4F8" value="1"/>
+						<type xmi:idref="EAJava_int"/>
+					</ownedAttribute>
+					<ownedOperation xmi:id="EAID_250942AA_8505_432e_A448_75369F598FE2" name="MazeIterator" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_EE117972_B5D5_46b0_901E_5B8D5E13DB9E" name="maxX" direction="in" type="EAJava_int"/>
+						<ownedParameter xmi:id="EAID_C054B37D_B49D_42eb_8899_5CF299DF23AA" name="maxY" direction="in" type="EAJava_int"/>
+						<ownedParameter xmi:id="EAID_E9A477FD_105A_4cf5_9656_E86D70E4D70E" name="array" direction="in" type="EAJava_Tile[][]"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_636D5EDC_BAAD_4638_ABCD_9D4281BCE6E8" name="hasNext" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_BAAD_4638_ABCD_9D4281BCE6E8" name="return" direction="return" type="EAJava_boolean"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_46D0B250_ACFA_4830_BA9C_D69C6D207DCF" name="next" visibility="public" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_ACFA_4830_BA9C_D69C6D207DCF" name="return" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" direction="return"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_2A905305_2510_4462_9034_6B6D61C815B5" name="remove" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_2510_4462_9034_6B6D61C815B5" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dstD1CDD9_F0D4_47c7_B434_2C4CCAD085D8" name="tileArray" visibility="private" association="EAID_B8D1CDD9_F0D4_47c7_B434_2C4CCAD085D8" isOrdered="false" isDerived="false" isDerivedUnion="false" isUnique="true" aggregation="none">
+						<type xmi:idref="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2"/>
+					</ownedAttribute>
+				</ownedMember>
+				<ownedMember xmi:type="uml:Association" xmi:id="EAID_B8D1CDD9_F0D4_47c7_B434_2C4CCAD085D8" visibility="public">
+					<memberEnd xmi:idref="EAID_dstD1CDD9_F0D4_47c7_B434_2C4CCAD085D8"/>
+					<memberEnd xmi:idref="EAID_srcD1CDD9_F0D4_47c7_B434_2C4CCAD085D8"/>
+					<ownedEnd xmi:type="uml:Property" xmi:id="EAID_srcD1CDD9_F0D4_47c7_B434_2C4CCAD085D8" visibility="public" association="EAID_B8D1CDD9_F0D4_47c7_B434_2C4CCAD085D8" isOrdered="false" isDerived="false" isDerivedUnion="false" isUnique="true" aggregation="none">
+						<type xmi:idref="EAID_CCF4EC16_183A_45c6_87D0_48199ACAB7F6"/>
+					</ownedEnd>
+				</ownedMember>
+				<ownedMember xmi:type="uml:Class" xmi:id="EAID_F06C9AD8_A81B_42a5_B965_649DCE5BFCB4" name="Player" visibility="public">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_42DE0A2A_0EEB_476d_B2D3_45081A79C0FB" name="lives" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000047_0EEB_476d_B2D3_45081A79C0FB" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000048_0EEB_476d_B2D3_45081A79C0FB" value="1"/>
+						<type xmi:idref="EAJava_int"/>
+					</ownedAttribute>
+					<ownedOperation xmi:id="EAID_E0861147_2B81_4534_BD38_45E8B1CB906D" name="Player" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_14BB855F_EB89_45e9_A94D_A00EEA617FF6" name="startTile" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" direction="in"/>
+						<ownedParameter xmi:id="EAID_4BBE9F76_2FF9_4e5f_9B36_8AFE422921C3" name="startLives" direction="in" type="EAJava_int"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_B587527A_ECC2_49fe_B774_869EAE724306" name="loseLife" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_ECC2_49fe_B774_869EAE724306" name="return" direction="return" type="EAJava_boolean"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_D5FA5246_5AF8_4055_8D3F_B1F16E3E2BE2" name="getLives" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_5AF8_4055_8D3F_B1F16E3E2BE2" name="return" direction="return" type="EAJava_int"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_1C57F437_6C26_482c_89A7_FF332BFFBFC3" name="setLives" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_98F42FC5_E9D7_4ec5_9B39_3094807DD97E" name="lives" direction="in" type="EAJava_int"/>
+						<ownedParameter xmi:id="EAID_RT000000_6C26_482c_89A7_FF332BFFBFC3" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_47BE4211_72F9_4fd4_BCF0_E1E7152058C7" name="isDead" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_72F9_4fd4_BCF0_E1E7152058C7" name="return" direction="return" type="EAJava_boolean"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_EA48F54A_8C24_499a_9C55_EF01E020A460" name="setTile" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_601CB33A_9B43_4599_80D7_4D6A596C3F12" name="newTile" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_8C24_499a_9C55_EF01E020A460" name="return" direction="return" type="EAJava_boolean"/>
+					</ownedOperation>
+					<generalization xmi:type="uml:Generalization" xmi:id="EAID_C865D7D8_1FFC_4298_87C7_07B4C7ECA70D" general="EAID_15B3B887_6464_46ce_8B49_5D0A212A6747"/>
+				</ownedMember>
+				<ownedMember xmi:type="uml:Class" xmi:id="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" name="Tile" visibility="public">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_9798F968_9B7B_4dbc_B688_0F882F702EBC" name="visited" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000049_9B7B_4dbc_B688_0F882F702EBC" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000050_9B7B_4dbc_B688_0F882F702EBC" value="1"/>
+						<type xmi:idref="EAJava_boolean"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_49846276_AB93_46ac_97BC_4F5C35D3F1D3" name="xCoord" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000051_AB93_46ac_97BC_4F5C35D3F1D3" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000052_AB93_46ac_97BC_4F5C35D3F1D3" value="1"/>
+						<type xmi:idref="EAJava_int"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_C8293AE0_438F_48b8_8DA6_EAFF69A22740" name="yCoord" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000053_438F_48b8_8DA6_EAFF69A22740" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000054_438F_48b8_8DA6_EAFF69A22740" value="1"/>
+						<type xmi:idref="EAJava_int"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_1AEFA3AD_29AD_4dc9_A267_2C28B1C11338" name="exits" visibility="private" isDerived="false" isOrdered="false" isUnique="true">
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000055_29AD_4dc9_A267_2C28B1C11338" value="1"/>
+						<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000056_29AD_4dc9_A267_2C28B1C11338" value="1"/>
+						<type xmi:idref="EAJava_Map&lt;Direction, Tile&gt;"/>
+					</ownedAttribute>
+					<ownedOperation xmi:id="EAID_F4E498BA_2A88_481d_BB33_908819FCDC44" name="Tile" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_71ACCDE1_426E_40d5_A443_CEC17E28CE71" name="x" direction="in" type="EAJava_int"/>
+						<ownedParameter xmi:id="EAID_25A7D813_101E_42f6_B42B_52A8981A1489" name="y" direction="in" type="EAJava_int"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_04CB5ABA_090D_40fd_B9FE_E3AD4ED70087" name="hasDot" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_090D_40fd_B9FE_E3AD4ED70087" name="return" direction="return" type="EAJava_boolean"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_AF56BDDD_62B8_40d6_B568_35C548EF5476" name="getXCoord" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_62B8_40d6_B568_35C548EF5476" name="return" direction="return" type="EAJava_int"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_2B5A9C15_7CB4_4fd1_ADF9_E7CFB1EEC4F1" name="getYCoord" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_7CB4_4fd1_ADF9_E7CFB1EEC4F1" name="return" direction="return" type="EAJava_int"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_455470AD_880D_458d_90F6_3EA332F10F12" name="clearDot" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_880D_458d_90F6_3EA332F10F12" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_C0AD7BE8_D96B_4562_B3BE_E016CBC73FAD" name="resetDot" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_D96B_4562_B3BE_E016CBC73FAD" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_3CE3DC2B_E024_472a_AE3E_102F635EF04F" name="setExit" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_D2501632_BADB_4e37_A60D_880C114330B6" name="dir" type="EAID_32A300AA_6A97_409f_8984_20B4D8F783CB" direction="in"/>
+						<ownedParameter xmi:id="EAID_A2136DE9_62B0_4ff7_92F4_36D00B90D81F" name="tile" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_E024_472a_AE3E_102F635EF04F" name="return" direction="return" type="EAJava_boolean"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_D9E321E0_E92B_440a_BF20_168CA88768BC" name="removeExit" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_D2FDA2F8_7CF2_4412_B9AC_2A8D6A26155B" name="dir" type="EAID_32A300AA_6A97_409f_8984_20B4D8F783CB" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_E92B_440a_BF20_168CA88768BC" name="return" direction="return" type="EAJava_boolean"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_85918F10_E962_43a9_9EE9_22B923BA8E72" name="getExit" visibility="public" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_AA141E62_73C0_48d1_A15B_5AB6EDD3DCE4" name="dir" type="EAID_32A300AA_6A97_409f_8984_20B4D8F783CB" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_E962_43a9_9EE9_22B923BA8E72" name="return" type="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" direction="return"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_553946B7_91E1_4bda_B2EB_246A59540F50" name="shortName" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_91E1_4bda_B2EB_246A59540F50" name="return" direction="return" type="EAJava_String"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_7A183822_82FB_4319_BC1F_C0D9AC3B758C" name="toString" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_RT000000_82FB_4319_BC1F_C0D9AC3B758C" name="return" direction="return" type="EAJava_String"/>
+					</ownedOperation>
+				</ownedMember>
+				<ownedMember xmi:type="uml:Interface" xmi:id="EAID_70945F0F_B1FB_4fb1_AA43_C0152D0C1F8A" name="GameListener" visibility="public" isAbstract="true">
+					<ownedOperation xmi:id="EAID_E84445F7_4D4D_4055_959A_124D8A85D25C" name="playerMove" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_EA2732A0_F704_47ff_ABFA_8C4FA3B2FF28" name="event" type="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_4D4D_4055_959A_124D8A85D25C" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_0E08DCC0_4BC6_4cd6_A7E7_D35A85D0387C" name="playerDeath" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_6900B1E3_7D9E_432f_84F4_EE2D1187B937" name="event" type="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_4BC6_4cd6_A7E7_D35A85D0387C" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_EDA3B8A8_C5E7_4376_836F_E2E74CC1BE7E" name="gameOver" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_4EDE4E39_7440_480e_BEEE_39300F669FFC" name="event" type="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_C5E7_4376_836F_E2E74CC1BE7E" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_62EE8B7E_7181_4e96_80A7_7B2C8DEAAB62" name="levelComplete" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_3062DCA0_1704_42d7_B4AD_F314EE90FFB9" name="event" type="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_7181_4e96_80A7_7B2C8DEAAB62" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+				</ownedMember>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Package" xmi:id="EAPK_E7B6015A_09D4_4860_B2D3_564096901C0D" name="view" visibility="public">
+				<ownedElement xmi:type="uml:Realization" xmi:id="EAID_C57FE722_454A_4eab_B622_097C4A005AE9" visibility="public" supplier="EAID_70945F0F_B1FB_4fb1_AA43_C0152D0C1F8A" realizingClassifier="EAID_70945F0F_B1FB_4fb1_AA43_C0152D0C1F8A" client="EAID_50CE3F9F_A082_4fe7_93BB_26A31E13641F"/>
+				<ownedMember xmi:type="uml:Class" xmi:id="EAID_50CE3F9F_A082_4fe7_93BB_26A31E13641F" name="ConsoleView" visibility="public">
+					<ownedOperation xmi:id="EAID_2BF14C1B_88B5_460b_B024_3CAF6ECC63B6" name="ConsoleView" visibility="public" concurrency="sequential"/>
+					<ownedOperation xmi:id="EAID_842B0E83_CE63_47d1_ABAC_B33DCD41943D" name="ConsoleView" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_513E6968_D044_4777_AE88_3726BE5BC37A" name="model" type="EAID_1E150732_D26B_49c5_8822_26089FED0745" direction="in"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_F282186F_57EA_4215_A4D9_2E4C4EFB0AEF" name="drawMaze" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_649CC2A9_DBC4_4485_BBE8_8EE4980FDE48" name="model" type="EAID_1E150732_D26B_49c5_8822_26089FED0745" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_57EA_4215_A4D9_2E4C4EFB0AEF" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_270A4A06_F304_417b_9875_3C1E8ECEC121" name="playerMove" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_7ADE78C0_2A79_48cf_BD27_F3C457B0A813" name="event" type="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_F304_417b_9875_3C1E8ECEC121" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_C8121B53_4033_4e3b_BEE3_971C13C9A2E7" name="playerDeath" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_7C7A8BBA_0E8A_4b95_9C36_AC4E51D3D144" name="event" type="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_4033_4e3b_BEE3_971C13C9A2E7" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_F5E173FA_688F_401b_AB33_DD94F461618A" name="gameOver" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_BE887763_D8B2_4877_96EB_48C70F356881" name="event" type="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_688F_401b_AB33_DD94F461618A" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+					<ownedOperation xmi:id="EAID_7F3B35B9_8929_4bd8_A9A4_247C16B34D3B" name="levelComplete" visibility="public" concurrency="sequential">
+						<ownedParameter xmi:id="EAID_ABCBC4AB_5851_4777_8545_F108EACD88B1" name="event" type="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3" direction="in"/>
+						<ownedParameter xmi:id="EAID_RT000000_8929_4bd8_A9A4_247C16B34D3B" name="return" direction="return" type="EAJava_void"/>
+					</ownedOperation>
+				</ownedMember>
+			</ownedMember>
+		</ownedMember>
+		<packagedElement xmi:type="uml:Package" xmi:id="EAPrimitiveTypesPackage" name="EA_PrimitiveTypes_Package" visibility="public">
+			<packagedElement xmi:type="uml:Package" xmi:id="EACommonTypesPackage" name="EA_CommonTypes_Package" visibility="public">
+				<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAID_EABOOL00_B653_4f3c_A010_30205D67F5F5" name="EA_Boolean" visibility="public">
+					<generalization xmi:type="uml:Generalization" xmi:id="EA_Boolean_General">
+						<general href="http://schema.omg.org/spec/UML/2.1/#Boolean"/>
+					</generalization>
+				</packagedElement>
+				<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAID_EAINT000_B653_4f3c_A010_30205D67F5F5" name="EA_Integer" visibility="public">
+					<generalization xmi:type="uml:Generalization" xmi:id="EA_Integer_General">
+						<general href="http://schema.omg.org/spec/UML/2.1/#Integer"/>
+					</generalization>
+				</packagedElement>
+				<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAID_EAUNAT00_B653_4f3c_A010_30205D67F5F5" name="EA_UnlimitedNatural" visibility="public">
+					<generalization xmi:type="uml:Generalization" xmi:id="EA_UnlimitedNatural_General">
+						<general href="http://schema.omg.org/spec/UML/2.1/#UnlimitedNatural"/>
+					</generalization>
+				</packagedElement>
+				<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAID_EASTRING_B653_4f3c_A010_30205D67F5F5" name="EA_String" visibility="public">
+					<generalization xmi:type="uml:Generalization" xmi:id="EA_String_General">
+						<general href="http://schema.omg.org/spec/UML/2.1/#String"/>
+					</generalization>
+				</packagedElement>
+			</packagedElement>
+			<packagedElement xmi:type="uml:Package" xmi:id="EAJavaTypesPackage" name="EA_Java_Types_Package" visibility="public">
+				<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAJava_BufferedInputStream" name="BufferedInputStream" visibility="public"/>
+				<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAJava_boolean" name="boolean" visibility="public">
+					<generalization xmi:type="uml:Generalization" xmi:id="EAJava_boolean_General" general="EAID_EABOOL00_B653_4f3c_A010_30205D67F5F5"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAJava_void" name="void" visibility="public"/>
+				<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAJava_String[]" name="String[]" visibility="public"/>
+				<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAJava_List&lt;Tile&gt;" name="List&lt;Tile&gt;" visibility="public"/>
+				<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAJava_int" name="int" visibility="public">
+					<generalization xmi:type="uml:Generalization" xmi:id="EAJava_int_General" general="EAID_EAINT000_B653_4f3c_A010_30205D67F5F5"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAJava_List&lt;Ghost&gt;" name="List&lt;Ghost&gt;" visibility="public"/>
+				<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAJava_List&lt;String&gt;" name="List&lt;String&gt;" visibility="public"/>
+				<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAJava_List&lt;GameListener&gt;" name="List&lt;GameListener&gt;" visibility="public"/>
+				<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAJava_String" name="String" visibility="public"/>
+				<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAJava_Iterator&lt;Tile&gt;" name="Iterator&lt;Tile&gt;" visibility="public"/>
+				<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAJava_Tile[][]" name="Tile[][]" visibility="public"/>
+				<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAJava_Map&lt;Direction, Tile&gt;" name="Map&lt;Direction, Tile&gt;" visibility="public"/>
+			</packagedElement>
+		</packagedElement>
+		<thecustomprofile:annotations base_Operation="EAID_F3BAC98A_1D14_40a3_AB26_2E00FEC44B74" annotations="@Override"/>
+		<thecustomprofile:annotations base_Operation="EAID_117A1EB0_6457_40bc_986D_EB1A81F90729" annotations="@Override"/>
+		<thecustomprofile:throws base_Operation="EAID_8B88E9E4_61A2_4c21_AB8C_694355B7B5A2" throws="IOException"/>
+		<EAUML:enumeration base_Class="EAID_32A300AA_6A97_409f_8984_20B4D8F783CB"/>
+		<thecustomprofile:enum base_Attribute="EAID_5791DE2C_5CFB_409b_A3F5_DEC69A793917"/>
+		<thecustomprofile:enum base_Attribute="EAID_A553048B_315F_4af4_8B2A_E9CD22C015E6"/>
+		<thecustomprofile:enum base_Attribute="EAID_20069F23_F90A_4151_A9E5_6AF9CF82FA32"/>
+		<thecustomprofile:enum base_Attribute="EAID_5E1363D8_1134_4dce_B669_AF145DA0C9E4"/>
+		<thecustomprofile:annotations base_Operation="EAID_8FD9C2C6_507B_44d2_8D67_38C1EF87BB2C" annotations="@Override"/>
+		<thecustomprofile:annotations base_Operation="EAID_636D5EDC_BAAD_4638_ABCD_9D4281BCE6E8" annotations="@Override"/>
+		<thecustomprofile:annotations base_Operation="EAID_46D0B250_ACFA_4830_BA9C_D69C6D207DCF" annotations="@Override"/>
+		<thecustomprofile:annotations base_Operation="EAID_2A905305_2510_4462_9034_6B6D61C815B5" annotations="@Override"/>
+		<thecustomprofile:interface base_Interface="EAID_70945F0F_B1FB_4fb1_AA43_C0152D0C1F8A"/>
+		<uml:Profile xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.0/" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:id="thecustomprofile" nsPrefix="thecustomprofile" name="thecustomprofile" metamodelReference="mmref01">
+			<ownedComment xmi:type="uml:Comment" xmi:id="comment01" annotatedElement="thecustomprofile">
+				<body> Version:1.0</body>
+			</ownedComment>
+			<packageImport xmi:id="mmref01">
+				<importedPackage href="http://schema.omg.org/spec/UML/2.0/"/>
+			</packageImport>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="interface" name="interface">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="interface-base_Interface" name="base_Interface" association="Interface_interface">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Interface"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Interface_interface" name="A_Interface_interface" memberEnd="extension_interface interface-base_Interface">
+				<ownedEnd xmi:id="extension_interface" name="extension_interface" type="interface" isComposite="true" lower="0" upper="1" memberEnd="extension_interface interface-base_Interface"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="annotations" name="annotations">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="annotations-base_Operation" name="base_Operation" association="Operation_annotations">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Operation"/>
+				</ownedAttribute>
+				<ownedAttribute xmi:type="uml:Property" xmi:id="annotations-annotations" name="annotations">
+					<type href="http://schema.omg.org/spec/UML/2.0/#String"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Operation_annotations" name="A_Operation_annotations" memberEnd="extension_annotations annotations-base_Operation">
+				<ownedEnd xmi:id="extension_annotations" name="extension_annotations" type="annotations" isComposite="true" lower="0" upper="1" memberEnd="extension_annotations annotations-base_Operation"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="throws" name="throws">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="throws-base_Operation" name="base_Operation" association="Operation_throws">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Operation"/>
+				</ownedAttribute>
+				<ownedAttribute xmi:type="uml:Property" xmi:id="throws-throws" name="throws">
+					<type href="http://schema.omg.org/spec/UML/2.0/#String"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Operation_throws" name="A_Operation_throws" memberEnd="extension_throws throws-base_Operation">
+				<ownedEnd xmi:id="extension_throws" name="extension_throws" type="throws" isComposite="true" lower="0" upper="1" memberEnd="extension_throws throws-base_Operation"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="enum" name="enum">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="enum-base_Attribute" name="base_Attribute" association="Attribute_enum">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Attribute"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Attribute_enum" name="A_Attribute_enum" memberEnd="extension_enum enum-base_Attribute">
+				<ownedEnd xmi:id="extension_enum" name="extension_enum" type="enum" isComposite="true" lower="0" upper="1" memberEnd="extension_enum enum-base_Attribute"/>
+			</ownedMember>
+		</uml:Profile>
+		<uml:Profile xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.0/" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:id="8C9E6706-8" nsPrefix="EAUML" name="EAUML" metamodelReference="mmref01">
+			<ownedComment xmi:type="uml:Comment" xmi:id="comment01" annotatedElement="8C9E6706-8">
+				<body>EAUML Version:1.0</body>
+			</ownedComment>
+			<packageImport xmi:id="mmref01">
+				<importedPackage href="http://schema.omg.org/spec/UML/2.0/"/>
+			</packageImport>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="business boundary" name="business boundary">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="business boundary-base_Object" name="base_Object" association="Object_business boundary">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Object"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Object_business boundary" name="A_Object_business boundary" memberEnd="extension_business boundary business boundary-base_Object">
+				<ownedEnd xmi:id="extension_business boundary" name="extension_business boundary" type="business boundary" isComposite="true" lower="0" upper="1" memberEnd="extension_business boundary business boundary-base_Object"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="procedure" name="procedure">
+				<generalization xmi:type="uml:Generalization" xmi:id="procedure_generalization" general="table"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="abstraction" name="abstraction">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="abstraction-base_Dependency" name="base_Dependency" association="Dependency_abstraction">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Dependency"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Dependency_abstraction" name="A_Dependency_abstraction" memberEnd="extension_abstraction abstraction-base_Dependency">
+				<ownedEnd xmi:id="extension_abstraction" name="extension_abstraction" type="abstraction" isComposite="true" lower="0" upper="1" memberEnd="extension_abstraction abstraction-base_Dependency"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="XSDchoice" name="XSDchoice">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="XSDchoice-base_Class" name="base_Class" association="Class_XSDchoice">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Class"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Class_XSDchoice" name="A_Class_XSDchoice" memberEnd="extension_XSDchoice XSDchoice-base_Class">
+				<ownedEnd xmi:id="extension_XSDchoice" name="extension_XSDchoice" type="XSDchoice" isComposite="true" lower="0" upper="1" memberEnd="extension_XSDchoice XSDchoice-base_Class"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="business use-case realization" name="business use-case realization">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="business use-case realization-base_Collaboration" name="base_Collaboration" association="Collaboration_business use-case realization">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Collaboration"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Collaboration_business use-case realization" name="A_Collaboration_business use-case realization" memberEnd="extension_business use-case realization business use-case realization-base_Collaboration">
+				<ownedEnd xmi:id="extension_business use-case realization" name="extension_business use-case realization" type="business use-case realization" isComposite="true" lower="0" upper="1" memberEnd="extension_business use-case realization business use-case realization-base_Collaboration"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="use" name="use">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="use-base_Dependency" name="base_Dependency" association="Dependency_use">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Dependency"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Dependency_use" name="A_Dependency_use" memberEnd="extension_use use-base_Dependency">
+				<ownedEnd xmi:id="extension_use" name="extension_use" type="use" isComposite="true" lower="0" upper="1" memberEnd="extension_use use-base_Dependency"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="internal worker" name="internal worker">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="internal worker-base_Object" name="base_Object" association="Object_internal worker">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Object"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Object_internal worker" name="A_Object_internal worker" memberEnd="extension_internal worker internal worker-base_Object">
+				<ownedEnd xmi:id="extension_internal worker" name="extension_internal worker" type="internal worker" isComposite="true" lower="0" upper="1" memberEnd="extension_internal worker internal worker-base_Object"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="instantiate" name="instantiate">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="instantiate-base_Dependency" name="base_Dependency" association="Dependency_instantiate">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Dependency"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Dependency_instantiate" name="A_Dependency_instantiate" memberEnd="extension_instantiate instantiate-base_Dependency">
+				<ownedEnd xmi:id="extension_instantiate" name="extension_instantiate" type="instantiate" isComposite="true" lower="0" upper="1" memberEnd="extension_instantiate instantiate-base_Dependency"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="import" name="import">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="import-base_Dependency" name="base_Dependency" association="Dependency_import">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Dependency"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Dependency_import" name="A_Dependency_import" memberEnd="extension_import import-base_Dependency">
+				<ownedEnd xmi:id="extension_import" name="extension_import" type="import" isComposite="true" lower="0" upper="1" memberEnd="extension_import import-base_Dependency"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="view" name="view">
+				<generalization xmi:type="uml:Generalization" xmi:id="view_generalization" general="table"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="model document" name="model document">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="model document-base_Class" name="base_Class" association="Class_model document">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Class"/>
+				</ownedAttribute>
+				<ownedAttribute xmi:type="uml:Property" xmi:id="model document-RTFTemplate" name="RTFTemplate">
+					<type href="http://schema.omg.org/spec/UML/2.0/#String"/>
+				</ownedAttribute>
+				<ownedAttribute xmi:type="uml:Property" xmi:id="model document-SearchValue" name="SearchValue">
+					<type href="http://schema.omg.org/spec/UML/2.0/#String"/>
+				</ownedAttribute>
+				<ownedAttribute xmi:type="uml:Property" xmi:id="model document-SearchName" name="SearchName">
+					<type href="http://schema.omg.org/spec/UML/2.0/#String"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Class_model document" name="A_Class_model document" memberEnd="extension_model document model document-base_Class">
+				<ownedEnd xmi:id="extension_model document" name="extension_model document" type="model document" isComposite="true" lower="0" upper="1" memberEnd="extension_model document model document-base_Class"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="worker" name="worker">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="worker-base_Object" name="base_Object" association="Object_worker">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Object"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Object_worker" name="A_Object_worker" memberEnd="extension_worker worker-base_Object">
+				<ownedEnd xmi:id="extension_worker" name="extension_worker" type="worker" isComposite="true" lower="0" upper="1" memberEnd="extension_worker worker-base_Object"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="enumeration" name="enumeration">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="enumeration-base_Class" name="base_Class" association="Class_enumeration">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Class"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Class_enumeration" name="A_Class_enumeration" memberEnd="extension_enumeration enumeration-base_Class">
+				<ownedEnd xmi:id="extension_enumeration" name="extension_enumeration" type="enumeration" isComposite="true" lower="0" upper="1" memberEnd="extension_enumeration enumeration-base_Class"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="navigate" name="navigate">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="navigate-base_Association" name="base_Association" association="Association_navigate">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Association"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Association_navigate" name="A_Association_navigate" memberEnd="extension_navigate navigate-base_Association">
+				<ownedEnd xmi:id="extension_navigate" name="extension_navigate" type="navigate" isComposite="true" lower="0" upper="1" memberEnd="extension_navigate navigate-base_Association"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="business entity" name="business entity">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="business entity-base_Object" name="base_Object" association="Object_business entity">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Object"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Object_business entity" name="A_Object_business entity" memberEnd="extension_business entity business entity-base_Object">
+				<ownedEnd xmi:id="extension_business entity" name="extension_business entity" type="business entity" isComposite="true" lower="0" upper="1" memberEnd="extension_business entity business entity-base_Object"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="business use case" name="business use case">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="business use case-base_UseCase" name="base_UseCase" association="UseCase_business use case">
+					<type href="http://schema.omg.org/spec/UML/2.0/#UseCase"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="UseCase_business use case" name="A_UseCase_business use case" memberEnd="extension_business use case business use case-base_UseCase">
+				<ownedEnd xmi:id="extension_business use case" name="extension_business use case" type="business use case" isComposite="true" lower="0" upper="1" memberEnd="extension_business use case business use case-base_UseCase"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="business actor" name="business actor">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="business actor-base_Actor" name="base_Actor" association="Actor_business actor">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Actor"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Actor_business actor" name="A_Actor_business actor" memberEnd="extension_business actor business actor-base_Actor">
+				<ownedEnd xmi:id="extension_business actor" name="extension_business actor" type="business actor" isComposite="true" lower="0" upper="1" memberEnd="extension_business actor business actor-base_Actor"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="column" name="column">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="column-base_Attribute" name="base_Attribute" association="Attribute_column">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Attribute"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Attribute_column" name="A_Attribute_column" memberEnd="extension_column column-base_Attribute">
+				<ownedEnd xmi:id="extension_column" name="extension_column" type="column" isComposite="true" lower="0" upper="1" memberEnd="extension_column column-base_Attribute"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="business worker" name="business worker">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="business worker-base_Object" name="base_Object" association="Object_business worker">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Object"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Object_business worker" name="A_Object_business worker" memberEnd="extension_business worker business worker-base_Object">
+				<ownedEnd xmi:id="extension_business worker" name="extension_business worker" type="business worker" isComposite="true" lower="0" upper="1" memberEnd="extension_business worker business worker-base_Object"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="table" name="table">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="table-base_Class" name="base_Class" association="Class_table">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Class"/>
+				</ownedAttribute>
+				<ownedAttribute xmi:type="uml:Property" xmi:id="table-DBVERSION" name="DBVERSION">
+					<type href="http://schema.omg.org/spec/UML/2.0/#String"/>
+				</ownedAttribute>
+				<ownedAttribute xmi:type="uml:Property" xmi:id="table-OWNER" name="OWNER">
+					<type href="http://schema.omg.org/spec/UML/2.0/#String"/>
+				</ownedAttribute>
+				<ownedAttribute xmi:type="uml:Property" xmi:id="table-TABLESPACE" name="TABLESPACE">
+					<type href="http://schema.omg.org/spec/UML/2.0/#String"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Class_table" name="A_Class_table" memberEnd="extension_table table-base_Class">
+				<ownedEnd xmi:id="extension_table" name="extension_table" type="table" isComposite="true" lower="0" upper="1" memberEnd="extension_table table-base_Class"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="business control" name="business control">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="business control-base_Object" name="base_Object" association="Object_business control">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Object"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Object_business control" name="A_Object_business control" memberEnd="extension_business control business control-base_Object">
+				<ownedEnd xmi:id="extension_business control" name="extension_business control" type="business control" isComposite="true" lower="0" upper="1" memberEnd="extension_business control business control-base_Object"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="derive" name="derive">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="derive-base_Dependency" name="base_Dependency" association="Dependency_derive">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Dependency"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Dependency_derive" name="A_Dependency_derive" memberEnd="extension_derive derive-base_Dependency">
+				<ownedEnd xmi:id="extension_derive" name="extension_derive" type="derive" isComposite="true" lower="0" upper="1" memberEnd="extension_derive derive-base_Dependency"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="XSDall" name="XSDall">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="XSDall-base_Class" name="base_Class" association="Class_XSDall">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Class"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Class_XSDall" name="A_Class_XSDall" memberEnd="extension_XSDall XSDall-base_Class">
+				<ownedEnd xmi:id="extension_XSDall" name="extension_XSDall" type="XSDall" isComposite="true" lower="0" upper="1" memberEnd="extension_XSDall XSDall-base_Class"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="XSDsequence" name="XSDsequence">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="XSDsequence-base_Class" name="base_Class" association="Class_XSDsequence">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Class"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Class_XSDsequence" name="A_Class_XSDsequence" memberEnd="extension_XSDsequence XSDsequence-base_Class">
+				<ownedEnd xmi:id="extension_XSDsequence" name="extension_XSDsequence" type="XSDsequence" isComposite="true" lower="0" upper="1" memberEnd="extension_XSDsequence XSDsequence-base_Class"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="case worker" name="case worker">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="case worker-base_Object" name="base_Object" association="Object_case worker">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Object"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Object_case worker" name="A_Object_case worker" memberEnd="extension_case worker case worker-base_Object">
+				<ownedEnd xmi:id="extension_case worker" name="extension_case worker" type="case worker" isComposite="true" lower="0" upper="1" memberEnd="extension_case worker case worker-base_Object"/>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Stereotype" xmi:id="master document" name="master document">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="master document-base_Package" name="base_Package" association="Package_master document">
+					<type href="http://schema.omg.org/spec/UML/2.0/#Package"/>
+				</ownedAttribute>
+				<ownedAttribute xmi:type="uml:Property" xmi:id="master document-RTFTemplate" name="RTFTemplate">
+					<type href="http://schema.omg.org/spec/UML/2.0/#String"/>
+				</ownedAttribute>
+			</ownedMember>
+			<ownedMember xmi:type="uml:Extension" xmi:id="Package_master document" name="A_Package_master document" memberEnd="extension_master document master document-base_Package">
+				<ownedEnd xmi:id="extension_master document" name="extension_master document" type="master document" isComposite="true" lower="0" upper="1" memberEnd="extension_master document master document-base_Package"/>
+			</ownedMember>
+		</uml:Profile>
+	</uml:Model>
+	<xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+		<diagrams>
+			<diagram xmi:id="EAID_3254E81E_BCDD_4c00_A494_3FCA71FDF64C">
+				<model package="EAPK_E1B76704_9F36_468c_B2DC_8CCB19979583" localID="7" owner="EAPK_E1B76704_9F36_468c_B2DC_8CCB19979583"/>
+				<properties name="Milestone2" type="Logical"/>
+				<project author="Hafeez" version="1.0" created="2012-04-24 11:47:10" modified="2012-09-26 18:04:49"/>
+				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=0;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=835;DocSize.cy=1083;ShowDetails=0;Orientation=P;Zoom=75;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;MatrixLineWidth=1;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=0;bold=false;fcol=0;;cls=0;"/>
+				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;width=1;"/>
+				<extendedProperties/>
+				<elements>
+					<element geometry="Left=24;Top=757;Right=237;Bottom=898;" subject="EAID_50CE3F9F_A082_4fe7_93BB_26A31E13641F" seqno="1" style="DUID=93C60AB8;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=18;Top=634;Right=231;Bottom=724;" subject="EAID_70945F0F_B1FB_4fb1_AA43_C0152D0C1F8A" seqno="2" style="DUID=3B0249B5;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=17;Top=10;Right=226;Bottom=250;" subject="EAID_95184B55_ED08_4480_AE66_E6BE7442B0E2" seqno="3" style="DUID=A15A7078;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=610;Top=192;Right=797;Bottom=342;" subject="EAID_F06C9AD8_A81B_42a5_B965_649DCE5BFCB4" seqno="4" style="DUID=D0CFFB89;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=287;Top=12;Right=533;Bottom=184;" subject="EAID_CCF4EC16_183A_45c6_87D0_48199ACAB7F6" seqno="5" style="DUID=7CFA6145;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=12;Top=314;Right=344;Bottom=616;" subject="EAID_381B9583_BE0A_4589_ACF2_56B5841E9237" seqno="6" style="DUID=F2F42A1F;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=565;Top=51;Right=768;Bottom=149;" subject="EAID_7F74B880_9DDB_4830_A629_A2E7CB59CD49" seqno="7" style="DUID=3646B03F;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=569;Top=611;Right=805;Bottom=890;" subject="EAID_1E150732_D26B_49c5_8822_26089FED0745" seqno="8" style="DUID=0423C5E8;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=339;Top=630;Right=552;Bottom=732;" subject="EAID_F2C46A9E_940D_4bfe_BDED_3E29CF4354D8" seqno="9" style="DUID=CA80BBC1;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=405;Top=350;Right=599;Bottom=564;" subject="EAID_7C1808EB_6FB4_44c9_89F3_BB1ACE9B73C3" seqno="10" style="DUID=5810AC14;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=611;Top=931;Right=792;Bottom=1019;" subject="EAID_B9D28433_1624_433e_A4DE_F2BAFD5108C3" seqno="11" style="DUID=6226F747;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=391;Top=200;Right=569;Bottom=327;" subject="EAID_15B3B887_6464_46ce_8B49_5D0A212A6747" seqno="12" style="DUID=FB36E386;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=122;Top=936;Right=267;Bottom=1056;" subject="EAID_32A300AA_6A97_409f_8984_20B4D8F783CB" seqno="13" style="DUID=88D93683;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=289;Top=948;Right=431;Bottom=1018;" subject="EAID_7E7D36DD_A153_4a27_9D1A_35A9FA93BACB" seqno="14" style="DUID=4D41B1F7;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=285;Top=768;Right=479;Bottom=927;" subject="EAID_2F2D83B7_ADF2_48a6_9A8D_15E0EA93C3F2" seqno="15" style="DUID=16B52C5A;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_C57FE722_454A_4eab_B622_097C4A005AE9" style="Mode=3;EOID=3B0249B5;SOID=93C60AB8;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_C865D7D8_1FFC_4298_87C7_07B4C7ECA70D" style="Mode=3;EOID=FB36E386;SOID=D0CFFB89;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=-4;SY=36;EX=104;EY=68;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=CX=43:CY=16:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_B8D1CDD9_F0D4_47c7_B434_2C4CCAD085D8" style="Mode=3;EOID=A15A7078;SOID=7CFA6145;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=CX=51:CY=16:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_9A0D17C6_0D40_4811_8E1E_CD0194BCD677" style="Mode=3;EOID=A15A7078;SOID=F2F42A1F;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=-51;SY=-31;EX=-51;EY=-28;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=920:-780$;" subject="EAID_DB498129_77A0_42d6_81F8_B171DEBFA9A4" style="Mode=1;EOID=FB36E386;SOID=3646B03F;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=18;SY=-1;EX=18;EY=-1;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=CX=31:CY=16:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=956:-780$;" subject="EAID_C439C8C8_0F49_4d68_9273_561198512937" style="Mode=1;EOID=FB36E386;SOID=3646B03F;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=CX=26:CY=16:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_4FBA617C_4D2C_4024_9CAB_1403C138D8FC" style="Mode=3;EOID=5810AC14;SOID=0423C5E8;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=CX=33:CY=16:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_5121EC31_0E83_4775_B8E0_30C6988039BD" style="Mode=3;EOID=D0CFFB89;SOID=0423C5E8;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_F25B8EB7_F961_4215_BD9C_A8BEB9DE5034" style="Mode=3;EOID=3B0249B5;SOID=CA80BBC1;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=2;SY=15;EX=2;EY=15;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=CX=55:CY=16:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=546:-480$;" subject="EAID_C066865A_B1AA_4ab7_B94F_ACC2BC35DAEA" style="Mode=1;EOID=A15A7078;SOID=5810AC14;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=-11;SY=47;EX=-11;EY=55;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=CX=29:CY=16:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_CB431176_BDA5_458e_A193_8B28A56C1C40" style="Mode=3;EOID=F2F42A1F;SOID=5810AC14;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=CX=36:CY=16:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_79541E01_0D7E_444b_A0DC_0CE766512121" style="Mode=3;EOID=0423C5E8;SOID=6226F747;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=104;EY=-48;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=CX=53:CY=16:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_8D101D2C_9E4B_44df_847F_80B0E1D312B7" style="Mode=3;EOID=A15A7078;SOID=FB36E386;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=-63;EY=-50;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_9ED1389C_C1FF_461a_A3F5_6EA01420D2C8" style="Mode=3;EOID=CA80BBC1;SOID=16B52C5A;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=96;SY=66;EX=-117;EY=-31;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=CX=33:CY=16:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_EA781123_2412_465c_B7C2_114129583AB8" style="Mode=3;EOID=0423C5E8;SOID=16B52C5A;Color=-1;LWidth=0;Hidden=0;"/>
+				</elements>
+			</diagram>
+		</diagrams>
+	</xmi:Extension>
+</xmi:XMI>

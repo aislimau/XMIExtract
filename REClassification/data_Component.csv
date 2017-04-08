@@ -1,0 +1,5 @@
+Name,NumOps,NumComp,NumPack,NumCls,NumInterf,NumManifest,Connectors,ProvidedIF,RequiredIF,Dep_Out,Dep_In,Assoc_Out,Assoc_In,Diags
+Root.Component View.atm,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Root.Component View.physical,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Root.Component View.transaction,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Root.Component View.banking,0,0,0,0,0,0,0,0,0,0,0,0,0,0

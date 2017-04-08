@@ -1,0 +1,1608 @@
+<?xml version = '1.0' encoding = 'UTF-8' ?>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' xmlns:UML2 = 'org.omg.xmi.namespace.UML2'
+  timestamp = 'Tue Apr 19 11:52:17 CEST 2005'>
+  <XMI.header><XMI.documentation>
+    <XMI.exporter>Netbeans XMI Writer</XMI.exporter>
+    <XMI.exporterVersion>1.0</XMI.exporterVersion>
+    <XMI.metaModelVersion>1.4.1</XMI.metaModelVersion></XMI.documentation>
+
+	<XMI.content>
+		<UML:Model name="Class Model" xmi.id="MX_EAID_D65C12EA_D522_421d_A9B1_8C45236D74EA" isRoot="true" isLeaf="false" isAbstract="false" isSpecification="false" visibility="public">
+			<UML:Namespace.ownedElement>
+				<UML:Class name="GameEvent" xmi.id="EAID_0916387A_3E36_426f_976D_A0A8F08C375D" visibility="public" isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+					<UML:Classifier.feature>
+						<UML:Attribute name="eventType" xmi.id="EAID_9A286596_8D88_498f_9ED9_1BAE9DA05E07" visibility="private" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid0"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_4EEE8A11_D25F_46cd_BE6D_26828AF230D7">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_0187965F_5CF8_4c09_9A75_D47D63F07F7B" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_AEA1FC35_5C11_4b8e_935C_2CBA23205740"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Attribute name="GAME_OVER" xmi.id="EAID_42C56F04_13EA_450b_9521_2320BAE09D5A" visibility="public" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid0"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_9703237B_D3EB_4d22_B7C5_05A5928C3591">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_1BC8F927_DB16_4e6b_A7B9_52C4EEA618E0" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_5A96041B_ED04_47e1_9EFC_A7ECDDF6A5B8" body="0"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Attribute name="HAS_MOVED" xmi.id="EAID_C1F18DCB_5645_47f7_A80C_93D98A90DCAF" visibility="public" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid0"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_821BF663_9CE1_458e_8AF6_91AA9F69B116">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_AAD0049C_6975_4cce_BF25_1DADE2C7118D" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_E0A2C289_815F_4d99_83A0_209D4D1577BF" body="1"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Attribute name="LEVEL_OVER" xmi.id="EAID_911B8A5C_6C23_443b_BA89_45C351B3DF76" visibility="public" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid0"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_89533CD5_F894_4551_80E4_624E99665C6D">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_68CF19AF_CFF7_4708_A165_7B1258C7A6C6" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_8C7327A1_E15B_4a77_BEAB_3992C4F275D0" body="2"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Attribute name="PLAYER_DEATH" xmi.id="EAID_B53286EA_8799_4c80_B394_A471468D398A" visibility="public" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid0"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_2CA14FC6_062F_4203_9E61_B477D7302151">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_8C2CF73D_82E4_46eb_971B_147B788198F1" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_37F0F294_C044_4dac_92D4_E9BCBA73367B" body="3"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Operation name="GameEvent" xmi.id="EAID_10F2CBE8_E412_4298_90AA_08C69F87B34E" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_DA086DB0_0A6A_43ac_A2A4_49966B30CDA8" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid1"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="eventType" xmi.id="EAID_EF050FF8_9A91_4d5f_A8E3_AA578809EE09" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="getEventType" xmi.id="EAID_A679B54D_50C4_49e6_80F4_84673C570DD0" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_5AA04DDE_37E8_4d79_8185_EEC3D2F85D8F" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="getSource" xmi.id="EAID_BD7C3493_BDA4_4dd4_A13B_5BE0F7CCDEDD" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_86D1A7DF_C133_46ce_896A_AB08C90A1448" kind="return">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_B5A799BF_D7CD_4e30_B56D_1A2BC36456DD"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+				</UML:Class>
+				<UML:Association xmi.id="EAID_CCE5315A_0EC2_4798_95EE_5A5A3636FA9A" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+					<UML:Association.connection>
+						<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_0916387A_3E36_426f_976D_A0A8F08C375D">
+							<UML:AssociationEnd.multiplicity>
+								<UML:Multiplicity>
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange lower="0" upper="-1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:AssociationEnd.multiplicity>
+							<UML:AssociationEnd.participant>
+								<UML:Class xmi.idref="EAID_0916387A_3E36_426f_976D_A0A8F08C375D"/>
+							</UML:AssociationEnd.participant>
+						</UML:AssociationEnd>
+						<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_B5A799BF_D7CD_4e30_B56D_1A2BC36456DD">
+							<UML:AssociationEnd.multiplicity>
+								<UML:Multiplicity>
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange lower="0" upper="-1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:AssociationEnd.multiplicity>
+							<UML:AssociationEnd.participant>
+								<UML:Class xmi.idref="EAID_B5A799BF_D7CD_4e30_B56D_1A2BC36456DD"/>
+							</UML:AssociationEnd.participant>
+						</UML:AssociationEnd>
+					</UML:Association.connection>
+				</UML:Association>
+				<UML:Class name="Character" xmi.id="EAID_2FCD45B5_A4C1_406c_BF01_0E867567F47A" visibility="public" isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+					<UML:Classifier.feature>
+						<UML:Attribute name="currentTile" xmi.id="EAID_4A429821_39CB_4a21_AFFD_F9E33B4B9458" visibility="private" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:Classifier xmi.idref="EAID_8987A639_1EDF_4e59_92B3_78CD1B1FAF42"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_52701E1C_DE75_443c_B870_B7D875C7D008">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_1659973E_9235_4702_A235_ECED1CB48270" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_7BE60DB6_2760_4b15_91FD_9369A44C26E0"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Operation name="Character" xmi.id="EAID_2563A17B_2010_4640_8FC1_2B886563FB5B" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_C71E2DEC_091A_44be_BC60_9DE5C59EC410" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="startTile" xmi.id="EAID_76BDDDA6_8171_40f0_A0EE_09AA7DB91552" kind="in">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_8987A639_1EDF_4e59_92B3_78CD1B1FAF42"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="move" xmi.id="EAID_63FDE14C_B95B_421c_962F_B8F0B0902CA1" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_52C315A2_5225_4ed3_A2B5_20D859B3A830" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid2"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="dir" xmi.id="EAID_F67C5374_5D5D_4f3d_84A4_2F93781AABE3" kind="in">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_E775CDAD_BD74_4e3b_9309_030D513F19D4"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="getNeighbour" xmi.id="EAID_03DA8449_7BD7_411f_A582_3351F871F2D6" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_10A3BE72_FD2C_4ec0_874B_CC5826A68A3A" kind="return">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_8987A639_1EDF_4e59_92B3_78CD1B1FAF42"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="dir" xmi.id="EAID_449DCB05_A4A5_47e6_B5C9_0666E05B1846" kind="in">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_E775CDAD_BD74_4e3b_9309_030D513F19D4"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="setTile" xmi.id="EAID_96C4695A_FAC1_4f9e_8658_3522A1536B4E" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_85B8F7E4_EF3C_4398_ACEA_B477D1C19565" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid2"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="newTile" xmi.id="EAID_F7A6E181_D5B6_4193_8B7E_979A89966F14" kind="in">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_8987A639_1EDF_4e59_92B3_78CD1B1FAF42"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="getTile" xmi.id="EAID_DABA9738_6B30_4b93_B244_9D822D1A3FC9" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_8D7ADA30_EDF1_4c96_BD73_7BB3FAEC91F9" kind="return">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_8987A639_1EDF_4e59_92B3_78CD1B1FAF42"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+				</UML:Class>
+				<UML:Generalization xmi.id="EAID_29292DA2_CB0B_40c7_A6DB_D50EE39F2E90" isSpecification="false">
+					<UML:Generalization.child>
+						<UML:Class xmi.idref="EAID_EAD87DA4_D1BF_41ff_9D2A_38180F6A816D"/>
+					</UML:Generalization.child>
+					<UML:Generalization.parent>
+						<UML:Class xmi.idref="EAID_2FCD45B5_A4C1_406c_BF01_0E867567F47A"/>
+					</UML:Generalization.parent>
+				</UML:Generalization>
+				<UML:Generalization xmi.id="EAID_2C90A33C_104D_4162_8758_1B1307ACDFD1" isSpecification="false">
+					<UML:Generalization.child>
+						<UML:Class xmi.idref="EAID_CB576008_EA04_4cf1_BD78_1F997D62E635"/>
+					</UML:Generalization.child>
+					<UML:Generalization.parent>
+						<UML:Class xmi.idref="EAID_2FCD45B5_A4C1_406c_BF01_0E867567F47A"/>
+					</UML:Generalization.parent>
+				</UML:Generalization>
+				<UML:Class name="MazeIterator" xmi.id="EAID_336A274E_1E00_4be5_9240_318ED83272B6" visibility="public" isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+					<UML:Classifier.feature>
+						<UML:Attribute name="maxX" xmi.id="EAID_8D578130_64C4_4028_97DA_D980E1324C39" visibility="private" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid0"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_89CEBB8C_DC42_4c97_89DC_41F3DECCE138">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_BAA255D6_4192_45f7_8B59_2BD14BE879D9" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_5A182BDD_E638_43d6_8748_4D2C8CD8D04B"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Attribute name="maxY" xmi.id="EAID_D2A8F7CE_F9F4_483d_B451_28E4A254E309" visibility="private" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid0"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_DA89984F_2BBA_47f9_92E9_FB552B8754F8">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_0F27165D_A046_48d9_B923_F2D108E5BBCA" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_03730DEF_4B00_4165_85D6_5547156ADD8A"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Attribute name="tileArray" xmi.id="EAID_5886D7ED_70D2_4752_9D27_2F30D57FC850" visibility="private" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid3"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_5E49BB47_FF4D_4f73_9268_BA3F14DDB5AA">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_3974BB44_708D_4ac0_89B3_9B7D17EFB0FE" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_19D6A36B_0471_4095_A53D_DDF6E45593EB"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Attribute name="xPointer" xmi.id="EAID_388BE1C3_C12A_49ee_A92F_799FB611E367" visibility="private" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid0"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_1A7EE126_F187_4d02_9DC8_B8A2DB2D723C">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_CFC1258A_A608_4cf8_AB6F_EEAF9BDFBE09" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_B7EB225E_2D25_449a_BF22_0F757D85640B"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Attribute name="yPointer" xmi.id="EAID_9EB7E51D_7D23_4b60_8D44_F3818DE6A867" visibility="private" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid0"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_C8D491F9_4622_4369_909F_74C2220FFF08">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_79E75AA9_B234_4a19_A7BB_3A67151B72B9" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_E50C16C4_9DF4_4603_B81E_BC14E9692186"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Operation name="MazeIterator" xmi.id="EAID_DFE875DA_C6A9_4af4_A9E1_AD3C63F6A12D" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_009AC7A6_37B8_4d20_9BD1_9C83EAFB8026" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="maxX" xmi.id="EAID_D8DBD379_154B_4434_9330_F7A8C77B7E54" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="maxY" xmi.id="EAID_D43B5856_CDF7_42da_B769_378D3006209E" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="array" xmi.id="EAID_DDB39210_946D_4aca_90B3_5F6F62D8C3B7" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid3"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="hasNext" xmi.id="EAID_BDD4A559_90E3_4bd4_8027_9B95090B4B0E" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_63D41A5D_2795_450d_860C_7B8C445591C3" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid2"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="next" xmi.id="EAID_F9A1789D_5791_42e2_BE60_39A388AA790C" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_DBD21E38_EFB7_4e7a_8584_60711940D383" kind="return">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_8987A639_1EDF_4e59_92B3_78CD1B1FAF42"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="remove" xmi.id="EAID_046D03E4_D3C0_4ff2_AF31_7DFA82409446" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_98AB8E4C_D693_496c_AF0C_A568DD3D808F" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid1"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+				</UML:Class>
+				<UML:Dependency xmi.id="EAID_03FB4CC1_9C61_4f74_931A_4DDCA6513C2E" visibility="public" isSpecification="false" client="EAID_336A274E_1E00_4be5_9240_318ED83272B6" supplier="EAID_83E2D9B6_158F_47ed_B074_4D63676A2E85"/>
+				<UML:Association xmi.id="EAID_329BD11C_DE6C_435f_B954_6490267BFF90" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+					<UML:Association.connection>
+						<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_336A274E_1E00_4be5_9240_318ED83272B6">
+							<UML:AssociationEnd.multiplicity>
+								<UML:Multiplicity>
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange lower="0" upper="-1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:AssociationEnd.multiplicity>
+							<UML:AssociationEnd.participant>
+								<UML:Class xmi.idref="EAID_336A274E_1E00_4be5_9240_318ED83272B6"/>
+							</UML:AssociationEnd.participant>
+						</UML:AssociationEnd>
+						<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_6D45FDE9_1B74_4a8e_8253_F0F9978E93AB">
+							<UML:AssociationEnd.multiplicity>
+								<UML:Multiplicity>
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange lower="0" upper="-1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:AssociationEnd.multiplicity>
+							<UML:AssociationEnd.participant>
+								<UML:Class xmi.idref="EAID_6D45FDE9_1B74_4a8e_8253_F0F9978E93AB"/>
+							</UML:AssociationEnd.participant>
+						</UML:AssociationEnd>
+					</UML:Association.connection>
+				</UML:Association>
+				<UML:Class name="Maze" xmi.id="EAID_6D45FDE9_1B74_4a8e_8253_F0F9978E93AB" visibility="public" isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+					<UML:Classifier.feature>
+						<UML:Attribute name="mazeTiles" xmi.id="EAID_863B348C_CB52_48d7_B991_B7170B276586" visibility="private" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid3"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_271439EF_8711_4d66_B246_BEF995540986">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_81123E4F_8A47_42a4_94BD_A2B5E378FE06" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_1F5F79C6_9DE2_49bf_87D5_883D3B95E495"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Attribute name="maxX" xmi.id="EAID_F8C07906_8A9B_4de2_97E3_8952AE2060AD" visibility="private" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid0"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_995EABA4_3F2C_4c4f_A1A9_A3CDB2219352">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_1E2B0E7A_3479_4be4_886A_E2BFBF64EE37" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_0F96A0D4_9F8D_4cf9_9198_AA25965DED55"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Attribute name="maxY" xmi.id="EAID_43AD135A_B863_4d69_BDAA_16A694A83E4E" visibility="private" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid0"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_D0B6C55B_9736_44da_BF61_4F01B8DB3143">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_5D1A1F99_E2A5_4ac2_9254_1135554608A2" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_879E517A_52DB_4ca7_B7FC_CEFDE9871302"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Operation name="Maze" xmi.id="EAID_C471E651_9C0D_422e_9452_03CC5ED69852" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_8759E232_C946_4870_A780_7B911DB89329" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="maxY" xmi.id="EAID_3480AA4B_9976_474c_B953_8FBC37D1A0D1" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="maxX" xmi.id="EAID_1DE88696_103F_4f50_A943_D5A6FF162B37" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="addTile" xmi.id="EAID_EC8ADB98_64AD_4906_ABCD_81CB0DF4ACC2" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_96E8C5A3_A40A_4f28_ADB7_B62268FBAC05" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid2"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="x" xmi.id="EAID_A99F188E_FD17_42ad_8B55_0420B6E006A5" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="y" xmi.id="EAID_A2703E28_8F4C_493e_AECB_0C99F9D933E3" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="removeTile" xmi.id="EAID_C2FDA6BD_F61D_4f6e_877F_877911E8890A" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_51182CEE_CB41_46cc_AE1D_865F19ACBADE" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid2"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="x" xmi.id="EAID_7F026B20_F3D2_48a1_ABA2_8357A72C415D" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="y" xmi.id="EAID_1A3392F3_B65D_47f5_AF94_E33F781D7CA6" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="getTile" xmi.id="EAID_C8E59738_C1A3_4fd9_BB56_D1B238B00CF1" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_F1999FE9_9BC2_4bc0_B04D_0CCE8FF3DF8B" kind="return">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_8987A639_1EDF_4e59_92B3_78CD1B1FAF42"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="x" xmi.id="EAID_D791F58B_3712_4dfe_B652_AE8DE4B9B7AB" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="y" xmi.id="EAID_2899F236_C7F1_4a29_834D_523F98201C62" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="getNeighbour" xmi.id="EAID_E6ADFB50_9DD9_4325_AA88_133A3A7AD839" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_CD26AEE3_6D38_4bbb_8EDC_43F492DBA24B" kind="return">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_8987A639_1EDF_4e59_92B3_78CD1B1FAF42"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="curTile" xmi.id="EAID_0D1636E9_4DD6_4d63_8B3D_2174A564B524" kind="in">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_8987A639_1EDF_4e59_92B3_78CD1B1FAF42"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="dir" xmi.id="EAID_DDA43E3C_8033_41b7_85DF_0C976E3E60E1" kind="in">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_E775CDAD_BD74_4e3b_9309_030D513F19D4"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="clearMaze" xmi.id="EAID_F0D9A06A_1411_4276_B9AA_2F8E1AEA5FDC" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_E493F474_839C_4cb1_803F_68C4DB2660A5" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid1"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="dotsRemaining" xmi.id="EAID_479DD8C6_3CF2_4ba5_BFBB_46274308566E" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_E393F302_300A_4828_9F8D_1FB6EBAB0BE9" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="addExit" xmi.id="EAID_1662F3F6_D2FC_410d_BA3A_0B79B6E26AC9" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_8C20FFC0_367D_4b74_BB20_0067C81C76D8" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid2"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="x" xmi.id="EAID_3A50E379_C3A5_48fc_88E3_82D473C9B03A" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="y" xmi.id="EAID_5652489D_A944_45d6_B166_1254CD76BBC2" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="dir" xmi.id="EAID_7FCB2EB0_5E35_4879_9AE0_3020DB0B5644" kind="in">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_E775CDAD_BD74_4e3b_9309_030D513F19D4"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="linkBack" xmi.id="EAID_65E215FB_DB31_4c5d_9886_C366EFADE698" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid2"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="removeExit" xmi.id="EAID_D4DBBFBD_669C_4735_98A8_AEE5713E0630" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_4BB4031C_CF66_44cc_8B94_45881C309618" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid2"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="x" xmi.id="EAID_FDF7EA51_A32B_4ebf_AAC3_C3A80C458C79" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="y" xmi.id="EAID_68DE6520_15FA_4b72_9B68_26770C5AEE24" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="dir" xmi.id="EAID_55EB2500_BF2F_444a_8E03_9FF378F01D2D" kind="in">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_E775CDAD_BD74_4e3b_9309_030D513F19D4"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="linkBack" xmi.id="EAID_A4C3BE69_98B4_4ca0_875C_F7D08775FF1E" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid2"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="getMaxX" xmi.id="EAID_6C234663_C68E_4817_83C3_55F8609A4485" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_C734F15C_509D_463c_986A_741B4090B197" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="getMaxY" xmi.id="EAID_818BFF9A_4FA6_44fe_9841_E9EAB0E2D7F3" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_AA39B50E_F49A_42dd_B81C_2147F16E03AD" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="iterator" xmi.id="EAID_61CC9EB7_BE3D_4c08_94AF_BF536186BD73" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_30947B34_8429_4239_9047_BEC08280350E" kind="return">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_72101749_8509_4251_A444_E25E760080D8"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+				</UML:Class>
+				<UML:Dependency xmi.id="EAID_8EFA8EA0_8097_48a3_AE4A_A0992E3EC8AC" visibility="public" isSpecification="false" client="EAID_6D45FDE9_1B74_4a8e_8253_F0F9978E93AB" supplier="EAID_72101749_8509_4251_A444_E25E760080D8"/>
+				<UML:Association xmi.id="EAID_A5BC62F7_E2E0_43b4_8899_BFCEC5D9EB0A" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+					<UML:Association.connection>
+						<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_6D45FDE9_1B74_4a8e_8253_F0F9978E93AB">
+							<UML:AssociationEnd.multiplicity>
+								<UML:Multiplicity>
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange lower="0" upper="-1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:AssociationEnd.multiplicity>
+							<UML:AssociationEnd.participant>
+								<UML:Class xmi.idref="EAID_6D45FDE9_1B74_4a8e_8253_F0F9978E93AB"/>
+							</UML:AssociationEnd.participant>
+						</UML:AssociationEnd>
+						<UML:AssociationEnd visibility="public" aggregation="aggregate" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_B9748EFA_26E1_4857_AF35_88783876347B">
+							<UML:AssociationEnd.multiplicity>
+								<UML:Multiplicity>
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange lower="0" upper="-1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:AssociationEnd.multiplicity>
+							<UML:AssociationEnd.participant>
+								<UML:Class xmi.idref="EAID_B9748EFA_26E1_4857_AF35_88783876347B"/>
+							</UML:AssociationEnd.participant>
+						</UML:AssociationEnd>
+					</UML:Association.connection>
+				</UML:Association>
+				<UML:Association xmi.id="EAID_6DFAAFBA_DD29_46fa_9D43_66C75988FF41" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+					<UML:Association.connection>
+						<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_8987A639_1EDF_4e59_92B3_78CD1B1FAF42">
+							<UML:AssociationEnd.multiplicity>
+								<UML:Multiplicity>
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange lower="0" upper="-1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:AssociationEnd.multiplicity>
+							<UML:AssociationEnd.participant>
+								<UML:Class xmi.idref="EAID_8987A639_1EDF_4e59_92B3_78CD1B1FAF42"/>
+							</UML:AssociationEnd.participant>
+						</UML:AssociationEnd>
+						<UML:AssociationEnd visibility="public" aggregation="aggregate" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_6D45FDE9_1B74_4a8e_8253_F0F9978E93AB">
+							<UML:AssociationEnd.multiplicity>
+								<UML:Multiplicity>
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange lower="0" upper="-1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:AssociationEnd.multiplicity>
+							<UML:AssociationEnd.participant>
+								<UML:Class xmi.idref="EAID_6D45FDE9_1B74_4a8e_8253_F0F9978E93AB"/>
+							</UML:AssociationEnd.participant>
+						</UML:AssociationEnd>
+					</UML:Association.connection>
+				</UML:Association>
+				<UML:Interface name="Iterable&lt;Tile&gt;" xmi.id="EAID_72101749_8509_4251_A444_E25E760080D8" visibility="public" isSpecification="false" isRoot="false" isLeaf="false" isAbstract="true"/>
+				<UML:Class name="Observable" xmi.id="EAID_7FDA79E1_6D68_4f1c_8CE4_367167714367" visibility="public" isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<UML:Generalization xmi.id="EAID_D113EB8A_7DAB_48ae_8667_6A221D129E69" isSpecification="false">
+					<UML:Generalization.child>
+						<UML:Class xmi.idref="EAID_B5A799BF_D7CD_4e30_B56D_1A2BC36456DD"/>
+					</UML:Generalization.child>
+					<UML:Generalization.parent>
+						<UML:Class xmi.idref="EAID_7FDA79E1_6D68_4f1c_8CE4_367167714367"/>
+					</UML:Generalization.parent>
+				</UML:Generalization>
+				<UML:Interface name="Iterator&lt;Tile&gt;" xmi.id="EAID_83E2D9B6_158F_47ed_B074_4D63676A2E85" visibility="public" isSpecification="false" isRoot="false" isLeaf="false" isAbstract="true"/>
+				<UML:Class name="Tile" xmi.id="EAID_8987A639_1EDF_4e59_92B3_78CD1B1FAF42" visibility="public" isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+					<UML:Classifier.feature>
+						<UML:Attribute name="visited" xmi.id="EAID_B8386A43_F801_470f_B292_B94379F99D34" visibility="private" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid2"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_F24C088B_A6FD_47d5_B35D_EAB2FD276B77">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_5A7C9EFB_26D6_42da_8179_0899AA26B8BC" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_252CDDD9_A088_4af0_9497_2278A5636CB7"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Attribute name="xCoord" xmi.id="EAID_4AC17400_A724_4ed0_BBF1_78CF69377D86" visibility="public" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid0"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_B42EBDA1_D32D_42b7_B9A5_684A5A7264F4">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_2E2F6D35_9B47_49e9_8CFB_8329335933D7" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_CF3DE669_2181_4bed_B32A_C3DCECD3B8FD"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Attribute name="yCoord" xmi.id="EAID_D75B555E_8A3C_434f_96A5_80615B38A791" visibility="public" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid0"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_B033824E_E9F9_402e_8402_2D67E23DF0B4">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_B25DF990_0BEF_4df9_BE88_EAF419106E13" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_45E712B6_7DF9_4fe4_A08E_502B50E771DF"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Attribute name="exists" xmi.id="EAID_FFD84DCC_371B_47ec_B287_792D3DF753DC" visibility="private" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid4"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_EABEE479_7B1C_4874_925E_E8E98CA9E0C6">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_1E0D20A1_9F07_457f_AD4A_9BFF2825A1F1" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_6A91C14C_40E8_4ac8_80BD_384256A47157"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Operation name="Tile" xmi.id="EAID_A2975F45_388E_4201_9D9C_AC47AB4E2D69" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_454DABB4_8922_4e62_A317_73F930F5925F" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="x" xmi.id="EAID_2655EE5F_21E6_47c6_BA97_D140BE5FD81E" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="y" xmi.id="EAID_665C86DB_A818_4ef6_A684_CCF727831135" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="hasDot" xmi.id="EAID_F4AF506D_7EB0_4f89_9A54_96FDD95CAD54" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_4B70494B_56A5_4812_A4D8_644143ED61CE" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid2"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="getXCoord" xmi.id="EAID_3D969A4F_D8E8_4ead_92E6_79E263AD2D85" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_168F76D0_4F56_4b95_AB84_F486003590E1" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="getYCoord" xmi.id="EAID_92F842B6_1D7F_48c3_8A6A_71A5FBCFE055" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_3D60DA80_69F0_4c17_A772_A54A8B51FA6F" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="clearDot" xmi.id="EAID_A0B78CAC_B66B_4aef_B256_548B92875D40" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_EE832E7D_F5F3_4e71_8B73_9858A27E100E" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid1"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="addDot" xmi.id="EAID_A87D3D02_620C_4116_8500_373EF8EC1B1B" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_CB3EC72D_5574_42ac_8F35_D88B6A7B90E2" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid1"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="setExit" xmi.id="EAID_C9D728DF_8503_43ba_82D4_530A0A83666B" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_2968CFF2_D7F3_47d6_A373_A85FF7F4CDBE" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid2"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="dir" xmi.id="EAID_F02F57D3_5752_439a_A737_17EEF9452D6E" kind="in">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_E775CDAD_BD74_4e3b_9309_030D513F19D4"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="tile" xmi.id="EAID_043FAA46_F143_44ee_862F_8DE8E0CA701C" kind="in">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_8987A639_1EDF_4e59_92B3_78CD1B1FAF42"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="removeExit" xmi.id="EAID_DA2004F9_7483_4133_9AB1_AB278CD26FB1" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_8EEE63C0_1291_4a4f_9AA5_23168A232174" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid2"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="dir" xmi.id="EAID_C87EA3BF_FA9B_4dd9_B51F_5CDF073B5DB5" kind="in">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_E775CDAD_BD74_4e3b_9309_030D513F19D4"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="getExit" xmi.id="EAID_6749A305_43CC_457a_9B91_9867C9474AF9" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_817D5AE6_6BBC_4ca2_A479_5DDA0BE782FC" kind="return">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_8987A639_1EDF_4e59_92B3_78CD1B1FAF42"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="dir" xmi.id="EAID_90437226_C6F3_4bc5_B854_FD3BC6596622" kind="in">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_E775CDAD_BD74_4e3b_9309_030D513F19D4"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="getShortName" xmi.id="EAID_C08405C3_1F6A_43a4_B633_1CF0B22CBFB7" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_E57A685F_A77E_4db6_8F62_DDF5E482C257" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid5"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="toString" xmi.id="EAID_67159D16_EC19_46e6_89D9_1D26DAB27B4C" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_E8CA92D2_9431_4247_A3C6_3E45D164D75A" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid5"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+				</UML:Class>
+				<UML:Class name="GameModel" xmi.id="EAID_B5A799BF_D7CD_4e30_B56D_1A2BC36456DD" visibility="public" isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+					<UML:Classifier.feature>
+						<UML:Attribute name="player" xmi.id="EAID_8B13A42B_0D9B_431a_B0BE_BBD4EFE91F4D" visibility="private" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:Classifier xmi.idref="EAID_EAD87DA4_D1BF_41ff_9D2A_38180F6A816D"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_057E51F4_CA8D_4e97_BD2D_D20B6C1BDEF6">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_F310CE3D_6605_4d49_8B7D_37009525031F" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_88D7F6F9_CCA8_413f_B409_FF647064FE4B"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Attribute name="ghosts" xmi.id="EAID_91D70215_B6A7_447d_920C_6EBB5A403E0C" visibility="private" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid6"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_23EF8517_B114_4a2b_BB51_944C2BC28A23">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_7006BA14_4DDC_440f_B190_26A1B2637175" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_E17B2B41_500E_4d07_B274_3EAB7EAF0BB6"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Attribute name="level" xmi.id="EAID_284A685F_4762_4737_8F05_32BCFA625B81" visibility="private" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:Classifier xmi.idref="EAID_B9748EFA_26E1_4857_AF35_88783876347B"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_ADAD8EFB_C1ED_4c2a_BA76_EEFDF4F8B7C5">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_1B8AE700_4D4A_47cc_A927_CD6EA0617B6D" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_3D50FBFF_605C_4f5a_8A97_AC396E01B912"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Attribute name="levels" xmi.id="EAID_ECBC48B0_F471_4778_A0D2_3881D5FB13BE" visibility="private" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid7"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_8E569A2F_7786_46cc_B178_D127CC39DD7A">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_6111CA35_B9A6_4e3d_B46F_34F7E3825E9F" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_22CEA726_EBE1_407b_809A_5F53CAEC4041"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Operation name="GameModel" xmi.id="EAID_81C7BAD6_D3C4_41f9_A756_A39F1B4B2780" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false"/>
+						<UML:Operation name="loadLevel" xmi.id="EAID_E2A05A84_D758_48b2_BB8B_0BC0654D2FAF" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_B4EA6AB3_8342_4e5a_8000_07EB313A8A1A" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid1"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="fileName" xmi.id="EAID_4318786B_2A3E_4134_B9DF_6DAC73C38C59" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid5"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="makeMove" xmi.id="EAID_72CAE20B_24D0_4ded_8A5E_BD8DE6BF0434" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_E3F96E61_21EE_4f1a_B5FE_18E06AFECC59" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid2"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="dir" xmi.id="EAID_B38CF2C8_C2FD_453a_8BAA_74074D69D9A5" kind="in">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_E775CDAD_BD74_4e3b_9309_030D513F19D4"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="updateGhosts" xmi.id="EAID_EF82FA2E_090A_4350_8ABE_02F92E1A717D" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_A6284DB6_7C70_43b6_9BCE_48F88C908A72" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid1"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="getPlayer" xmi.id="EAID_BC9A589B_4D73_4e13_A371_AFF408731699" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_6DAF99D6_204A_453b_8E8F_F7C7B4CE459C" kind="return">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_EAD87DA4_D1BF_41ff_9D2A_38180F6A816D"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="getGhost" xmi.id="EAID_C873E87B_B64E_4732_B013_E1B2E7B55FEC" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_794E757F_CD72_4ecd_A831_950B048FA8EE" kind="return">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_CB576008_EA04_4cf1_BD78_1F997D62E635"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="id" xmi.id="EAID_3E3439DE_34C5_47d9_A017_89C5EB96D7B8" kind="in">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_CB576008_EA04_4cf1_BD78_1F997D62E635"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="resetLevel" xmi.id="EAID_1E512AAB_EE86_4f57_89AF_85440A7F6B70" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_7733A45D_0B40_4bfb_B058_DEF9B2FC2301" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid1"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="notifyObservers" xmi.id="EAID_B409A920_E3E4_4c4f_86D3_E5DFB202296F" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_FEC56EA4_3F58_4e2a_9F5F_57FD4C04340B" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid1"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="getMaze" xmi.id="EAID_33B734A5_DCE7_474d_9BAB_3C6BD10CEEB0" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_D72FF1F5_08C0_475f_B5FB_8BB1118884D2" kind="return">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_6D45FDE9_1B74_4a8e_8253_F0F9978E93AB"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+					<UML:GeneralizableElement.generalization>
+						<UML:Generalization xmi.idref="EAID_D113EB8A_7DAB_48ae_8667_6A221D129E69"/>
+					</UML:GeneralizableElement.generalization>
+				</UML:Class>
+				<UML:Association xmi.id="EAID_10DBDCAB_9038_40f5_99AE_8A02C57CB0DE" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+					<UML:Association.connection>
+						<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_EAD87DA4_D1BF_41ff_9D2A_38180F6A816D">
+							<UML:AssociationEnd.multiplicity>
+								<UML:Multiplicity>
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange lower="0" upper="-1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:AssociationEnd.multiplicity>
+							<UML:AssociationEnd.participant>
+								<UML:Class xmi.idref="EAID_EAD87DA4_D1BF_41ff_9D2A_38180F6A816D"/>
+							</UML:AssociationEnd.participant>
+						</UML:AssociationEnd>
+						<UML:AssociationEnd visibility="public" aggregation="aggregate" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_B5A799BF_D7CD_4e30_B56D_1A2BC36456DD">
+							<UML:AssociationEnd.multiplicity>
+								<UML:Multiplicity>
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange lower="0" upper="-1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:AssociationEnd.multiplicity>
+							<UML:AssociationEnd.participant>
+								<UML:Class xmi.idref="EAID_B5A799BF_D7CD_4e30_B56D_1A2BC36456DD"/>
+							</UML:AssociationEnd.participant>
+						</UML:AssociationEnd>
+					</UML:Association.connection>
+				</UML:Association>
+				<UML:Association xmi.id="EAID_61AED14D_F09F_4cb6_8F7B_FD3DC89C471E" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+					<UML:Association.connection>
+						<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_B9748EFA_26E1_4857_AF35_88783876347B">
+							<UML:AssociationEnd.multiplicity>
+								<UML:Multiplicity>
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange lower="0" upper="-1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:AssociationEnd.multiplicity>
+							<UML:AssociationEnd.participant>
+								<UML:Class xmi.idref="EAID_B9748EFA_26E1_4857_AF35_88783876347B"/>
+							</UML:AssociationEnd.participant>
+						</UML:AssociationEnd>
+						<UML:AssociationEnd visibility="public" aggregation="aggregate" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_B5A799BF_D7CD_4e30_B56D_1A2BC36456DD">
+							<UML:AssociationEnd.multiplicity>
+								<UML:Multiplicity>
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange lower="0" upper="-1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:AssociationEnd.multiplicity>
+							<UML:AssociationEnd.participant>
+								<UML:Class xmi.idref="EAID_B5A799BF_D7CD_4e30_B56D_1A2BC36456DD"/>
+							</UML:AssociationEnd.participant>
+						</UML:AssociationEnd>
+					</UML:Association.connection>
+				</UML:Association>
+				<UML:Association xmi.id="EAID_CEE12E8B_3D23_4c8c_9901_5C777F78EA6F" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+					<UML:Association.connection>
+						<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_CB576008_EA04_4cf1_BD78_1F997D62E635">
+							<UML:AssociationEnd.multiplicity>
+								<UML:Multiplicity>
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange lower="0" upper="-1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:AssociationEnd.multiplicity>
+							<UML:AssociationEnd.participant>
+								<UML:Class xmi.idref="EAID_CB576008_EA04_4cf1_BD78_1F997D62E635"/>
+							</UML:AssociationEnd.participant>
+						</UML:AssociationEnd>
+						<UML:AssociationEnd visibility="public" aggregation="aggregate" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_B5A799BF_D7CD_4e30_B56D_1A2BC36456DD">
+							<UML:AssociationEnd.multiplicity>
+								<UML:Multiplicity>
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange lower="0" upper="-1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:AssociationEnd.multiplicity>
+							<UML:AssociationEnd.participant>
+								<UML:Class xmi.idref="EAID_B5A799BF_D7CD_4e30_B56D_1A2BC36456DD"/>
+							</UML:AssociationEnd.participant>
+						</UML:AssociationEnd>
+					</UML:Association.connection>
+				</UML:Association>
+				<UML:Class name="GameLevel" xmi.id="EAID_B9748EFA_26E1_4857_AF35_88783876347B" visibility="public" isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+					<UML:Classifier.feature>
+						<UML:Attribute name="maze" xmi.id="EAID_747F2CF7_F245_42ba_BC98_9E55FB710F74" visibility="private" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:Classifier xmi.idref="EAID_6D45FDE9_1B74_4a8e_8253_F0F9978E93AB"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_F8A79E44_7910_400b_8386_EFF05B923DF0">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_C0122937_4DD0_42a8_B1A8_8AD56303E81B" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_8A201023_7214_4b27_AF73_BC71DBEA7F32"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Attribute name="playerStart" xmi.id="EAID_BAE2B385_898A_47a5_B9D5_C38FE7C8BE0A" visibility="private" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:Classifier xmi.idref="EAID_8987A639_1EDF_4e59_92B3_78CD1B1FAF42"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_2F0B6525_6F66_489a_9521_02CC504019A9">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_2FCA20AF_D01D_46ba_B21B_991C1AB756F1" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_0D8293C1_503A_4dea_A8A9_D492D8CC11C5"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Attribute name="ghostStarts" xmi.id="EAID_C7DF44E6_A643_4b86_AA11_1979DE83A094" visibility="private" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid8"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_B38E5C24_4D31_445c_AB9C_14814BE149AD">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_10D27F31_6459_4fb5_A030_DB981E711C2C" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_554689AC_F5CE_4107_9BAF_43F6FA2E30B9"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Operation name="GameLevel" xmi.id="EAID_9CDB54FF_8342_4fbd_98FD_BF77F28FFDD1" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_760536C3_4B63_41eb_9F57_959EFE2B3935" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="Maze" xmi.id="EAID_BB24725A_A272_47f0_A1DB_6E18DE6AD422" kind="in">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_6D45FDE9_1B74_4a8e_8253_F0F9978E93AB"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="isComplete" xmi.id="EAID_3C177232_8BD5_4cf1_B583_61AF40C4BFE8" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_AA711443_35F3_4335_A025_391294C16923" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid2"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="getMaze" xmi.id="EAID_BB0C39F5_D1F2_4ec4_8AC7_4596DD4A6FAE" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_E507A895_669E_4b95_9C74_E96C968644CE" kind="return">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_6D45FDE9_1B74_4a8e_8253_F0F9978E93AB"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="setPlayerStart" xmi.id="EAID_4E0AC450_22C1_457d_B939_1B9598199387" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_F0C73F09_5C3C_49c9_A18E_2D3BFB335198" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid1"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="start" xmi.id="EAID_1C29BA47_0C7B_48a4_B368_6D2EE7340917" kind="in">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_8987A639_1EDF_4e59_92B3_78CD1B1FAF42"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="clearPlayerStart" xmi.id="EAID_94FABCBB_5A78_431d_AC35_B0BD9BB0AABD" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_7CE82788_9FD0_40c2_BEB0_2D2C137FABD0" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid1"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="addGhostStart" xmi.id="EAID_F82B23CC_152D_45da_A0DC_9C70B06814B5" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_BD3E0BCC_92DA_4931_90DD_F4087F5C29BD" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid1"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="start" xmi.id="EAID_D17ECFDA_EC96_4760_B9F0_89E4E39AE542" kind="in">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_8987A639_1EDF_4e59_92B3_78CD1B1FAF42"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="clearGhostStart" xmi.id="EAID_22032D53_2464_463c_A674_6D9C5485EAEF" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_CE80DCD8_5614_4640_BF7A_3EA89FAC5DEA" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid2"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="index" xmi.id="EAID_4921E589_72CC_44cb_B392_8E4B189FB6A1" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="getGhosts" xmi.id="EAID_0A790CFE_220E_4182_A625_1B57CD65143E" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_458CC902_DCCD_4a97_BC63_C06FA33FE276" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="getPlayerStart" xmi.id="EAID_4FA25526_6EAB_47b6_A39B_2A771808E549" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_94494313_72BC_4bd7_873F_68140D9076E6" kind="return">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_8987A639_1EDF_4e59_92B3_78CD1B1FAF42"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="getGhostStart" xmi.id="EAID_D333A6E0_BEB5_493d_89DA_FF47F8377E4A" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_77C6B468_7445_4fb6_96D6_5D5DBE9DA7AA" kind="return">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_8987A639_1EDF_4e59_92B3_78CD1B1FAF42"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="index" xmi.id="EAID_DF570CA3_9C51_4423_A102_00A1E2C2E784" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+				</UML:Class>
+				<UML:Class name="Ghost" xmi.id="EAID_CB576008_EA04_4cf1_BD78_1F997D62E635" visibility="public" isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+					<UML:Classifier.feature>
+						<UML:Attribute name="target" xmi.id="EAID_9301B2B4_A990_4bf6_99BD_1CAA039DAD7A" visibility="private" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:Classifier xmi.idref="EAID_2FCD45B5_A4C1_406c_BF01_0E867567F47A"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_EDCAD8C5_AE17_42b6_8FB8_DCEBB1547C79">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_5309FC41_8975_4f0e_93F6_F9B89EF9924B" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_9A4FD203_1FF4_4e99_87A6_EC485FF79F85"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Operation name="Ghost" xmi.id="EAID_638B1671_650B_4544_92BF_9BF7D73F690C" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_6E5DCA73_BCB9_484d_A3B9_B8A101D33B51" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="startTile" xmi.id="EAID_D0A42BCB_C55A_4378_B8C3_6EF639790713" kind="in">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_8987A639_1EDF_4e59_92B3_78CD1B1FAF42"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="target" xmi.id="EAID_A359F033_471B_485b_8E44_AB51260F21D1" kind="in">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_2FCD45B5_A4C1_406c_BF01_0E867567F47A"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="getNextMove" xmi.id="EAID_0C3D03D1_A36D_439a_BB5C_C1D9CBE8E207" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_72D84FC1_C063_43d2_89EB_99B3772E983F" kind="return">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_E775CDAD_BD74_4e3b_9309_030D513F19D4"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+					<UML:GeneralizableElement.generalization>
+						<UML:Generalization xmi.idref="EAID_2C90A33C_104D_4162_8758_1B1307ACDFD1"/>
+					</UML:GeneralizableElement.generalization>
+				</UML:Class>
+				<UML:Class name="Direction" xmi.id="EAID_E775CDAD_BD74_4e3b_9309_030D513F19D4" visibility="public" isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+					<UML:ModelElement.stereotype>
+						<UML:Stereotype xmi.idref="EAID_DF9AC652_5068_4ba0_B2FE_C673B66CE452"/>
+					</UML:ModelElement.stereotype>
+					<UML:Classifier.feature>
+						<UML:Attribute name="NORTH" xmi.id="EAID_BE73F6BF_3456_44b8_8838_7FC605CA61F1" visibility="public" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid9"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_160B787E_3354_4188_AF51_C7A29B20AE04">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_1C3D057B_200E_448e_9309_7CBAD0328408" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_DC6D04AF_F633_48b6_B658_AAF4CB1B83B5"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype xmi.idref="EAID_58A0649D_A510_46ba_8FE8_44486A236A30"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Attribute name="EAST" xmi.id="EAID_765C6077_CF8F_45c0_B378_4B6F9ED9517A" visibility="public" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid9"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_200031D0_3220_4e1e_9F01_19D8DC97097A">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_50CD873F_5A95_44cb_ABF6_45AE50E83A30" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_7AF9CEBA_0CF6_40d8_8335_DEDE40BC4636"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype xmi.idref="EAID_58A0649D_A510_46ba_8FE8_44486A236A30"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Attribute name="SOUTH" xmi.id="EAID_B9A1D492_ED26_4ab8_AC58_1D953705EB8E" visibility="public" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid9"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_4A022AFE_C36E_421c_9BEE_EDF78A860AE0">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_2246048A_C38D_4931_B2B5_6AAB8A8FEB96" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_CFEFAF65_EA73_426b_84B8_FFA0673CB5CB"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype xmi.idref="EAID_58A0649D_A510_46ba_8FE8_44486A236A30"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Attribute name="WEST" xmi.id="EAID_EC8EFB22_4CA3_4dcb_A7B8_6D5AF24A2699" visibility="public" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid9"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_684C8CCD_2A52_48c8_A7D7_0324758E5357">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_6C16008A_4699_4a01_ACEB_113434FE78F4" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_615B3CFF_EAE2_437c_A185_1F5F6F429571"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype xmi.idref="EAID_58A0649D_A510_46ba_8FE8_44486A236A30"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Operation name="getOpposite" xmi.id="EAID_F993618E_94B8_44fd_8D02_61CACC8E4FB9" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_20714641_321E_4560_BCBF_19537C306138" kind="return">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_E775CDAD_BD74_4e3b_9309_030D513F19D4"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+				</UML:Class>
+				<UML:Stereotype xmi.id="EAID_DF9AC652_5068_4ba0_B2FE_C673B66CE452" name="enumeration" isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false">
+					<UML:Stereotype.baseClass>Class</UML:Stereotype.baseClass>
+				</UML:Stereotype>
+				<UML:Stereotype xmi.id="EAID_58A0649D_A510_46ba_8FE8_44486A236A30" name="enum" isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false">
+					<UML:Stereotype.baseClass>Attribute</UML:Stereotype.baseClass>
+				</UML:Stereotype>
+				<UML:Class name="Player" xmi.id="EAID_EAD87DA4_D1BF_41ff_9D2A_38180F6A816D" visibility="public" isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+					<UML:Classifier.feature>
+						<UML:Attribute name="lives" xmi.id="EAID_077A1201_F6BF_4215_862D_ECBFA5EFC55E" visibility="private" ownerScope="instance" changeability="changeable" ordering="unordered" targetScope="instance">
+							<UML:StructuralFeature.type>
+								<UML:DataType xmi.idref="eaxmiid0"/>
+							</UML:StructuralFeature.type>
+							<UML:StructuralFeature.multiplicity>
+								<UML:Multiplicity xmi.id="EAID_693E85E1_5E23_4c40_92EC_1E7421D1BDE2">
+									<UML:Multiplicity.range>
+										<UML:MultiplicityRange xmi.id="EAID_9506C32D_372A_4520_A739_E31EE5464CBD" lower="1" upper="1"/>
+									</UML:Multiplicity.range>
+								</UML:Multiplicity>
+							</UML:StructuralFeature.multiplicity>
+							<UML:Attribute.initialValue>
+								<UML:Expression xmi.id="EAID_D3D7C080_F6E2_457d_A5AA_D0A0D0CE6BD9"/>
+							</UML:Attribute.initialValue>
+							<UML:ModelElement.taggedValue/>
+						</UML:Attribute>
+						<UML:Operation name="Player" xmi.id="EAID_20797F90_5DD7_4db1_962E_E96773E4249B" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_02ABDCFC_3234_429e_8BD0_B89635FA40F0" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="startTile" xmi.id="EAID_6A42412F_9EB7_4561_AD73_5F69D5536C5C" kind="in">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_8987A639_1EDF_4e59_92B3_78CD1B1FAF42"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+								<UML:Parameter name="startLives" xmi.id="EAID_D4C624C8_F63D_4cae_8926_4D331477A8FB" kind="in">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="loseLife" xmi.id="EAID_7437D9DE_DA70_40ab_A826_BB926E087E1C" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_1D8FE690_9C47_4180_846F_68DDBBE8A242" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid2"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="getLives" xmi.id="EAID_A520E931_D063_4b22_828B_EC7D2B98B727" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_145C9DFF_B965_430e_9B9E_D0127ABA857E" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="isDead" xmi.id="EAID_EF087D67_08C0_4924_895D_281A96955C00" visibility="public" ownerScope="instance" isQuery="false" isRoot="false" isLeaf="false" concurrency="sequential" isAbstract="false">
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter name="return" xmi.id="EAID_6AF08B1A_C1D4_4562_A75A_F60245B7F33E" kind="return">
+									<UML:Parameter.type>
+										<UML:DataType xmi.idref="eaxmiid2"/>
+									</UML:Parameter.type>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+					<UML:GeneralizableElement.generalization>
+						<UML:Generalization xmi.idref="EAID_29292DA2_CB0B_40c7_A6DB_D50EE39F2E90"/>
+					</UML:GeneralizableElement.generalization>
+				</UML:Class>
+				<UML:DataType xmi.id="eaxmiid9" visibility="private" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<UML:DataType xmi.id="eaxmiid8" name="List&lt;Tile&gt;" visibility="private" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<UML:DataType xmi.id="eaxmiid3" name="Tile[][]" visibility="private" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<UML:DataType xmi.id="eaxmiid1" name="void" visibility="private" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<UML:DataType xmi.id="eaxmiid4" name="Map&lt;Direction, Tile&gt;" visibility="private" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<UML:DataType xmi.id="eaxmiid7" name="List&lt;String&gt;" visibility="private" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<UML:DataType xmi.id="eaxmiid6" name="List&lt;Ghost&gt;" visibility="private" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<UML:DataType xmi.id="eaxmiid2" name="boolean" visibility="private" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<UML:DataType xmi.id="eaxmiid5" name="String" visibility="private" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<UML:DataType xmi.id="eaxmiid0" name="int" visibility="private" isRoot="false" isLeaf="false" isAbstract="false"/>
+			</UML:Namespace.ownedElement>
+		</UML:Model>
+		<UML:Diagram name="Milestone1" xmi.id="EAID_ACEEEBA9_F371_4b60_A7BF_7E938F582F0F" diagramType="ClassDiagram" owner="EAPK_D65C12EA_D522_421d_A9B1_8C45236D74EA" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue/>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=16;Top=213;Right=180;Bottom=340;" subject="EAID_2FCD45B5_A4C1_406c_BF01_0E867567F47A" seqno="1" style="DUID=ED906327;"/>
+				<UML:DiagramElement geometry="Left=351;Top=801;Right=524;Bottom=967;" subject="EAID_336A274E_1E00_4be5_9240_318ED83272B6" seqno="2" style="DUID=8978CAFE;"/>
+				<UML:DiagramElement geometry="Left=208;Top=714;Right=298;Bottom=754;" subject="EAID_83E2D9B6_158F_47ed_B074_4D63676A2E85" seqno="3" style="DUID=76B36171;"/>
+				<UML:DiagramElement geometry="Left=20;Top=397;Right=159;Bottom=517;" subject="EAID_E775CDAD_BD74_4e3b_9309_030D513F19D4" seqno="4" style="DUID=041BEB1F;"/>
+				<UML:DiagramElement geometry="Left=446;Top=33;Right=536;Bottom=71;" subject="EAID_7FDA79E1_6D68_4f1c_8CE4_367167714367" seqno="5" style="DUID=EE1D1F9C;"/>
+				<UML:DiagramElement geometry="Left=205;Top=582;Right=295;Bottom=626;" subject="EAID_72101749_8509_4251_A444_E25E760080D8" seqno="6" style="DUID=37914C25;"/>
+				<UML:DiagramElement geometry="Left=10;Top=558;Right=183;Bottom=802;" subject="EAID_8987A639_1EDF_4e59_92B3_78CD1B1FAF42" seqno="7" style="DUID=889D1F58;"/>
+				<UML:DiagramElement geometry="Left=395;Top=267;Right=558;Bottom=485;" subject="EAID_B9748EFA_26E1_4857_AF35_88783876347B" seqno="8" style="DUID=9E3CB362;"/>
+				<UML:DiagramElement geometry="Left=185;Top=447;Right=333;Bottom=535;" subject="EAID_CB576008_EA04_4cf1_BD78_1F997D62E635" seqno="9" style="DUID=C7C15070;"/>
+				<UML:DiagramElement geometry="Left=350;Top=522;Right=599;Bottom=766;" subject="EAID_6D45FDE9_1B74_4a8e_8253_F0F9978E93AB" seqno="10" style="DUID=0A55B8D4;"/>
+				<UML:DiagramElement geometry="Left=210;Top=310;Right=325;Bottom=424;" subject="EAID_EAD87DA4_D1BF_41ff_9D2A_38180F6A816D" seqno="11" style="DUID=5881923C;"/>
+				<UML:DiagramElement geometry="Left=234;Top=7;Right=404;Bottom=225;" subject="EAID_B5A799BF_D7CD_4e30_B56D_1A2BC36456DD" seqno="12" style="DUID=847D6B15;"/>
+				<UML:DiagramElement geometry="Left=22;Top=35;Right=168;Bottom=190;" subject="EAID_0916387A_3E36_426f_976D_A0A8F08C375D" seqno="13" style="DUID=F42DD770;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_6DFAAFBA_DD29_46fa_9D43_66C75988FF41" style="Mode=3;EOID=0A55B8D4;SOID=889D1F58;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_329BD11C_DE6C_435f_B954_6490267BFF90" style="Mode=3;EOID=0A55B8D4;SOID=8978CAFE;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_A5BC62F7_E2E0_43b4_8899_BFCEC5D9EB0A" style="Mode=3;EOID=9E3CB362;SOID=0A55B8D4;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=67;SY=-8;EX=67;EY=-8;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_CEE12E8B_3D23_4c8c_9901_5C777F78EA6F" style="Mode=3;EOID=847D6B15;SOID=C7C15070;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_61AED14D_F09F_4cb6_8F7B_FD3DC89C471E" style="Mode=3;EOID=847D6B15;SOID=9E3CB362;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_10DBDCAB_9038_40f5_99AE_8A02C57CB0DE" style="Mode=3;EOID=847D6B15;SOID=5881923C;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_2C90A33C_104D_4162_8758_1B1307ACDFD1" style="Mode=3;EOID=ED906327;SOID=C7C15070;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_29292DA2_CB0B_40c7_A6DB_D50EE39F2E90" style="Mode=3;EOID=ED906327;SOID=5881923C;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_8EFA8EA0_8097_48a3_AE4A_A0992E3EC8AC" style="Mode=3;EOID=37914C25;SOID=0A55B8D4;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_03FB4CC1_9C61_4f74_931A_4DDCA6513C2E" style="Mode=3;EOID=76B36171;SOID=8978CAFE;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_D113EB8A_7DAB_48ae_8667_6A221D129E69" style="Mode=3;EOID=EE1D1F9C;SOID=847D6B15;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_CCE5315A_0EC2_4798_95EE_5A5A3636FA9A" style="Mode=3;EOID=847D6B15;SOID=F42DD770;Color=-1;LWidth=0;Hidden=0;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+	</XMI.content>
+	<XMI.extensions xmi.extender="Enterprise Architect 2.5"/>
+</XMI>

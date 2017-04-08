@@ -1,0 +1,29 @@
+Name,NumAttr,NumOps,NumPubOps,Setters,Getters,Nesting,IFImpl,NOC,NumDesc,NumAnc,DIT,CLD,OpsInh,AttrInh,Dep_Out,Dep_In,NumAssEl_ssc,NumAssEl_sb,NumAssEl_nsb,EC_Attr,IC_Attr,EC_Par,IC_Par,Connectors,InstSpec,LLInst,MsgSent,MsgRecv,MsgSelf,Diags
+Root.src.atm.ATM,10,18,16,0,11,0,1,0,0,0,0,0,0,0,0,0,1,10,0,0,2,10,13,0,0,0,0.0,0.0,0,0
+Root.src.atm.physical.CardReader,0,4,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,2,0,0,0,0.0,0.0,0,0
+Root.src.atm.physical.CashDispenser,0,4,4,1,0,0,0,0,0,0,0,0,0,0,0,0,1,2,1,0,0,1,4,0,0,0,0.0,0.0,0,0
+Root.src.atm.physical.CustomerConsole.Cancelled,0,1,1,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,0,0
+Root.src.atm.physical.CustomerConsole,0,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,6,0,0,0,0.0,0.0,0,0
+Root.src.atm.physical.EnvelopeAcceptor,0,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0,0,0,1,1,0,0,0,0.0,0.0,0,0
+Root.src.atm.physical.Log,0,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,3,4,0,0,0,4,3,0,0,0,0.0,0.0,0,0
+Root.src.atm.physical.NetworkToBank,1,4,4,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0,0,1,1,5,0,0,0,0.0,0.0,0,0
+Root.src.atm.physical.OperatorPanel,0,2,2,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,2,0,0,0,0.0,0.0,0,0
+Root.src.atm.physical.ReceiptPrinter,0,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0.0,0.0,0,0
+Root.src.atm.Session,8,3,3,1,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0,0,0,6,1,0,0,0,0.0,0.0,0,0
+Root.src.atm.transaction.Deposit,1,3,1,0,1,0,0,0,0,1,1,0,7,11,0,0,0,0,1,0,0,0,5,0,0,0,0.0,0.0,0,0
+Root.src.atm.transaction.Inquiry,1,3,1,0,1,0,0,0,0,1,1,0,7,11,0,0,0,0,0,0,0,0,5,0,0,0,0.0,0.0,0,0
+Root.src.atm.transaction.Transaction.CardRetained,0,1,1,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,0,0
+Root.src.atm.transaction.Transaction,11,7,4,0,2,0,0,4,4,0,0,1,0,0,0,0,0,2,3,0,1,1,9,0,0,0,0.0,0.0,0,0
+Root.src.atm.transaction.Transfer,2,3,1,0,1,0,0,0,0,1,1,0,7,11,0,0,0,0,1,0,0,0,5,0,0,0,0.0,0.0,0,0
+Root.src.atm.transaction.Withdrawal,1,3,1,0,1,0,0,0,0,1,1,0,7,11,0,0,0,0,1,0,0,0,5,0,0,0,0.0,0.0,0,0
+Root.src.banking.AccountInformation,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0.0,0.0,0,0
+Root.src.banking.Balances,0,4,4,1,2,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,2,4,0,0,0,0.0,0.0,0,0
+Root.src.banking.Card,1,2,2,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,10,0,0,0,0,0.0,0.0,0,0
+Root.src.banking.Message,10,10,10,1,7,0,0,0,0,0,0,0,0,0,0,0,2,2,1,0,0,7,5,0,0,0,0.0,0.0,0,0
+Root.src.banking.Money,1,7,7,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,4,0,0,12,1,0,0,0,0.0,0.0,0,0
+Root.src.banking.Receipt,3,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,6,5,0,0,0,0.0,0.0,0,0
+Root.src.banking.Status,0,4,4,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,2,0,0,0,0.0,0.0,0,0
+Root.Unknown Externals.Exception,0,0,0,0,0,0,0,2,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,0,0
+Root.Unknown Externals.String,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,0,13,0,0,0,0,0.0,0.0,0,0
+Root.Unknown Externals.InetAddress,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,2,0,0,0,0,0.0,0.0,0,0
+Root.Unknown Externals.Enumeration,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0.0,0.0,0,0

@@ -1,0 +1,9 @@
+Name,type,Elements,Classes,Interfc,Packages,Assoc,Genrs,Deps,Abstr,Objects,Links,Messages,Stimuli,Actors,UseCase,ExtPts,Extends,Includes
+EA Model.Class Model.Class Model,ClassDiagram,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+EA Model.Class Model.CompleteClassDiagram,ClassDiagram,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+EA Model.Class Model.atm.atm,ClassDiagram,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+EA Model.Class Model.atm.physical.physical,ClassDiagram,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+EA Model.Class Model.atm.transaction.transaction,ClassDiagram,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+EA Model.Class Model.banking.banking,ClassDiagram,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+EA Model.Class Model.System.System,ClassDiagram,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+EA Model.Class Model.Frameworks.Frameworks,ClassDiagram,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
