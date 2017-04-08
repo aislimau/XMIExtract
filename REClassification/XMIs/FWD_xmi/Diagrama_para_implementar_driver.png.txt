@@ -1,0 +1,262 @@
+﻿
+************** Class Start **************
+<<utility>>
+Regi5ter
+==============
+statitpublicvoidselfRegisterO
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<Sinqleton>>
+DataSourceManager
+==============
+
+************** End Class **************
+
+************** Class Start **************
+IDataStoreParameters
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<interiace>>
+IDriveStoreParameter
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<interface>>
+IData5tore
+==============
+
+************** End Class **************
+
+************** Class Start **************
+nterfate>>
+Collection
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+DriverStoreParameters
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<interface>>
+IDataColIeCt0n
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+MemoryFeatureCoileCtIOn
+==============
+
+************** End Class **************
+
+************** Class Start **************
+interiace>>
+IDriverParameters
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+SpatialManager
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<interfa
+FeatureS
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+bsrctAbstrafeWreStore
+==============
+
+************** End Class **************
+
+************** Class Start **************
+jFeatureManager
+==============
+1I
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<Interface>>
+lExpansionAdapter
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<Intenfate>IObservable
+==============
+
+************** End Class **************
+
+************** Class Start **************
+AttributeManager
+==============
+
+************** End Class **************
+
+************** Class Start **************
+MemoryExpansionAdapter
+==============
+
+************** End Class **************
+
+************** Class Start **************
+CompIexObervabIe
+==============
+
+************** End Class **************
+
+************** Class Start **************
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+_<intenate>>
+IDriver
+==============
+
+************** End Class **************
+
+************** Class Start **************
+abstractAbstractDriver
+==============
+
+************** End Class **************
+
+************** Class Start **************
+FeatureSt
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<interface>>
+IDataStoreNotification
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<Interface>>
+iFeturesReader
+==============
+
+************** End Class **************
+
+************** Class Start **************
+FeatureStoreNotificationI
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<_dnterface>>
+IFeturesWriter
+==============
+
+************** End Class **************
+
+************** Class Start **************
+nterfate>>
+Map
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<interface>>
+IFeature
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<Interface>>
+IFetureID
+==============
+
+************** End Class **************
+
+************** Class Start **************
+abstractFeature
+==============
+
+************** End Class **************
+
+************** Class Start **************
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<Interface>>
+IFetureRule
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<interiace>>
+IFeatureType
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<Interface
+->
+IFeatureAttributeDescriptor
+==============
+
+************** End Class **************
+
+************** Class Start **************
+_1strctI
+==============
+
+************** End Class **************
+
+************** Class Start **************
+DefauItFeatUreType
+==============
+
+************** End Class **************
+
+************** Class Start **************
+DefaultMtributeDescriptor
+==============
+
+************** End Class **************

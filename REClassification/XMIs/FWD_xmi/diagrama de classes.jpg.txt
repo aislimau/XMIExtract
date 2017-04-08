@@ -1,0 +1,82 @@
+﻿
+************** Class Start **************
+user_id:mt
+status:bool
+mensagem:
+string
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Conta
+login:string
+password:string
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Mensagem
+==============
+user_id:nt
+conteudo:string
+gosotu:bool
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Mural
+==============
+mensagens:Mensagem__
+pedidos:Pedido_Amizade__
+treinos:Treino_
+bio:string
+facebook:string
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Usuarlo
+==============
+user_id:mt
+nascimento:date
+altura:float
+largura:float
+friends:Usuario__
+bloqueados:Usuario_j
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+
+==============
+treino_id:mt
+duracao_dias:mt
+alimentacao:string
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Serie
+==============
+
+************** End Class **************
+
+************** Class Start **************
+
+==============
+
+************** End Class **************

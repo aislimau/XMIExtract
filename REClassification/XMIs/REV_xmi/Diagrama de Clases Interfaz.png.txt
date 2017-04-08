@@ -1,0 +1,70 @@
+﻿
+************** Class Start **************
+<<JavaClass>>
+GAgregarActivity
+corn_ayudante_eEtudntiI
+==============
+SJDLOGFECHA:mt_0
+aanioP:mt
+amesP:mt
+adiaP:mt
+afechaString:StringBuilder
+afecha:String
+afieldTitulo:Edffext
+afieldTexto:EdflText
+abtnAgregar:Button
+abtnFecha:Button
+atabla:TableLayout
+arow:TableRow
+aIbffltulo:TextView
+albftexto:Textview
+aIbiFecha:TexiView
+acontexto:Context
+aayudante:Ayudante
+atareas:ArrayLmsttTarea>
+acalendario:Calendar
+adateSetLmstener:OnDateSetLmstener_newDatePickerDialog_OnoateSetListener_____
+==============
+JAgregarActtvity
+onCreate(Bundle):void
+_cargaroatosi:void
+_rellenarTablaConRows(String_String_String):void
+_updateDispIayQ:vod
+_dispIayToast:void
+oncreateDialog(int):DiaIog
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<JavaClass>>
+GMainActivity
+corn_ayudante_eEtudantil
+==============
+abtnAgregar:Imageeutton
+adialog:ProgressDialog
+acontexto:Context
+==============
+EMainActivay
+_onCreate(Bundle):void
+_onCreateOptionsMenu(Menu):boolean
+_onOptionsltemSelected(Menultem):boolean
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<JavaClass>>
+GProgressAbnendo
+cm_ayudante_etud__t
+==============
+
+==============
+EProgressAbriendo
+onPostExecute(Void):void
+onPreExecute:void
+onProgressUpdate(Integertj):voxl
+dolnBackgrourid(Voidfl):Void
+==============
+
+************** End Class **************

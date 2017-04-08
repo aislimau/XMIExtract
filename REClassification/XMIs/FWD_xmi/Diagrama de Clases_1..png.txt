@@ -1,0 +1,145 @@
+﻿
+************** Class Start **************
+<<entity>>
+Person
+==============
+Attributes
+-Id:mt
+-name:String
+-IastNames:String
+-mail:String
+-phone:mt
+-adress:String
+==============
+OperQtions
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<entity>>
+Administrator
+==============
+Attributes
+-id_Administrator:mt
+-username:String
+-password:String
+-type:String
+-idPerson:mt
+==============
+Operations
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<entity>>
+Encoming
+==============
+Attributes
+-idPackage:mt
+-type:String
+-volume:String
+-priority:String
+-weigth:float
+==============
+Operations
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<entity>>
+Shipping
+==============
+Aitributes
+-idShipping:mt
+-idReceiver:mt
+-clientldClient:mt
+-packageldPackage:mt
+-routeidRoute:mt
+==============
+Operations
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<entity>>
+Driver
+==============
+Attributes
+-Id:mt
+-license:String
+-idPerson:mt
+==============
+Operetions
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<entity>>
+Invoice
+==============
+Attributes
+-Idinvoice:mt
+-sender:String
+-receiver:String
+-idPackage:mt
+-moment:DATE
+-idShipping:mt
+==============
+Operetions
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<entity>>
+jVehicIe
+Attributes
+==============
+-type:String
+-manufacturer:String
+-model:String
+-capacity:mt
+-status:String
+-plateLetters:String
+-plateNumber:mt
+Operations
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<entity>>
+Route
+==============
+Attributes
+-IdRoute:mt
+-numberKilometers:mt
+-numberTolls:mt
+-destinationCity:String
+-originCity:String
+==============
+OperQtions
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<entity>>
+Point
+==============
+Attributes
+-name:String
+-idPoint:mt
+-idRoute:mt
+-latitude:float
+-longitude:float
+==============
+Operetions
+==============
+
+************** End Class **************

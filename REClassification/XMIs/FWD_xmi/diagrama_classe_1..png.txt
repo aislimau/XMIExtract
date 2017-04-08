@@ -1,0 +1,36 @@
+﻿
+************** Class Start **************
+IComposite
+==============
+-nome:string
+-filhos:IList<IComposite>
+==============
++adicionar
++remover()
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Arquivo
+==============
+-nome:string
+-filhos:IList<IComposite>
+==============
++adicionar
++remover()
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Pasta
+==============
+-nome:string
+-filhos:IList<IComposite>
+==============
++adjcionar
++remover()
+==============
+
+************** End Class **************

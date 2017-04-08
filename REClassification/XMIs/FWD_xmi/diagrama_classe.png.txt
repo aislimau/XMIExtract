@@ -1,0 +1,56 @@
+﻿
+************** Class Start **************
+<<interface>>
+Imprimivel
+==============
+
+==============
++getCabecalhoPagina:String
++getCorpoPagina:String
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<interface>>
+Autorizavel
+==============
+
+==============
++getValorTotal:double
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<interface>>
+Impressora
+==============
+
+==============
++imprimirlmprimivelimprimivel:int:voic_1
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<interface>>
+Operadora
+==============
+
+==============
++aurorizarAutorizavelautorizaye_:mt_Cartaocartao:int_:boolearl
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Checkout
+==============
+-operadora:Operadora
+_impressoraImpressora
+==============
++fecharCompraCompracompra:int_Cartaocartao:int:void
+==============
+
+************** End Class **************

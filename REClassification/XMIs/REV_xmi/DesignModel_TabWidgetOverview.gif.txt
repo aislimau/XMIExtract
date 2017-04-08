@@ -1,0 +1,79 @@
+﻿
+************** Class Start **************
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+eJavaScript
+Tab
+==============
+
+************** End Class **************
+
+************** Class Start **************
+JavScrip6
+TabWdget
+==============
+lactiveTab_null
+jbackOrouncilmage__images__bg_gif_
+BUTTONCLASSNAIV1E_Buttons_
+htmlDivElement_theDivElement
+isVisible_false
+logger_null
+showCloseButton_false
+showprintButton_false
+self_this
+TABCLASSNAME__Tabs_
+_LjtabLeftlmage__imageslleft_gif_
+tabLeftOnlmage__imageslleft_on_gif_
+jtabRightlmage__imageskight_gif_
+jtabRightOnlamge__imageskight_on_gif_
+1tabs_(ledhn
+initializeoptions_resourceBuncile
+activateTab(tabName)
+aclclNewTabtabName_tabCaption_htmlDivElement_cloNotActivate
+changeCaptionscontroller
+configurecloNotActivate
+jjdestroy
+moveFirstToLast
+moveLastToFirst
+onClose
+onPrint
+removeAllTabs0
+removeTab(tabName)
+replaceDocumentofTabtabNarne_objectToSelect
+webUlMessageHandlerwebUlMessage
+Q1configureButtons
+configureTabscloNotActivate
+createButtoncaption_onClickHancller
+_1determineShowClose5utton
+ciadetermineShowPrintButton
+determineTabDefinftionparentDefinitionElement_index
+ciadetermineTabDefinitionsparentDefinftionElement
+QdetermineTabCaption(tabDefinition)
+ciadetermineTabld(theDefinition)
+determineTabisDefault(tabDefinition)
+determineTabWldgetld0
+cjdetermineWldgetDefinitionElement
+cjprocessWdgetDefinftion
+hideButtons
+insertULElement
+ciaremoveUnorderedListTag
+saveComponentStatedelimiter
+==============
+
+************** End Class **************
+
+************** Class Start **************
+JavaScrip6
+InvertedTabWidget
+==============
+tab_off_6699ff
+jtab_on_VThite
+==============
+
+==============
+
+************** End Class **************

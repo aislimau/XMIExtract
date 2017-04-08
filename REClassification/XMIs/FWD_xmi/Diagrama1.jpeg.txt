@@ -1,0 +1,214 @@
+﻿
+************** Class Start **************
+<<Entity>>
+AreaAtuacao
+==============
+-codTipo:mt
+-nomeArea:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<Entity>>
+TelefoneEmpresa
+==============
+-Id:mt
+-telefone:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<Entity>>
+Empresa
+==============
+-codEmpresa:mt
+-nome:String
+-cnpj:tring
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<Entity>>
+Curso
+==============
+-codCurso:mt
+-nome:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<Entity>>
+Endereco
+==============
+id:mt
+-rua:String
+-bairro:String
+-cidade:String
+-estado:String
+-cep:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<Entity>>
+EnderecoEmpresa
+==============
+-Id:mt
+-rua:String
+-bairro:String
+-cidade:String
+-estado:String
+-cep:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<Entity>>
+Telefone
+==============
+-Id:mt
+-telefone:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<Entity>>
+CurriculoCurso
+==============
+-idCurricul_oCurso:mt
+-datalnicio:Date
+-dataTermmno:Date
+-horas:String
+-exibirCurso:boo_tean
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<Entity>>
+Vaga
+==============
+-codCandVaga:mt
+-dataCriacao:Date
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<Entity>>
+TipoDeTelefone
+==============
+-cod:mt
+-nome:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<Entity>>
+CurriculoEmpresa
+==============
+idCurricu1_o:mt
+-dataEntrada:Date
+-dataSaida:Date
+-atividades:String
+-exibirEmpresa:boo1ean
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<Entity>>
+usuarlo
+==============
+-codUsuario:mt
+-nome:String
+-cpf:String
+-dataCriacao:Date
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<Entity>>
+TipoLogin
+==============
+-codTipoLogin:mt
+-nomeTipo:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<Entity>>
+CandidatoVaga
+==============
+-codCandVaga:mt
+-dataCriacao:Date
+-vaqa:Vaga
+-curricu1o:Curricul_o
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<Entity>>
+Curriculo
+==============
+-Id:mt
+-cursos:Curricu1oCursos
+-einpresas:List_cCurricu1osEmpresa>
+-usuario:usuario
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<Entity>>
+Login
+==============
+-id:mt
+-user:String
+-senha:String
+==============
+
+==============
+
+************** End Class **************

@@ -1,0 +1,45 @@
+﻿
+************** Class Start **************
+BusinessLogic
+==============
+Foreachentityclass_
+oneFacadeclass
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Dao
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Entity
+==============
+AdministratorPersonDriver
+InvoicePointRoute
+EncomingShippingVehicle
+KlEntityw
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Presentation
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Vo
+==============
+Foreachentityclass_
+oneVoclass
+==============
+
+************** End Class **************

@@ -1,0 +1,159 @@
+﻿
+************** Class Start **************
+SuperJueqo
+==============
+List<Usuario>usuarios
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Iisuario
+==============
+List<Personajes>personaje
+Interaccioninteraccion
+==============
+actualizarEstadoestado_mtexperiencia_stringnivel
+==============
+
+************** End Class **************
+
+************** Class Start **************
+
+4cintertace+
+Acciones
+==============
+
+==============
+atacaro_
+defenderseo_
+correro_
+deslizarseo_
+huiro_
+recargaro_
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Interaccion
+==============
+
+==============
+batallaPersonajeP1_PersonajeP2:
+chat(List<Personaje>personajes
+==============
+
+************** End Class **************
+
+************** Class Start **************
+
+==============
+getlnstanceO
+QetPersonajeFacade()
+getEquipoFacade()
+getEstadoFacade()
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Personaje
+==============
+profesion
+nivel
+experiencia
+Equipoequipo
+Estadoestado
+Razaraza
+==============
+tipo
+tipoProfesion()
+subirexperiencia
+subirNivel(intexperiencia
+atacar(Razaraza_Equipoequipo_
+clefenderse(Razaraza_Equipoequipo_
+correr(Razaraza_Equipoequipo_
+cleslizarse(Razaraza_Equipoequipo_
+huiro_
+recargarO_
+suscribir(Usuariousuario
+borrar(Usuariousuario
+notiflcar(Estadoestado_mtexperiencia_stringnivel
+==============
+
+************** End Class **************
+
+************** Class Start **************
+4dntertace)_
+Raza
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Equipo
+==============
+Armasarmas
+Armadurasarmaduras
+ObjetoMagicoobjetoMagico
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Estado
+==============
+vida
+maia
+fuerza
+defensa
+==============
+mociiflcarEstado(equipo)
+==============
+
+************** End Class **************
+
+************** Class Start **************
+dntertace
+Profesion
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Armas
+==============
+nombre
+cantidadDa_o
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+ObjetoMagico
+==============
+nombre
+tipo
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Armaduras
+==============
+nombre
+cantidadProteccion
+==============
+
+==============
+
+************** End Class **************

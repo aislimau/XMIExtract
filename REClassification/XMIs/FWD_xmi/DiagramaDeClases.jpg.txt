@@ -1,0 +1,215 @@
+﻿
+************** Class Start **************
+Funcionarlo
+==============
+rut:Integer
+nombre:String
+-apellidoPaterno:String
+-apellidoMaterno:String
+-correoUV:String
+-fediaPrimerAcceso:DateTime
+-fechaUlbmoAcceso:DateTime
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+TipoProyecto
+==============
+-idTipoProyecto:Integer
+-nombreTipoProyecto:Sblng
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+ComentarioSohcitud
+==============
+idComentario:Integer
+-fechaComentarlo:DateTime
+<omentarlo:Siring
+-visible:Boolean
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+TiposohcitudRequeriniiento
+==============
+-tdTipoSolidtud:Integer
+-nombreTipoSobcitud:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+EstadoProyecto
+==============
+-tdEstadoProyecto:Integer
+-nombreEstadoProyedo:Sffing
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+ItemConhquracion
+==============
+-idltemConfiguracion:Integer
+-codigoldentificador:String
+_nombreltemConfiguracion:String
+-version:String
+-ubicacionEnLaBiblioteca:String
+-fediaultimaModificacion:DateTime
+==============
+
+************** End Class **************
+
+************** Class Start **************
+SohcitudDeRequerini_ento
+==============
+idSoIidtud:Integer
+-codigoConsulta:String
+-asunto:String
+-mensaje:String
+-jusbficadonTransferenda:String
+-respuesta:String
+-fethaErivio:DateTime
+-fechaCierre:DateTime
+-fethaVendmiento:DateTime
+-fecf-iaUlbmaActualizadon:DateTime
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Proyecto
+==============
+idProyecto:Integer
+-codigolriterno:String
+-nombre:String
+-descripcion:String
+-fechalriido:Date
+-fechaTermino:Date
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+EstadoSolicitudRequeriniiento
+==============
+-idEstadoSolidtud:Integer
+-nombreEstadoSolicitud:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+FuncionarioDisico
+==============
+-cargo:String
+-anexo:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+TareaProyecto
+==============
+idTareaProyecto:Integer
+-descripoontarea:String
+-fechaCreacion:DateTme
+-fechalnicioPropuesta:DateTime
+-fechalnicioReal:DateTime
+-fechaTerminoPropuesta:DateTime
+-fechaTerminoReal:DateTime
+-nivelAvance:Integer
+-visible:800lean
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Prior_dad
+==============
+-idPrioridad
+-nombrePrioriclad
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+EstadisticaPersonalDiaria
+==============
+dEstadisbca:Integer
+-fechaMedidon:Date
+-totalSohdtudesAsignadas:Integer
+-canbdadSolidtudesPendientes:Integer
+-cantidadSolidtudesVencidas:Integer
+-cantidadSolidtudeCerradas:Integer
+-cantidadSolidtudeslnidadas:Integer
+-cantidadProyectosAcargo:Integer
+-cantidadProyectosEnQueParbcipa:Integer
+-cantidadTareasProyectoAsodadas:Integer
+-cantidadTareasSCMAsodadas:Integer
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Area
+==============
+-codigoArea:Integer
+-nombreArea:String
+-descripcionArea:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+TareaSCM
+==============
+-idTareaSCM:Integer
+-nombreTarea
+-descripcion
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Entregable
+==============
+-idEntregable:Integer
+-nombreEntregable:String
+==============
+
+==============
+
+************** End Class **************

@@ -1,0 +1,24 @@
+﻿
+************** Class Start **************
+JavaScript
+ResourceCache
+==============
+self_this
+==============
+
+************** End Class **************
+
+************** Class Start **************
+JavaScript
+XMLResourceBundle
+==============
+isLoaded:Booleanfalse
+logger_null
+localeUtil:LocaleUtil
+parser:XMLBundleParser
+cache
+fileName:String_theFileName
+nameSpace:String
+==============
+
+************** End Class **************

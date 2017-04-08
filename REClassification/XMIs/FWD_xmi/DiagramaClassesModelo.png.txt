@@ -1,0 +1,232 @@
+﻿
+************** Class Start **************
+Equipamento
+==============
+-codigo:String
+-nome:String
+-Informa_OesComplementares:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+NiveLinteresse
+==============
+-id:long
+-nivel:mt
+==============
++nivellnteresseDisc:void
++getNiveIInteresse:nt
+==============
+
+************** End Class **************
+
+************** Class Start **************
+0_
+0_
+==============
+Disciplina
+==============
+-nome:String
+-codigo:String
+-curso:String
+-campus:String
+-cargaHoraria:String
+-creditosPraticos:String
+-creditosTeoricos:String
+-anoLetivo:mt
+-turno:String
+-turma:String
+-ementa:String
+-objetivoCeral:String
+-objetivoEspecif:String
+-preRequisitos:String
+-bibliografiaBasica:String
+-bibliografiaComplem:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Curso
+==============
+-nome:String
+-campus:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Sala
+==============
+-codigo:String
+-tipo:TipoSala
+-capacidade:mt
+-ativa:boolean
+-InformacOesComplementares:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+TipoSala
+==============
+-nome:String
+-descricao:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Campus
+==============
+-nome:String
+-cidade:String
+-estado:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+OfertaDiscipIina
+==============
+-datalnicio:Date
+-dataFim:Date
+-horalnicio:Time
+-horaFim:Time
+==============
++verificaDisponibilidadeQ:boolean
++salvarOferta:void
++excluirOferta:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+DiaSemana
+==============
+-nome:String
+-nomeCurto:String
+==============
++getDiasSemana:List
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Insrituicao
+==============
+-nome:StringH
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Compromisso
+==============
+-titulo:String
+-descricao:String
+-datalnicio:Date
+-dataEim:Date
+-horalnicio:Time
+-horaPim:Time
+-dialnteiro:boolean
+-publico:boolean
+-frequencia:mt
+-data_fim_repeticao:Date
+==============
++gravarBanco:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Frequencia
+==============
+-APENAS_UMA_VEZ:nt_0
+-TODOS_DIAS:nt_1
+-SEMANAL:nt_2
+-MENSAL:int_3
+-SEMESTRAL:nt_4
+-ANUAL:int_5
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+AreaFormacao
+==============
+-nome:String
+==============
++adicionarAreaFormacao:void
++removerAreaFormacao:void
++editarAreaFormacao:void
++getAreaFormacaoO:List
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Professor
+==============
+-nome:String
+==============
++informarDisponibilidade:void
++adicionarDisponibilidade:void
++removerDisponibilidade:void
++getDiponibilidadeAulasO:List
++getGradeDeAulasQ:List
+==============
+
+************** End Class **************
+
+************** Class Start **************
+DisponibilidadeAula
+==============
+-hora:Time
+-attributeO:mt
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Pessoa
+==============
+-email:String
+-senha:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Agenda
+==============
+
+==============
++agendarcompromisso:Compromisso:void
++cancelarcompromisso:Compromisso:void
++consultarO:Compromissofl
++removercompromisso:Compromisso:void
+==============
+
+************** End Class **************

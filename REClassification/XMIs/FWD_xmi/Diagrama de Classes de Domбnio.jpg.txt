@@ -1,0 +1,106 @@
+﻿
+************** Class Start **************
+EncaminhaAtendimento
+==============
+-typPaciente:Paciente
+-dtmDataEncaminhamento:Date
+-strMotivo:String
+-typHospital:Hospital
+-strSituacaoAtual:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+AcessoSistema
+==============
+-strLogin:String
+-strSenha:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Paciente
+==============
+-strNome:String
+-strCategoria:String
+-dtmDataNascimento:Date
+-strCPF:String
+-strEndereco:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Atendimento
+==============
+-intRegistroAtendimento:mt
+-typPaciente:Paciente
+-strMotivoAtendimento:String
+-strProvidencias:String
+-typProfissional:Profissional
+-dtmDataAtendimento:Date
+-arItemAtendimento:MaterialAtendimento
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Profissional
+==============
+-strNome:String
+-strCPF:String
+-strCargo:String
+-dtmHorano:Date
+-strEscala:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+ReIatorio
+==============
+-arAcompanhamentoAtendimento:Atendimento
+-arjEncaminhamento:EncaminhaAtendimento
+-arMateriatAtendimento:MaterialAtendimento
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+MaterialAtendimento
+==============
+-strNomeMaterial:String
+-dtmDataCadastro:Date
+-intQuantidade:nt
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Hospital
+==============
+-strRazaoSocial:String
+-strCNPJ:String
+-strEndereco:String
+-strTelefone:String
+==============
+
+==============
+
+************** End Class **************

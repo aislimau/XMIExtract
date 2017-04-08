@@ -1,0 +1,56 @@
+﻿
+************** Class Start **************
+Login_Form_Login
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+loginIndexController
+==============
++indexAEtion()
++prcess()
++Iogout()
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Login_ModelAcI
+==============
+_static_instance_null_
++__UsrRoleName
++__LEserRoleld_null
+user_null
+4_ad
+-_val_arayO
++_Clone()
++init_aliie()
++getRoots(_roles
++preOrder(_mles
++postOrdet(Sroles
++initRoles()
++initResources()
++i_ltPermissiorm()J
++getRoIeId(__oleName)
++getRoleNarne(_roletd)
++ListRoles()
++ListResourcesl)-
++isUserAllowed(_role__resowe__permisson
++statusModule(_module)
++isModule(_rnodule)
++operaticn()
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Login_ControlIerylLlgin_AcI
+==============
++_Conctruct
++dispatchLoopStatup(_request
+==============
+
+************** End Class **************

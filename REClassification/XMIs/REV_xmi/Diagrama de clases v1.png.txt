@@ -1,0 +1,434 @@
+﻿
+************** Class Start **************
+Cent_olador::CenfroladorVoluntario
+==============
+-instancia:ConlroladoVoluritario
+==============
++adionPerfocmed_AdionEventvoid
++adualizarVistal:void
++buscarVoluntario4String_String:ArrayList<VoIuntario>
+-ControladoiVoluntario_:void
++eliminarVoluntario(String):boolean
++getlnstanoe_:ControladocVoluntario
++insertarVoluntarioString_J_String:boolean
++modificarVoluntarioString_fl:boolean
++mostrarVistal:void
+_obtenerVoluntario(String):Voluntario
++ecultarVistaG:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Utilidades
+==============
++comprobarDatos_String_fl:boolean
++mptobarDatos_fIoat_String:boolean
++mp_obarDNI(String):boolean
++compobarFed_aNacimiento_Date:boolean
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Vista::PaneIIdentifcacien
+==============
+-btConedarseJButton
+-imageLogoJLabeI
+-labelConfrasenaJLabeI
+-labelTitulo_JLabeI
+-IabelUsuarioJLabeI
+-textFieldConfrasenaJTextField
+==============
+
+************** End Class **************
+
+************** Class Start **************
+cinterfacee
+frnI_frnLlr_r
+==============
++aduIizarVistaO:void
++getInstanoe:Confroladoi
++mosirarVistaG:void
++oojltarVistaO:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Vista::Panellnicio
+==============
+-btOeneficiario:JButton
+-btBolsaTrabajo:JButton
+-btSodo:JButton
+-btVoluntario:JButton
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Coatrolador:ConfroladorPrincipal
+==============
+-instanda:CorifroladorPrincipal
++adionPerformed_AdionEvent:void
++adualizarVista9:void
+-ConfroladorPrindpalovoid
++getlnstanoeConfroladorPrincipal
++main(Sfring_j)void
++mosfrarVistavoid
++ocultarVistavoid
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Vista::PanelVoluntario
+==============
+-BreadCrumbBar:JPaneI
+-parielAyudes:PanelVoluntarioAyudas
+-parielGuscer:PanelVoluntario8uscar
+-panelContabilidad:PanelVoluntarioContabilidad
+-panelDatos:PanelVoluntarioDatos
+-panellnicio:PanelVoluntariolnicio
+==============
+
+************** End Class **************
+
+************** Class Start **************
+CentroIador::CenfroadorCentabiIidad
+==============
+-instande:ConfroledoiContebilided
+==============
++adionPerformed_AdionEventvoid
++adualizarVista:void
+-ControladoContabilidad_:void
++getinstancel:ControladoiContabilidad
++mostrarVista:void
++obteneiContabilidad_Date_Datefloat
++obteneiGastosWate_DateArrayList<Movirniento>
++obtenerlngresos_Date_Date:AirayListcMovirniento>
++ocultarVistal:void
++regislrarGasto4float_String:boolean
++regislrarGastoAyuda_String_float_Ayuda:boolean
+==============
+
+************** End Class **************
+
+************** Class Start **************
+cinterface
+Centrolador::ActienListener
+==============
++adionPerfc_rmed(AdionEvent):void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Vista::PanelVoluntariolnicio
+==============
+-btAyudas:JButton
+-btBuscar:JButton
+-btContabilidad:JButton
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Vista::PanelVoluntarioBuscar
+==============
+-btBuscarJButton
+-TipoBusquetaJComboBox
+-lebelTipo:_JLabeI
+-tebla:JPareI
+textBusqueta:JTextField
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Vista::Ventana
+_panelBeneficiario:PanelBeneficierio
+_paneIIdentificacon:Panelldentificaciori
+_panellnicio:Panellnicio
+_panelVoluntario:PanelVoluntario
+==============
+
+************** End Class **************
+
+************** Class Start **************
+
+Cenfrolador::Centi-oladorAyuda
+==============
+-instancia:ConfroladorAyuda
+==============
++adior_Perfoimed(AionEvent):void
++ac_ualizarVistaO:void
++buscarAyudasSiring_Date_Date_Float_Float_Siring:AirayList<Ayuda>
++consultarAyudaTipoAyuda_Siring_Date:Ayuda
+_ConiroladoiAyuda:void
+_datosNuevoTipoAyudaSiring_Siring_booleanvoid
++eliminarAyuda(Siring):boolean
+_eliminarTipoAyuda(Siring):boolean
++getInstance:ConiroladorAyuda
++modificarAyudaSiring_TipoAyuda_float_Siring:boolean
++modificarTipoAyudaSiring_Siring_Siring_boolean:booleari
++moslrarVista:void
++obtenerTiposAyuda:A_rayList<TipoAyuda>
++oajltarVistaO:void
++regislrarAyudaSiring_TipoAyuda_float_Siring:boolean
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Vista::PanelVoluntarioDatos
+==============
+-btBorrsr:JButtori
+-btGuardar:JBuftor
+-panelDatos:PanelDatosPersonsles
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Controlador:
+:Conb-oladorBeneficiario
+==============
+-instancia:ConlroladorBeneficiario
+==============
++adionPerfocmed_ActionEventvoid
+_ac_ualizarVistao:void
++buscarBeneficiarioSiring_Siring:AnayList<Beneficiario>
+_a>nsuItarOeneficiario(Siring):Benefidario
++a>nsuItarFamiIiares_Siring:AnayListcFamiIian_
+-ConiroladorBeneficiario:void
++eliminarBeneficiario(Siring):boolean
++e_iminarFaniiliarSiring_Siring:boolean
++get_nstancefConiroladorfleneficiario
++insertarBeneficiario(Siring(J):boolean
++insertarFamiliarSiring_Siring_Siring_Siring_Date_Siring:boolean
++modificarBeneficiario4Siringfl:boolean
++mosirarVista:void
++oajItar_ii_tao:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Vista::PanelVoluntarioCentabilidad
+==============
+-btBuscar_JButton
+-btObtenefCoritabilided_JButten
+-lebelContabilidadJLabeI
+-panelListaGastosJPaneI
+-panelListaingresos:JPaneI
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Vista::JFrame
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Vista::PanelVoluntarioAyudas
+==============
+-psnelListaAyudas:JPaneI
+-paneiListaTiposAyuda:JPsnnel
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Vista::JPaneI
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Vista::PanelBeneficiario
+==============
+-BreadCrumbBar:JPaneI
+-panelBuscar:PaneIBeneficiarioBusr
+_panelDatos:PanelBeneficiarioDatos
+_panellnicio:PanelBeneficiariolnicio
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Vista::PanelBeneficiariolnicio
+==============
+-btBucar:JButtori
+-btNuevcBeneficiario:JButtor
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Modelo::VoluntarioJDBC
+==============
+-instancia:VoluntariojDBC
+==============
++aiiedirVoluntarioVoluntario_Siring:boolean
+_borarVoluntario(Slring):boolean
++getInstance:VoIuntarioJDBC
+_modificarOatosVoluntario(Voluntario):boolean
++obtenefListadoVoluntarioSlring_Siring:ArrayList<VeIuntario
++ebtenetVoluntario(Slring):Voluntaria
+VoluntariojDBCO
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Modelo::AyudaJDBC
+==============
+-instende:AyudeJDBC
+==============
+_AyudaJDBC_
++buscarAyudasSlring_Date_Date_Float_Float_SiringAwayList<Ayuda>
++mprobarTipoAyuda_Siring:boolean
++eliminarDatosAyuda_Slring:boolean
++eliminarDatosTipoAyuda(Siring):boolean
++etlnstan_:AyudaJDBC
++insertarTipoAyuda_TipoAyuda:boolean
++modificarDatosAyudaAyuda_Voluntario:void
++modificarDatosTipoAyuda(TipoAyuda):boolean
++obtenerAyuda_TipoAyuda_Siring_Date:Ayuda
++obtenecDatosTiposAyudaO:ArrayList<TipoAyuda>
++obtenerTipcAyudaSfring:TipoAyuda
++registrarDatcsAyudaAyuda_Siring_Siring:boolean
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Modelo::DriverJDBC
+==============
+_conex:Conneion
+-hostBDSiring
+_instanciaDriverJDBC
+-nombieBDSfring
+-passwordBDSfring
+_usuarioBDSfring
+==============
++auaIizar_Stringboolean
+_nearO:boolean
+_desconedarO:boolean
+_DriverJDBC_J
++eliminar_Sfring:boolean
++getinstancef:DriverJDBC
++insectar_Sfring:boolean
++se_eccionar(String):Resu_tSet
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Vista::PanelBeneficiarioBuscar
+==============
+-btBuscarJButton
+-TipoBusquetaJComboBox
+-lebelTipo:_JLabeI
+-teble:JPareI
+textBusqueta:JTextField
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Vista::PanelBeneficiarioDatos
+==============
+-panel:mt
+-panelDatosPersonales:PanelDatosPersonales
+_panelSituacionEconomica:PanelSituacionEconomica
+_panelVivienda:PanelVivienda
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Modelo::MovimientoJDBC
+==============
+-instancta:MovimientoJDBC
+==============
++getInstan:MevimientoJDBC
+_MovimientoJDBCfj
++obteriefBalar_ce_Date_Datefloat
+_obtenerDatosGastos_Date_DateAnayList<Movimiento>
++obtenerDatoslngresos_Date_DateAnayList<Movirniento>
++regis1rarDatoGasto_Mevimiento:boolean
++regisfrarDatosGastoAyuda_Movimiento_Ayuda:boolean
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Modelo::BeneficiarioJDBC
+==============
+-instaricia:BeneficiarioJDBC
+==============
++aadirBeneficiario4Benefiaario:boolean
++aiiadirFamilierFamiliar_Siring:boolean
+-BeneficiarioJDBCl
++bvnarBeneficiario(Slring):boolean
++datosFamiliares_Slring:AnayList<Famiiiar>
++eliminarDatosFamiliarSlring_Siring:boolean
++getinstancelTipoAyudaJDBC
++modificarDatosBeneficiario_Beneficiario:boolean
++obtenerBeneficiario(Slring):Beneficiario
++obtenerListadoBeneficiario4String_Siring:ArrayList<Beneficario>
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Modelo::AsociacionJDBC
+==============
+-instanda:AsodadonjDBC
+==============
+-AsociacionJDOC:void
++getlnstance_:AociscionJDBC
++obtenerDatoodadon:Asodaclon
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Vista::PanelDatosPersonales
+==============
+-thNivelEstudioJComboBox
+-labelApellidos_JLabeI
+-IabeICP:Label
+-labeiDNI:JLabel
+-IabelDomicilio:Label
+-labelEstadoCivil:JLabel
+-labelFediaNacimiento:iLabel
+-labelLocalidadJLabe_
+-labelNadonalidadLabel
+-labelNivelEstudlo:JLabeI
+-labelNombreLabel
+-labelObservacionesLabel
+-labeiProfesion:JLabeI
+-labelProvinciaNadmientoJLabel
+-labelTelefonoLabel
+-labelTitulo:_JLabeI
+-textApellidos:JTextField
+-textCP:_JTextField
+-textDNl:JTextField
+-textDomicilio:JTextField
+-textLocalidad:JTextField
+-textNombre:JTextField
+-textobseivaciones:_JTextField
+-textProfesion:JTextField
+-textTelefono:JTextField
+==============
+
+************** End Class **************

@@ -1,0 +1,70 @@
+﻿
+************** Class Start **************
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Camera
+==============
+-eyeX:Float
+-eyeY:Float
+-eyeZ:Float
+-centerX:Float
+-centerY:Float
+-centerZ:Float
+-upX:Float
+-upY:Float
+-upZ:Float
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Dicom
+==============
+-name:String
+-patientDicomPatient
+-spacingBetweenSlices:float
+-file:File
+-imagesList
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+DicomPatient
+==============
+-nameString
+-gender:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+DicomImge
+==============
+-file:File
+-pixelDataint__
+-matrixint____
+-bitmapBitmap
+-bitsAllocatedmt
+-pixelRepresentationmt
+-columnsmt
+-rowsmt
+-imageType:String
+-bigEndian:boolean
+==============
++createBitmappixelData:int__:Bitmap
++getBitmapBitmap
++applyBoundingBoxminX:nt_maxX:nt_minY:int_maxY:int:void
+==============
+
+************** End Class **************

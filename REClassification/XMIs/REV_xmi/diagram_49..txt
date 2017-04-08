@@ -1,0 +1,126 @@
+﻿
+************** Class Start **************
+OMember<C_
+==============
+
+************** End Class **************
+
+************** Class Start **************
+_getNameo:String
+_getTargetClassO:Class<C>j
+_QetJavaMembero:Memj
+==============
+
+************** End Class **************
+
+************** Class Start **************
+OPropertyRelated<C_T>
+==============
+
+************** End Class **************
+
+************** Class Start **************
+getPropertyTypeO:CIass<T>
+_getPropertyName:Stririg
+==============
+
+************** End Class **************
+
+************** Class Start **************
+0Invocable<C>
+==============
+
+************** End Class **************
+
+************** Class Start **************
+0gethivocatioriTypes:Class<_>_I
+==============
+
+************** End Class **************
+
+************** Class Start **************
+0Settable<C_T>
+==============
+
+************** End Class **************
+
+************** Class Start **************
+OGettable<C_T>
+==============
+
+************** End Class **************
+
+************** Class Start **************
+OMethod<C_T>
+==============
+
+************** End Class **************
+
+************** Class Start **************
+OConstructor<C>
+==============
+
+************** End Class **************
+
+************** Class Start **************
+0set(C_T):void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+0get(C)
+==============
+
+************** End Class **************
+
+************** Class Start **************
+_invoke(C_ObjectjJ)
+_getReturnTyeO:CIass<T>
+_geuavaMemberO:Method
+==============
+
+************** End Class **************
+
+************** Class Start **************
+invoke(Objectfj)
+_getJavaMember:Coristructor<C>
+==============
+
+************** End Class **************
+
+************** Class Start **************
+OFieId<CT>
+==============
+
+************** End Class **************
+
+************** Class Start **************
+0getjavaMember():Field
+==============
+
+************** End Class **************
+
+************** Class Start **************
+OFunction<C_T>
+==============
+
+************** End Class **************
+
+************** Class Start **************
+OAction<C>
+==============
+
+************** End Class **************
+
+************** Class Start **************
+OGetter<C_T>
+==============
+
+************** End Class **************
+
+************** Class Start **************
+0Setter<C_T>
+==============
+
+************** End Class **************

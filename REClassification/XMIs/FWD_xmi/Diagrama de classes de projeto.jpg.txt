@@ -1,0 +1,142 @@
+﻿
+************** Class Start **************
+Estoque_Material
+==============
++NomeMaterial
+-fOata_Compra
++Codigo_Material
+-fQuantidade
++Tipo
+==============
++ConsultarMateriaisO:estoque_material
++CriarListaO:void
++AdidonarOvoid
+4NotificaEstoquistaO:obj<mensage>
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Paciente
+==============
++Nome
++Matricula
++Sexo
++CPF
++Endereco
++Teefone
++Categora
++Data_Nasamerito
+==============
++AdioonarO:void
++EditarO:void
++ExduirO:void
++ConsultarO:paciente
+==============
+
+************** End Class **************
+
+************** Class Start **************
+AssistenteT_cnico
+==============
++COREM
++Escala_Hor_rio
+==============
++AssociarO:void
+-f-DesassociarO:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+ItensdeAtendimento
+==============
++Codigo_Atendimento
++Codigo_Material
++Quanbdade_Material
+==============
++AdiaonarO:void
++EditarO:void
++ExduirO:void
+-IConsultarO:itens
++VerificarEstoqueO:bolean
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Llsu_rio
+==============
++Nome
++CPF
++Endereco
++Tdefone
++Sexo
+4Natricula
+==============
++CadastrarO:void
+_dtarOvoid
+4_xduirO:void
++ConsultarO:usuario
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Atendimento
+==============
++Data_Atendimento
++Codigo_Atendimento
++Codigo_Atendente
++Matricula_Paoente
++Descrico_Atendimento
+==============
++SeledonarPadenteQ:paaente
+-i-CriarSelecaoO:void
++Cadasb-arO:void
++AssociarEnvaminhametoO:void
++ManipuaItensO:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Medico
+==============
+CRM
+-fEscala_Hor_rio
+==============
++AssodarO:void
+-fDesassodarO:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Instituicao_Parceira
+==============
++Nome
++CNPJ
++Endereco
++Telefone
++M_dico_Respons_vel
+-i-CRM_M_dico_Resporis_vel
+==============
++AdioonarO:void
++EditarO:void
++ExduirO:void
++ConsultarO:instituicao
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Encaminhamento
+==============
+-fOata_Encaminhamento
+-f-Num_Formul_rio_FIsico
+==============
+-fCriarEncaminhamentoO
+==============
+
+************** End Class **************

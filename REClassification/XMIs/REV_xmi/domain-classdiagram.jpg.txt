@@ -1,0 +1,309 @@
+﻿
+************** Class Start **************
+_JavaInterface>
+0Job
+==============
+
+==============
+_getName
+_getSteps
+_getStartLimit
+_isRestartable
+_execute
+==============
+
+************** End Class **************
+
+************** Class Start **************
+
+==============
+ohandleReadFailure
+ohandleWriteFailure
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<JavaClass>>
+9DefaultiobLoader
+==============
+e_setApplicationContext
+_setRegistry
+getConfiuratons
+eloadResource
+getJobConfIguration
+getProperty
+e_setProperty
+_createBeanWrapper
+==============
+
+************** End Class **************
+
+************** Class Start **************
+JavaCIass
+(_3Joblnstance
+ojobParameters:JobParameters
+ojobJob
+ojobExecutionCount:nt
+lastExecutionJobExecution
+==============
+
+************** End Class **************
+
+************** Class Start **************
+_JavaClass>>
+oJobSupport
+stepsList
+oname:String
+orestartableboolean
+startLimitmt
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<JavaCIass
+0JobParameters
+==============
+
+************** End Class **************
+
+************** Class Start **************
+kJavaInterface
+o
+Ldechunk
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<JavaInterface>
+0Chunker
+==============
+_chunk
+==============
+
+************** End Class **************
+
+************** Class Start **************
+idLong
+Jitems:List
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<JavaClasst_
+0JobExecution
+==============
+ojoblnstanceJobinstance
+ostepExecutions:Collection
+ostatusBatchStatus
+ostartTimeDate
+oendTime:Date
+exitStatus:ExitStatus
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<JavaCassx
+0Simplejob
+==============
+execute
+_updateStatus
+_shouldStart
+rethrow
+esetJobRepository
+0setExcetztionCIassifier
+==============
+
+************** End Class **************
+
+************** Class Start **************
+1kJavaInterface>>
+0Step
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<JavaClass>>
+oChunkingResult
+jChunkingResult()
+_etChunk()
+etExceptions()
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<JavaC_ass>>
+eDechunkingResult
+==============
+dchunkld:Long
+Jexceptions:List
+Jsuccessfulboolean
+tDechunkingResult
+_getChunkld
+_getExceptions
+_isSuccessfui
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<JavaClass>>
+0JobParametersBuilder
+==============
+dstringMap:Map
+IongMap:Map
+oFdateMap:Map
+==============
+
+************** End Class **************
+
+************** Class Start **************
+_JJavaClass>>
+0Entity
+==============
+id:Long
+version:Integer
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<JavaCIassx
+0Stepsupport
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<JavaCIass
+0StepContribution
+==============
+ataskCountmt
+aexecutionStepExecution
+aexecutionContext:ExecutionContext
+acommitCount:mt
+askipCountmt
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<JavaCIass
+0StepExecution
+==============
+ajobExecutionJobExecution
+astepStep
+astatusBatchStatus
+ataskCountmt
+acommitcountmt
+arollbackcountmt
+askipCountmt
+oretryCount:mt
+ostartTimeDate
+oendTime:Date
+aexecutionContextExecutionContext
+aexitStatusExitStatus
+oterminateOnlyboolean
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<JavaCIass
+0Abstract5_tep
+==============
+iAbstractStep
+IAbstractStep
+_getRetryPolicy
+_setRetryPolicy
+_getExceptionHandler
+_setExceptionHandler
+osetSkipLimit
+ogetSkipLimit
+osetJobRepository
+osetTransactionManager
+osetStreamManager
+osetltemReader
+osetltemWriter
+osetltemSkipPolicy
+ogetltemSkipPolicy
+osetitemFailureHandler
+ogetitemFailureHandler
+e_afterPropertiesSet
+assertMandatoryProperties
+eexecute
+==============
+
+************** End Class **************
+
+************** Class Start **************
+JavaClass>>
+0ChunkedStep
+==============
+_setChunkSize
+_setStreamManager
+_setFattureLoQ
+_setJobRepository
+_setStepOperations
+_setlnterruptionPohcy
+_setExceptionClassifier
+setltemReader
+_setRetryPolicy
+_setltemWriter
+_setChunker
+_setDechunker
+_setltemSkipPolicy
+afterPropertiesSet
+_execute
+_possiblyRegisterStreams
+AprocessChunk
+_updateStatus
+==============
+
+************** End Class **************
+
+************** Class Start **************
+i:iJavaClass>>
+0TaskletStep
+==============
+_setListeners
+_setListener
+aafterPropertiesSet
+JTaskletStep
+tTaskletStep
+_setTaskiet
+_setJobRepository
+aexecute
+_updateStatus
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<JavaCIass
+0BatchStatus
+==============
+n_BatchStatus
+_readResolve
+e_toString
+ggetStatusC
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<JavaInterfacex
+0ItemskipPolicy
+==============
+
+==============
+_shouldskip
+==============
+
+************** End Class **************

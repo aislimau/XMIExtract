@@ -1,0 +1,54 @@
+﻿
+************** Class Start **************
+Job
+==============
+id
+category_id
+type
+company
+logo
+un
+position
+location
+description
+how_to_apply
+token
+is_public
+is_validated
+email
+expiresat
+created_at
+updated_at
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Affiliate
+==============
+id
+un
+email
+token
+is_active
+created_at
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Category
+id
+name
+==============
+
+************** End Class **************
+
+************** Class Start **************
+CategoryAffiliate
+==============
+categoryid
+affiliateid
+==============
+
+************** End Class **************

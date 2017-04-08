@@ -1,0 +1,267 @@
+﻿
+************** Class Start **************
+MatrizCurricular
+==============
+-semestre:nt
+==============
++MatrizCurricular:void
++setSemestresemestre:int:void
++getSemestreQ:mt
++getDicipByCursocurso:int:ArrayList
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Equipamento
+==============
+-codigo:String
+-nome:String
+-Informa_OesComplementares:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+0_
+0_
+==============
+Disciplina
+==============
+-nome:String
+-codigo:String
+-cargaHoraria:String
+-creditosPraticos:String
+-creditosTeoricos:String
+-anoLetivo:mt
+-turno:String
+-turma:String
+-ementa:String
+-objetivoGeral:String
+-objetivoEspecif:String
+-preRequisitos:String
+-bibliografiaBasica:String
+-bibliografiaComplem:String
+==============
++Disciplina:void
++getDisciplinasQ:List
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Nivelinteresse
+==============
+-nmvel:mnt
+==============
++setDisciplinadisc:Disciplina:void
++getNivellnteresseQ:mt
++adicionarDisciplinadisc:Disciplina:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Curso
+==============
+-nome:String
+-numeroSemestres:mt
+==============
++curso:void
++getCursoQ:String
++getNumeroSemestresO:mt
++getAliCursosO:ArrayList
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Sala
+==============
+-codigo:String
+-tipo:TipoSala
+-capacidade:mt
+-ativa:boolean
+-InformacOesComplementares:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+TipoSala
+==============
+-nome:String
+-descricao:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+AnoLetivo
+==============
+-anoLetivo:mt
+==============
++anoLetivo:void
++setAnoLetivoanoLetivo:int:void
++getAnoLetivoQ:mt
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Campus
+==============
+-nome:String
+-cidade:String
+-estado:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+OfertaDisciplina
+==============
+-datalnicio:Date
+-dataFim:Date
+-horalnicio:Time
+-horaFim:Time
+==============
++OfertaDisciplina:void
++verificaDisponibilidadeQ:boolean
++salvarOferta:void
++excluirOferta:void
++setOfertaDisciplina:void
++getOfertaDisciplina
++ofertarDisciplinaString:disciplina_Professor:professor_Horario:horario:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+DiaSemana
+==============
+-nome:String
+-nomeCurto:String
+==============
++getDiasSemana:List
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Insrituicao
+==============
+-nome:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Compromisso
+==============
+-titulo:String
+-descricao:String
+-datalnicio:Date
+-dataEim:Date
+-horalnicio:Time
+-horaPim:Time
+-dialnteiro:boolean
+-publico:boolean
+-frequencia:mt
+-data_fim_repeticao:Date
+==============
++gravarBanco:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Frequencia
+==============
+-APENAS_UMA_VEZ:nt_0
+-TODOS_DIAS:nt_1
+-SEMANAL:nt_2
+-MENSAL:int_3
+-SEMESTRAL:int_4
+-ANUAL:int_5
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Professor
+==============
+-nome:String
+==============
++Professor:void
++informarDisponibilidade:void
++adicionarDisponibilidade:void
++removerDisponibilidade:void
++getDiponibilidadeAulasQ:List
++adicionarNivellnteressenivel:Nivelinteresse:void
++removerNivellnteressenivel:Nivelinteresse:void
++getNiveislnteresseQ:List
++getProfByCursoQ:ArrayList
+==============
+
+************** End Class **************
+
+************** Class Start **************
+AreaFormacao
+==============
+-nome:String
+==============
++adicionarAreaFormacao:void
++removerAreaFormacao:void
++editarAreaFormacao:void
++getAreaFormacaoO:List
+==============
+
+************** End Class **************
+
+************** Class Start **************
+DisponibilidadeAula
+==============
+-hora:Time
+==============
++AdicionarDiaSemana:void
++removerDiaSemana:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Pessoa
+==============
+-email:String
+-senha:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Agenda
+==============
+
+==============
++agendarcompromisso:Compromisso:void
++cancelarcompromisso:Compromisso:void
++consultarO:Compromissofl
++removercompromisso:Compromisso:void
+==============
+
+************** End Class **************

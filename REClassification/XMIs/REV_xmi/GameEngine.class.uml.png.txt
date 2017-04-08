@@ -1,0 +1,95 @@
+﻿
+************** Class Start **************
+Protocol
+==============
+
+==============
++createStartMsg(s:Side):string
++createStatet1sg(m:Moveb:Board_end:booLturn:bool):string
++createSwaplnfoMsg(b:Board):string
++createEndMsgfl:string
++getMessageType(rnsg:string):MsgType
++interpretMoveMsg(rnsg:string):mt
+==============
+
+************** End Class **************
+
+************** Class Start **************
+GameEngme
+==============
+
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+javautilObservableI
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Player
+==============
+-name:string
+-agent:Process
+-moveCount:mt
+-overaUResDonseTime:time
+==============
++sendMsgmsg:string
++recvMsgO:string
+==============
+
+************** End Class **************
+
+************** Class Start **************
+KaIah
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Board
+==============
++Boardho1es:int_seeds:int
++Board(b:Board)
++qetNoOfHo1esO:mt
++getSeeds(s:Side_ho1e:int):mt
++setSeeds(s:Side_hol_e:mt1seeds:int
++addSeeds(s:Side_hol_e:int_seeds:int
++getSeedsOp(s:Side_ho1e:int):mt
++setSeedsOp(s:Side_hol_e:int_seeds:int)
+-i-addSeedsOp(s:Side_hol_e:int_seeds:int)
++getSeedslnStore(s:Side):mt
++setSeedslnStore(s:Side_seeds:int
++addSeedsToStore(s:Side_seeds:int
+==============
+
+************** End Class **************
+
+************** Class Start **************
+
++Kalah(b:Board)
+==============
++getBoardO:Board
++isLegalMove(m:Move):boot
++makeMove(m:Move):Side
++gameOverO:boot
++isLegatMove(b:Board_m:Move):boot
++rnakeNove(b:Boardjn:Move):Side
+hnn
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Move
+==============
++Move(s:Side_hole:int)
++getSideO:Side
++getHoleO:mt
+==============
+
+************** End Class **************

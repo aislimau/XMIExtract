@@ -1,0 +1,86 @@
+﻿
+************** Class Start **************
+Categorialivro
+==============
+-id:int
+-descricao:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+
+==============
+-Id:mt
+-matricula:nt
+-nome:String
+-endereco:String
+-telefone:String
+-grupo_id:mt
+==============
++Authenticatesenha:String:Boolean
++isAdministrator_Q:Boolean
+==============
+
+************** End Class **************
+
+************** Class Start **************
+
+==============
+-id:mt
+-titulo:String
+-subtitulo:String
+-autor:String
+-isbn:String
+-quantidade:mt
+-data_lancamento:Date
+-edicao:mt
+-categorialivro_id:mt
+-editora_id:mt
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Iocacao
+==============
+-id:mt
+-data_Iocacao:Date
+-data_devolucao:Date
+-data_prevista_dev:Date
+-multa:float
+-usuario_md:nt
+-livro_md:nt
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Grupo
+==============
+-id:int
+-descricao:String
+-multa:float
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Editora
+==============
+-id:mt
+-razao_social:String
+-cnpj:String
+==============
+
+==============
+
+************** End Class **************

@@ -1,0 +1,238 @@
+﻿
+************** Class Start **************
+TipoProductoI
+==============
++nombre:string
++unidadMedida:strin
++descripcion:string
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Stock
+==============
++reservadosConfirmado:integer
++reservadosNoConfirmados:intege
++disponib1_e:inteqer
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Rubro
+==============
++nroRubro:integer
++nombre:string
++descipcion:string
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+TipoProductoConcretoI
+==============
+
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Deposito
+==============
++nroDeposito:intege
++direccion:string
++telefono:integer
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Producto
+==============
++nroProducto:integer
++nombre:string
++descripcion:string
+==============
++ca1cu1arStockO:integel_
+==============
+
+************** End Class **************
+
+************** Class Start **************
+EstrategiaVenta
+==============
+
+==============
++vender
+==============
+
+************** End Class **************
+
+************** Class Start **************
+NotaVenta
+==============
++nroNota:integer
++nombreCHente:string
++apeUidoCliente:strin
++fecha:TFecha
+==============
+
+==============
+
+==============
+R
++nroRem_
+Detal
++nroDetallE
+-i-cantidad:
++entregado:
+==============
+
+************** End Class **************
+
+************** Class Start **************
+BsMateriales
+==============
++nombre:string
++direccion:string
++telefono:integer
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Fraccionable1
+==============
++medida:string
+==============
++vender
+==============
+
+************** End Class **************
+
+************** Class Start **************
+NoFraccionable
+==============
+
+==============
++vender
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Descuento
+==============
++nroDescuento:intege
++fecha:TFecha
++cantidad:double
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+
+==============
+1
+==============
+Factura
+==============
+Remito
+==============
++nroFactura:intege
++fecha:TFecha
++formaDePago:strin
++precioTotaudoubl
+==============
++nroRemito:integer
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Detalle
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Extravio
+==============
+
+==============
+-singleton
++getsingletonO:Singleto
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Robo
+==============
+
+==============
+-singleton
++getSingletonO:Singleto
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Averia
+==============
+
+==============
+-singleton
+-i-getsingletonU:Singleto
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Donacion
+==============
++beneficiario:strin
+==============
+
+************** End Class **************
+
+************** Class Start **************
+DetalleFactura
+==============
+
+************** End Class **************
+
+************** Class Start **************
+DetalleNotaVenta
+==============
++cantidad:integer
++subTotal_:d9ub1e
++precio:dou6te
+==============
+
+************** End Class **************
+
+************** Class Start **************
+DetalleRemito
+==============
++nroDetalleRenilto:intege
++cantidad:integer
+4-entregado:boolean
+==============
+
+==============
+
+************** End Class **************

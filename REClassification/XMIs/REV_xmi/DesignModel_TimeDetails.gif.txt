@@ -1,0 +1,78 @@
+﻿
+************** Class Start **************
+TmiePeriod
+==============
+
+==============
+TimePeriodbegin:TimePoint_endTimePoint
+compareTotimePeriodToCompare:mt
+==============
+-begin
+==============
+TirnePoint
+==============
+vaIue:Date
+_asFormattedString:String
+==============
+TimePointdate:Date
+TimePointyear:i_month:mt1day:int
+TimePointdate:Date_precision:TimePrecision
+compareToother:TimePoint:mt
+formatpreferences:Preferences:String
+formatlocale:ProcessPuzzleLocale:String
+parsesource:String_preferences:Preferences:TimePoint
+parsesource:String_locale:ProcessPuzzleLocale:TimePoint
+==============
+
+************** End Class **************
+
+************** Class Start **************
+cinterfacex
+Formattable
+(fromtext_formatting)
+==============
+asText
+asTextC
+parse
+parse
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Quantity
+==============
+
+************** End Class **************
+
+************** Class Start **************
+TinieArnounth
+==============
+
+==============
+TimeVaIue
+TimeValueC
+getlnMilhseconds
+getlnSeconds
+getlnMinutes
+getInHours(
+getlnDays
+getlnWeeks
+==============
+
+************** End Class **************
+
+************** Class Start **************
+enumeration
+TimePrecision
+==============
+_year
+_month
+_week
+_day
+_hour
+_second
+_milliSecond
+==============
+
+************** End Class **************

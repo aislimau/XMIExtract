@@ -1,0 +1,51 @@
+﻿
+************** Class Start **************
+WebUlController
+==============
+changeCaptions
+4changeLanguage(locale)
+4jchangeSkinnewSkinName
+configure
+(jdestroy
+loadDocumentdocumentProperties
+4jloadDocumentBylddocumentType_name_id_viewNameToActivate
+4loadDocumentByNamedocumentType_name_viewNameToActivate
+4loadDocumentbyUridocumentType_name_un_viewNameToActivate
+4jloadlnfoPanelDocumentBylddocumentType_name_id_viewNameToActivate
+4reloadlnfoPanelDocumentByNamedocumentType_name
+loadlnfoPanelDocumentUnidocumentType_name_un
+reloaciActiveDocument
+nestoneStateFromUrl
+storeStatelnUrl
+unloadinfoPanelDocumentdocumentName
+4jwebUlMessageHandlenwebUlMessage
+1buildLanguageSelecton
+4jconfiguneDesktop
+1_configuneDocumentManagen
+configuneLoggen
+determineCunnentHash
+determineCunnentUsenLocale
+determineDefaultSkin
+getTextlntennalkey_defauftValue
+4f__oadAntifactTypeLoaden(theAntifactTypeLoaden)
+4j_oadAntifactTypesbusinessDefinitionFileName
+4f_loadDocumentManagendocumentSekecton_viewSelecton_documentFname_emptyPagesHnef
+4floadlnfoManageninfoPanelSelecton_infoFrame_emptyPagesHnef
+4_loadMenuManagermeniWdget
+loadResounceflundlefileName_theLocale
+4floacWebUiConfigunation
+4_setLanguagenewLanguage
+4jshovWebUlExceptionPagee
+fstoreComponentState
+fsubscribeToWebUlMessages
+==============
+
+************** End Class **************
+
+************** Class Start **************
+LoadUtility
+==============
+
+==============
+
+************** End Class **************

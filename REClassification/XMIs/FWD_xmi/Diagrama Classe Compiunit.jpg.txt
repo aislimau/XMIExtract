@@ -1,0 +1,189 @@
+﻿
+************** Class Start **************
+
+==============
+-nomeCompleto:String
+-rg:String
+-cpf:String
+-telefone:String
+-celular:String
+-email:String
+-dataNascimento:Date
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Endereco
+==============
+-logradouro:String
+-numero:Integer
+-complemento:String
+-cep:String
+-cidade:String
+-estado:String
+-pais:String
+==============
++cadastrar
++editar
++excluir
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<enum>>
+TipoSexo
+==============
+-F:Feminino:String
+-M:Masculino:String
+==============
++getString:String
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Categoria
+==============
+-descricao:String
+==============
++cadastrar
++editar
++excluir
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<enum>>
+TipoAcesso
+==============
+-F:Funcionario:String
+-C:Cliente:String
+==============
++getString:String
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Cliente
+==============
+-dataCadastro:Date
+==============
++cadastrar
++editar
++excluir
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Produto
+==============
+-marca:String
+-preco:Double
+-descricao:String
+-quantidade:Integer
+==============
++cadastrar
++editar
++excluir
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Euncionario
+==============
+-dataAdmtssao:Date
+-dataDemissao:Date
+==============
++cadastrar
++editar
++excluir
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Venda
+==============
+-dataVenda:TimeStamp
+==============
++vender
++editar
+==============
+
+************** End Class **************
+
+************** Class Start **************
+
+==============
+-login:String
+-senha:String
+==============
++cadastrar
++editar
++excluir
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Chamado
+==============
+-descricao:Stnng
+-data:TimeStamp
+-tempoEstimado:Time
+-valorEstimado:Double
+==============
++cadastrar
++editar
++excluir
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<enum>>
+TipoPagamento
+==============
+-A:Avista:String
+-C:Cheque:String
+-CC:Cartaocredito:String
+-CD:Cart_odebito:String
+==============
++getStringQ:String
+==============
+
+************** End Class **************
+
+************** Class Start **************
+ServIC0
+==============
+-descricao:String
+-tempoServico:Time
+-valorServico:Double
+==============
++cadastrar
++editar
++excluir
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<enum>>
+TipoStatus
+==============
+-A:Ativo:String
+-I:Inativo:String
+==============
++getString:String
+==============
+
+************** End Class **************

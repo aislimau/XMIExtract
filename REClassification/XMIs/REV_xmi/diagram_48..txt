@@ -1,0 +1,87 @@
+﻿
+************** Class Start **************
+CMembedmpI<C>
+==============
+_getNameO:String
+_getTargetCIass:CIass<C>
+EMemberlmpl(StringClass<c>)
+==============
+
+************** End Class **************
+
+************** Class Start **************
+EJFieIdImpI<C_T>
+==============
+EFieIdImpI(StringClass<c>_Class<T>)
+_getpropertyNameO:String
+_getPropertyTypeO:CIass<T>
+_getJavaMember:FieId
+==============
+
+************** End Class **************
+
+************** Class Start **************
+(InvocabIeImpI<C>
+==============
+jlnvocablelmpl(String_Class<C>_Classlj<_>)
+_getInvocationTypes:CIass<_>
+==============
+
+************** End Class **************
+
+************** Class Start **************
+GJMethocfImpI<C_7>
+==============
+EMethodImpi(String_cIass<C>_cIassj<_>_cIass<T>)
+_getReturnTye:CIass<T>
+_geuavaMemben:Method
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Conslruclorlmpl<C>
+==============
+dConstructorlmpl(String_Class<C>_Classfl<_>)
+_getJavaMemberQ:Constructor<C_>
+==============
+
+************** End Class **************
+
+************** Class Start **************
+GjFuncrionlmpl<C_7>
+==============
+EFunctionlmpl(stringCIass<C>_cIassfl<_>_cIass<T>)
+==============
+
+************** End Class **************
+
+************** Class Start **************
+GJAct_onlmpl<C>
+==============
+jActionlmpl(StringClass<C>ClassIJ<_>)
+==============
+
+************** End Class **************
+
+************** Class Start **************
+GJSerlerImpI<C_T>
+==============
+Esetterlmpl(StringClass<C>_Class<T>String)
+_invoke(CObjectlj):Void
+_getPropertyTypeO:Class<T>
+_getPropertyNanieO:String
+==============
+
+************** End Class **************
+
+************** Class Start **************
+GiGeUerlmpl<C_T>
+==============
+EGetterlmpl(String_Class<c>Class<T>Stririg)
+_invoke(CObjectjj)
+_getPropertyType9:Class<T>
+_getPropertyNanieO:String
+==============
+
+************** End Class **************

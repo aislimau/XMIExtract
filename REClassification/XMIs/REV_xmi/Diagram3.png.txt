@@ -1,0 +1,87 @@
+﻿
+************** Class Start **************
+Share
+TTL_INFINITY
+mt
+_P
+hash
+String
+_P
+length
+long
+==============
+
+************** End Class **************
+
+************** Class Start **************
+CRemoteShare
+nj_addFileSource(Host_mt_String_String)ShareAvailability
+_9removeEileSource(ShareAvailability)void
+__noSourcesAvailable()boolean
+ptoString))String
+p
+hostList
+List<Host>
+p
+sources
+Vector<ShareAvailability>
+p
+maxTTL
+mt
+==============
+
+************** End Class **************
+
+************** Class Start **************
+CLocaiShare
+ttlmt
+equals(Object)boolean
+rrLmt
+_PmetaString
+_ppathString
+pdisplayNameString
+==============
+
+************** End Class **************
+
+************** Class Start **************
+CShareAvailability
+TTL_DEFAULT
+_pTTL
+pttl
+_phost
+Pmeta
+_pfile
+PdisplayName
+mt
+mt
+mt
+Host
+String
+RemoteShare
+String
+==============
+
+************** End Class **************
+
+************** Class Start **************
+CHost
+I)UNKNOWN_PORTmt
+)sharesHashtable<String_ShareAvailability>
+loggerLogger
+==============
+rn_addFileToSharedFiles(ShareAvailability)void
+rnremoveFileFromSharedFiles(String)void
+_9Seenvoid
+njtoStringString
+rn_equals(Object)boolean
+==============
+_PaddressInetAddress
+_I_portmt
+_pshar-edFilesHashtable_<String_ShareAvailability>
+_PIastSeenDate
+_pfirstSeenDate
+pdisplayNameString
+==============
+
+************** End Class **************

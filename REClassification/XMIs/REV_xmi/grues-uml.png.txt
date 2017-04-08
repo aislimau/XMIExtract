@@ -1,0 +1,83 @@
+﻿
+************** Class Start **************
+Thing
+==============
+-name:string
+-desc:string
+-size:mt
+_cur_room:Room_
+==============
++Thing(name_desc_size)
++moveTo(room:Room_):boot
++getName:string
++getDesc:string
++getSizeU:tnt
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Room
+==============
+-name:string
+-description:string
+-size:mt
+-things:setcThing_>
+-exits:map<stringRoom>
+==============
++Roomname_desc_size
++getNameU:string
++getDesc:string
+-i-Unk(room:Room_exit:string
++getExits:vector<string>
++add(thing:Thing_):bool_
++removething:Thing_
++printExitsC
++printThings(ignore:Thing
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Agent
+==============
+_Agentname_desc_size
+th_ial_k(exit:string:bool_
++act:boot
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Game
+==============
+-agents:vector<Agent_>
+==============
++Game
++addAgentagent:Agent
++step:bool_
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Grue
+==============
+
+==============
+4-Gruename
++act:bool_
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Player
+==============
+
+==============
+4-P1__ayername_desc_size
++act:bool
+==============
+
+************** End Class **************

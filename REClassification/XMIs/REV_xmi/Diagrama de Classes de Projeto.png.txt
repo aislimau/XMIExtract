@@ -1,0 +1,150 @@
+﻿
+************** Class Start **************
+Estoque
+==============
+-strDescricaoMaterial:String
+-intQuantidadeMaterial:nt
+==============
++PesquisarMaterial:void
++AlterarMaterial:void
++CadastrarMaterial:void
++ExcluirMaterial:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+MovimentacaoEstoque
+==============
+-strDescricaoMovimentacao:String
+-strQuantidadeMovimentacao:mt
+-dtmDataMovimentacao:Date
+==============
++RegistrarMovimentacao:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Atendimento
+==============
+-intRegistroAtendimento:nt
+-typPaciente:Paciente
+-strMotivoAtendimento:String
+-strProvidencias:String
+-typProfissional:Profissional
+-dtmDataAtendimento:Date
+==============
++PesquisarAtendimento:void
++CadastrarAtendimento:void
++AlterarAtendimento:void
++ExcluirAtendimento:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Paciente
+==============
+-strNome:String
+-strCategoria:String
+-dtmDataNascimento:Date
+-strCPF:String
+-strEndereco:String
+==============
++ImportarPaciente:void
++PesquisarPaciente:void
++SelecionarArquivo:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+MaterialAtendimento
+==============
+-strNomeMaterial:Stnng
+-dtmDataCadastro:Date
+-intQuantidade:nt
+==============
++InformarMateriais:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+ProfisSiOflal
+==============
+-strNome:String
+-strCPF:String
+-strCargo:String
+-dtmHorario:Date
+-strEscala:String
+==============
++CadastrarProfissional:void
++AlterarProfissional:void
++ExcluirProfissional:void
++PesquisarProfissional:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+EncaminhaAtendimento
+==============
+-tpPaciente:Paciente
+-dtmDataEncaminhamento:Date
+-strMotivo:String
+-strSituacaoAtual:String
+==============
++PesquisarEncaminhamento:void
++CadastrarEncaminhamento:void
++AlterarEncaminhamento:void
++ExcluirEncaminhamento:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Hospital
+==============
+-strRazaoSocial:String
+-strCNPJ:String
+-strEndereco:String
+-strTelefone:String
+==============
++AdicionarHospital:void
++AlterarHospital:void
++ExcluirHospital:void
++PesquisarHospital:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+ReIatorio
+==============
+-aryAcompanhamentoAtendimento:Atendimento
+-aryEncaminhamento:EncaminhaAtendimento
+-aryMaterialAtendimento:MaterialAtendimento
+==============
++GerarRelatorioAcompanhamentoO:void
++c3erarRelatorioEncaminhamento:void
++GerarRelatorioMaterial:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+AcessoSistema
+==============
+-strLogin:String
+-strSenha:String
+-attribute8:mt
+==============
++LogOn:void
++LogOff:void
++Registrar:void
++AlterarSenha:void
+==============
+
+************** End Class **************

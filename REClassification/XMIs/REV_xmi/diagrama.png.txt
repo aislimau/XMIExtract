@@ -1,0 +1,113 @@
+﻿
+************** Class Start **************
+<<enum>>
+SectionType
+==============
++<<enumconstant>>NULL:SectionType
++<<enumconstant>>ROAD:SectionType
++<<enumconstant>>0:SectionType
++<<enumconstant>>IN:SectionType
++<<enumconstant>>OUT:SectionType
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+MapGraphicsPanel
+==============
+-width:int_O
+-height:int_O
+-sectionW:mt_0
+-sectionH:mt_0
+-gridTam:int_0
+==============
+-MapGraphicsPanelwidthX:i_heightY:i_TamGrid:mt_state:State
++getlnstancewidthX:int_heightY:i_TamGrid:int_state:State:MapGraphicsPanel
++createlmagepath:String:Imagelcon
++paintg:Graphics:void
+-createGrid:void
++setBackgroundimg:String:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+MapSection
+==============
+-connections:BooleanU_newBooleannull_8_
+-pressed:Boolean_false
+==============
++MapSectionstate:State
++getConections:Booleanfl
+-defineActionListener:void
++getLabeI:JLabeI
+==============
+
+************** End Class **************
+
+************** Class Start **************
+State
+==============
+
+==============
++setMapSectionselectedmapsectionSelected:MapSection:void
++getMapSectionSeIected:MapSection
++setDirecctionsStatedirecctions:Booleanfl:void
++getDirecctionsStateo:Booleanfl
++updateM:ToolsGraphicsPanel:void
++updateM:MapSection:void
++updateM:DirectionGraphicsPanel:void
++getDirecctionso:DirectionGraphicsPanel
++getToolsState:ToolsGraphicsPanel
++setToolsStatelype:SectionType:void
++setToolstoolsGraphicsPanel:ToolsGraphicsPanel:void
++setDirecctionsdirectionGraphicsPanel:DirectionGraphicsPanel:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+DirectionGraphicsPanel
+==============
+-connections:BooleanU_newBooleannull_8_
+==============
++DirectionGraphicsPanelstate:State
+-buttonMatrixCreator:void
++setConnections:void
++createActions:void
++paint:void
++setDirecctionsdirecctions:Booleanfl:void
++getDirecctionso:Booleanfl
+==============
+
+************** End Class **************
+
+************** Class Start **************
+ToolsGraphicsPanel
+==============
+-pressed:Boolean
+==============
++ToolsGraphicsPanelmap:MaeocsMappingApplication
++buttonsSection:void
++setStatestate:State:void
++setStateTypety_pe:SectionType:void
++getStateTypeQ:SectionType
+==============
+
+************** End Class **************
+
+************** Class Start **************
+MaeocsMappingApplication
+==============
+-pressed:Boolean_false
+-path:String_FiIe_separator+_tmp_
+==============
+-MaeocsMappingApplication
++interfaceGenerator:void
++mainargs:Stringfl:void
++setMapEnabledb:boolean:void
+==============
+
+************** End Class **************

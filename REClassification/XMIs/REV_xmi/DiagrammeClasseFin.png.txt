@@ -1,0 +1,318 @@
+﻿
+************** Class Start **************
+<<JavaClass>>
+GMaConsole
+(defaultpackage)
+==============
+oTextel:JLabeI
+oTexte2:JLabeI
+oTexte3:JLabeI
+aTexte4:JLabeI
+oTexte5:JLabeI
+aTexte6:JLabeI
+aTexte7:JLabeI
+aTexte8:JLabeI
+aTexte9:JLabeI
+aTextelO:JLabeI
+aTextell:JLabeI
+aTextel2:JLabeI
+contenu:Container
+==============
+jMaConsole(int_Loft)
+_update(int_Loft_int):void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<JavaEnumeration>>
+oName
+(defauhpackage)
+==============
+ANTOINE:Name
+SFGpETAN_Name
+SFROBERT_Name
+SFRICHARD_Name
+SFGINEflE_Name
+zFANAIRE:Name
+ARACANO:Name
+ZFARAFINWE:Name
+ARANWE:Name
+ZFARTAHER:Name
+ARTANIS:Name
+ZFAULENDI:Name
+AULENDUR:Name
+SOFCURUFINWE:Name
+EARXWEN:Name
+SOFELDALOTE:Name
+SOELEMMACIL:Name
+SOFELEMIRE:Name
+SOELENWE:Name
+SOFFEANARO:Name
+SOFINDAMBAR:Name
+SO1FINDECANO:Name
+anom:String
+==============
+jName(String)
+_getNomQ:String
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<JavaEnumeration>>
+OTartine
+(defaultpackage
+==============
+SoFTAC:Tartine
+SOFNUTELLA_Tartine
+SOFORANGINA:Tartine
+SOFSALADE:Tartine
+SOFBIERE:Tartine
+anom:String
+aenergie:mt
+==============
+jTartine(String_int)
+_getEnergieO:int
+_getNom:String
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<JavaClass>>
+3Erratique
+(defaultpackage)
+==============
+
+************** End Class **************
+
+************** Class Start **************
+dErratique(String_Case_Loft)
+_seDepIacer:void
+Qmanger(Commestible):void
+_cycleDeVleO:vold
+dessnerObjet(Graphics):void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<JavaClass>>
+GCommestible
+(defaultpadcage)
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<JavaClass>>
+GSaison1
+(defaultpackage)
+==============
+oSnombreLofteu:mt
+oSlargeur:nt
+oShauteur:mt
+oSproporljonErratmque:float
+oSproportjonvorace:float
+oSproportmoncannmbale:float
+oSproportonLapjn:float
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Ecommestible()
+_donneEnergie(Neuneu):void
+getEnergieO:int
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<JavaClass>>
+_Neuneu
+(defaultpa_age)
+==============
+nom:String
+oenergie:mt
+otype:String
+==============
+dNeuneu(String_Case_Loft)
+_getEnergleO:int
+_setEnergie(Int):void
+_getEnvironnementQ:Loft
+_setEnvironnement(Loft):void
+_getNomO:String
+_setNom(String):void
+_getPostionO:Case
+_setPostion(Case):void
+seDepiacer:void
+manger(Commestibie):void
+oseReproduire(Neuneu):void
+_donneEnergie(Neuneu):void
+_cycleDeVieO:void
+_getRaceO:String
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<JavaClass>>
+eVorace
+(defaultpackage)
+==============
+
+************** End Class **************
+
+************** Class Start **************
+dVorace(String_Case_LofL)
+QseDepIacer:void
+Qmanger(Commestible):void
+QdessinerObjet(Graphics):void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<JavaClass>>
+LapIn
+(defaultpackage)
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<JavaClass>>
+GCannlbale
+(defaultpackage)
+==============
+
+************** End Class **************
+
+************** Class Start **************
+dbapinString_Case_Loft)
+_seDepIacerO:vold
+Qmangei(CommestibIe):void
+_cycIeDeVi_Qvoid
+dessinerObjet(Gaphics):void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+dCannibale(String_Case_Loft)
+QseDepIacer:void
+manger(Commestible):void
+cycleDeVleO:vold_
+_essinerObjet(Graphics):void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<JavaClass>>
+GLoft
+(defaultpackage)
+==============
+ohauteur:mt
+olargeur:mt
+==============
+Loft(int_int_ArrayList<Neuneu>2oneGraphique)
+ELoft(ArrayList<Neuneu>)
+_getTerrainO:CaseOU
+_setTerrain(CaseUU):void
+_getHauteurO:int
+_setHauteur(int):void
+_getLargeurO:int
+_setLargeur(int):void
+_getPopulationO:ArrayList<Neuneu>
+_setPopulation(ArrayList<Neuneu>):void
+_ajouterNeuneu(Neuneu):void
+_supprimerNeuneu(Neuneu):void
+cycleDeVieO:void
+odessinerObjet(Graphics):void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<JavaClass>>
+LoftPanel
+(defaultpackage)
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<JavaClass>>
+GCase
+(defaultpackage)
+==============
+positionx:mt
+positiony:mt
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<JavaClass>>
+0ZoneGraphique
+(defaultpadage)
+==============
+PIXEL_SIZE:mt
+==============
+JZoneGraphiqueString_intLnt
+AajouterObjet(ObjetDesi_abIe):void
+AsupprimerObjet(ObtDessinabIe):void
+_getWidthO:int
+_getHeightint
+==============
+
+************** End Class **************
+
+************** Class Start **************
+dLoftPaneI(LinkedList<ObjetDessinabIe>)
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<JavaClass>>
+GNourriture
+(defaultpackage)
+==============
+nom:Stnng
+energie:mt
+sX:mt
+sY:mt
+==============
+dNourriture(int_int)
+ENourriture(String_int)
+_getXQ:int
+_set)((int):void
+_getYQ:int
+_setY(int):void
+_donneEnergie(Neuneu):void
+_getEnergleO:int
+_getNomQ:String
+_setNom(String):void
+_setEnergie(int):void
+odessrnerObjet(Graphics):void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<JavaInterface>>
+oObJetDessinable
+(defaultpackage)
+==============
+
+************** End Class **************
+
+************** Class Start **************
+dessinerObjet(Graphics):void
+==============
+
+************** End Class **************

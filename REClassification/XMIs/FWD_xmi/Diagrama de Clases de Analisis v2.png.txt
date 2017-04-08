@@ -1,0 +1,81 @@
+﻿
+************** Class Start **************
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Movimiento
+==============
+-conoepto:String
+-fedia:date
+-importe:float
+-tipo:diar
+==============
+
+************** End Class **************
+
+************** Class Start **************
+
+-direocion:Sthng
+==============
+-nembfe:sfring
+==============
+
+************** End Class **************
+
+************** Class Start **************
+
+I-password:Sfririg
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Modificacien
+==============
+-fecha:Date
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Beneficiario
+==============
+-estadoCivilsiring
+-nactonalidedsiring
+-nivelDeEstudiomt
+-obsefvaclonessiring
+-ocupacaon:siring
+-profesion:siring
+-situacaonEconomica:siring
+-viviendesiring
+-viviendsAiquiler:float
+_viviendeObservaciones:siring
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Ayuda
+==============
+-fedia:date
+-importe:float
+_observaciones:
+-OlD:Sfring
+String
+==============
+
+************** End Class **************
+
+************** Class Start **************
+TipoAyuda
+==============
+_desaipcion:String
+_monetaria:boalean
+-OlD:String
+-titulo:Siring
+==============
+
+************** End Class **************

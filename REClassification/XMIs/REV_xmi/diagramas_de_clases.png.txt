@@ -1,0 +1,106 @@
+﻿
+************** Class Start **************
+
+==============
+utenabiap
+==============
+Generador
++generar()
+MultiGenerador
++generar()
++agregar_generador()
+MultiGeneradorConcatenador
+4-generar()
+==============
+
+************** End Class **************
+
+************** Class Start **************
+utenabigeneradores_de_archivc
+==============
+AdaptadorMultiproceso
++generar_csv()
++generar_multiples_csv_concurrentes(
+ArchivoCSV
++agregargenerador()
++agregar_header_csv()
++generar_csv()
+==============
+
+************** End Class **************
+
+************** Class Start **************
+utenabi_generadores_de_dato
+==============
+utenabi_api_Generador
+GeneradorDePalabrasEspaniolI
+IGeneradorDeltemDesdeCsvl
+IGeneradorDeFloatI
+GeneradorDeCiudadProvincia
+GeneradorDeEnteroI
+GeneradorDeOpcionPreestablecidaI
+IGeneradorDeEnteroSecuencialI
+IGeneradorDeBooleanoI
+I_Genera
+dorDeFechaI
+IGeneradorDeBarrioCiudadProvinciaI
+GeneradorDeCP
+GeneradorDeNroDocumento
+GeneradorDeRazonSocial
+==============
+
+************** End Class **************
+
+************** Class Start **************
+ArchivoCSVI
+==============
+
+************** End Class **************
+
+************** Class Start **************
+MultiGeneradorI
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Generador
+==============
+
+************** End Class **************
+
+************** Class Start **************
+generadorpk:GeneradorDeEnteroSecuencialI
+==============
+
+************** End Class **************
+
+************** Class Start **************
+generadorcodigocomercio:GeneradorDeEnteroI
+==============
+
+************** End Class **************
+
+************** Class Start **************
+_11_4_II_
+==============
+
+************** End Class **************
+
+************** Class Start **************
+archivocsv:ArchivoCSV
+==============
+
+************** End Class **************
+
+************** Class Start **************
+generador_razon_social_comercio:GeneradorRazonSocial1
+==============
+
+************** End Class **************
+
+************** Class Start **************
+generadorderubro:GeneradoroeopcionPreestablecidaI
+==============
+
+************** End Class **************

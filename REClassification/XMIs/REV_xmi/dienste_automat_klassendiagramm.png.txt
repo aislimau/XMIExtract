@@ -1,0 +1,105 @@
+﻿
+************** Class Start **************
+Automat
+==============
+
+==============
++Automat
++registriere(zustand:void
++setStart(zustandsKlasse:Class<T_>>:void
++setEventQuelle(queueEventQueUevoid
++getzustand(kiasse:Class<T_>>
++step:boolean_JavaAnnotations__SuppressWarnings(deprecation_)_
+_pruefeAutomat():void
++getAktuellerZustand
++run():void
++registriere
++registriereo
+==============
+
+************** End Class **************
+
+************** Class Start **************
+EventQueue
+==============
+<<getter>>+getEventoEvent
+==============
+
+************** End Class **************
+
+************** Class Start **************
+EventQueue
+==============
+
+==============
++EventQueue
++enqueue(event:Event:void
++dequeueo:Event
+-i-getEvent():Event
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Zustand
+==============
+
+==============
++setAutomatautomatAutomat:void
++init():void_javaAnnotations__Deprecated
++toString():String
++entry():void
++exit():void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+KeinUebergangException
+==============
+
+==============
++KeinUebergangExceptionmsg:String
+==============
+
+************** End Class **************
+
+************** Class Start **************
+UnbekannterEventException
+==============
+-sriaI_1ersionUID:long_1L_readOnly_
+==============
++UnbekannterEventExceptionmsg:String
+==============
+
+************** End Class **************
+
+************** Class Start **************
+AktlverZustand
+==============
+
+==============
++handleevent:Event:Zustand
+==============
+
+************** End Class **************
+
+************** Class Start **************
+PassiverZustand
+==============
+
+==============
++handle:Zustand
+==============
+
+************** End Class **************
+
+************** Class Start **************
+EndZustand
+==============
+
+==============
++setAutomatautomat:Automat:void_JavaAnnotations_Override_
+==============
+
+************** End Class **************

@@ -1,0 +1,67 @@
+﻿
+************** Class Start **************
+<<block>>
+Grippers(3Axises)vi
+(fromGripper(3Axises))
+==============
+cornt_uus
+==============
+
+==============
+parts
++xAxisDrjve:Drive
++yAxisDrive:Drive
++grip:Gripper
++colorSensor:DiffuseSensorvi
++gripPosition:MagneticSensorv2_2_
++doubleActingCylinder:DoubleActingCylinderv3
++gripValve5_2:Valve5_2wayvi
++cylinderValve5_2:Valve5_2wayvi
++gripValveController:ElectricValve5_2Controller
++cylinderValveController:ElectricValve5_2Controller
+refrerces
++model:String_version1
++eMode:electricMode_DC
+<<constraint>>+maxCapacitypieces_1
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<block>>
+Stackvi
+(fromStack)
+==============
+cortstrurns
+==============
+
+==============
+pans
+r_fe_erces
++model:String_version1
+<<constraint>>+maxapacitypieces_8
+ppees
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<block>>
+WarehousingStation
+(fromFestoMPSStructure)
+==============
+
+==============
+
+==============
++stackvi:Stackvi_3_
++grippers3Axisesvi:Grippers
+references
++inputs:Connections_7J_Digital
++outputs:Connections_3j_Digital
+propertths
++inoutenergy:E_FS
+(3Axisesvi
+==============
+
+************** End Class **************

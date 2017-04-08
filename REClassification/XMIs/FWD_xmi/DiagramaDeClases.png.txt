@@ -1,0 +1,111 @@
+﻿
+************** Class Start **************
+featuresternplate
+title:String
+comment:String
+knowladgearea:KnowladgeArea
+date:Date
+approved:boolean
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+queStions_ternp1ate
+==============
+text:String
+value:Integer
+feature:Feature
+==============
+
+************** End Class **************
+
+************** Class Start **************
+answerstempalte
+==============
+text:String
+value:Integer
+question:Question
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+KnowladgeArea
+==============
+name:String
+description:String
+san_relation:String
+==============
+riewOperation
+riewOperation()
+==============
+
+************** End Class **************
+
+************** Class Start **************
+calification
+==============
+feature:Integer
+valueInteger
+personal_testInteger
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+personalanswers
+==============
+answer:Integer
+stateBoolean
+personal_test:Integer
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+personal_test
+==============
+polister:Integer
+respondent:Integer
+test:Integer
+date:Date
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+respondent
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+pollster
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+users
+==============
+nik:Strnig
+==============
+newOperation
+==============
+
+************** End Class **************

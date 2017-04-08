@@ -1,0 +1,275 @@
+﻿
+************** Class Start **************
+ElementNoyau
+==============
++intPARSEERROR
++jntPARSEOK
+Integerid
+_IntegeridCount
+==============
++mtConstruireAPartirDeDOMXMLEIernei
++ElementCreerNoeucjXMLDocumentdo_
++ElementNoyau
++Integergetld
++voidsetldIntegerid
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+
+==============
+_CheminPorteurcheniinPorteur
+-Doublepoids
+Doubleposition
+Volvol
+==============
+voidAvancerDoubleprogression
+DoubleAvancerDoubleprogression_Dc
++Bagage
++Sagagedoublepoids_Volvol
++mtConstruireAPartirDeDoMXMLElemei
++ElementCreerNoeudXMLDocumentdoc
+-Pointcalcu_erCoordonneesAbsoluesCt
++Bagageget8agape5yldLinkedList<Bac
++CheminPorteurgetCheminPorteur
++PointgetCoordonneesAbsolues
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+
+==============
+_Booleandeplace
+_doubleIongueur
+IntersectionnoeudDeb
+IntersectionnoeudFin
+==============
++Chemin
++CheminIntersectionnoeudDeb_lnterse_
++it-itConstruireAPartirDeDOMXMLElemei
++ElementCreerNoeudXMLDocumentdo_
+-voidcalculerLongueur
++DoublegetCoeffDirecteur
++doublegetLongueur
++IntersectiongetNoeudDeb
++IntersectiongetNoeudFin
++DoublegetOrdAOrigine
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Cv
+ArrayList<Bagage>bagages
+_IntegernbBagagesMax
+_Stringnom
+==============
++ntConstruireAPartirDeDOMXMLElernei
++ElementCreerNoeudxMLDocumentdoc
++VoI
++VolStringnom_Integernb5agagesMax
++StringgetNom
++VolgetVoIByIdLinkedList<Vol>list_Inte
++StringtoString
+==============
+
+************** End Class **************
+
+************** Class Start **************
+CCheminPorteur
+_LinkedList<Bagage>bagagesAttente
+_LinkedList<Bagage>bagagesPortes
+_DoubledistanceBagages
+_DoublelirniteBagages
+_DoubletempsConsomme
+_Doublevitesse
+==============
++voidAvancerDoubleduree
++voidAvancerBagagesDoublejetonTen
++CherninPorteur
+CheminPorteur(lntersectionpointEntree_
++mtConstruireAPartirDeDOMXMLElerne
++ElementCreerNoeudXMLDocumentdo
++voidEntrerBagageBagagebagageEntr
++BagageSortirBagageDouble__dureeSc
++LinkedList<Bagage>getBagagesAttent
++_LinkedList<Bagage>getBagagesPoris
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Toboggan
+==============
+Volvol
+==============
++voidAvancerDoubleduree
++ElementCreerNoeudXMLDocumentdo_
++voidEntrerBagageagagebagageEntr
++Toboggan()
++TobogganlntersectionpointEntree_lnte
++ToboggangetTobogganByldLinkedList
++VolgetVol
++voidsetVolVolvol
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+CTapisRoulant
+==============
++voidAvancerDoubleduree
++ElementCreerNoeudXMLDocumentdo_
++voidEntrerBagageBagagebaqaqe
++BaqaqeSortirBaqaqeDouble__dureeSc
++TapisRoulant
++TapisRoulantlntersectionpointEntree_I
+-DoubleavancerBaqaqesDoubleternpsl
++LinkedList<CheminChariot>calculerTraj
+-ArrayList<LinkedList>calculerTrajetLir
+-ArrayList<LinkedList>calculerTrajetStji_
+==============
+
+************** End Class **************
+
+************** Class Start **************
+CIntersection
+_ChariotchariotPresent
+CheminPorteurcheminPorteur
+_Booleandeplace
+==============
+-Pointpoint
+CheminPorteurpointDepot
+CheminPorteurpointRetrait
+ArrayList<CheminChariot>voiesPrec
+ArrayList<CheminChariot>voiesSuiv
++voidAjouterVoiePrecCherninChariotc_
++voidAjouterVoieSuivCheminChariotch
++voidArreterChariot
++voidAvancerChariotDoublejetonTemp
++mtConstruireAPartirDeoOMXMLElerne
++ElementCreerNoeudXMLDocumentdo
++DoubleGetDistanceDernierChariotDou
++DoubleGetDistanceProchainChariotDo
++lntersection
++lntersectionDoublex_Doubley
+==============
+
+************** End Class **************
+
+************** Class Start **************
+CherninChariot
+==============
+LinkedList<Chariot>chariotsPresents
+==============
++voidAjouterChariotChariotchariot
++voidAjouterchariotQueueChariotchar
++voidAjouterchariotTeteChariotchariot
++voidArreterChariotChariotchariot
++voidAvancerCharioflDoublejetoriTemp
++voidAvancerChariotsDoublejetonTern
++voidAvancerchariotsIritegerjetonsTei
++CheminChariot
++CheminChariotIritersectionnoeudDeb_
++ntConstruireAPartirDeDoMXMLEIernei
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+CChariot
+_Actionaction
+BagagebagagePorte
+CheminChariotcheminActuel
+_Booleandeplace
+_booleanestArrete
+==============
+-DoublepositionPail
+_DoubletempsConsomme
+LinkedList<CheminChariot>trajet
+-Doublevitesse
+_DoublevitesseReelle
++voidAjouterCheminCheminChariotche
+voidAllerCheminPrecedentCheminChar
+voidAllerCheminSuivant
+voidAttendreDoubleduree
+DoubleAvancerDoubleprogression
+voidAvancerDoubleprogression_Doul
++voidCalculerTrajet
++Chariot
++ChariotDoublepositionRail_Doublevite
++mtConstruireAPartirDeDOMXMLElemei
+EnumAction
+==============
+
+************** End Class **************
+
+************** Class Start **************
+VoieGarage
+==============
+LinkedList<Chariot>chariotsDebloques
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Rail
+_LinkedList<Etincelle>etincelles
+==============
++voidAjouterChariotChariotchariot
++voidAjouterEtincelleEtincelleetincelle
++voidAvancerChariotDoublejetonTernr
++voidAvancerchariotDoublejetonTemp
++voidAvancerChariotsDoublejetonTerr
++voidAvancerEtincellesDoublejetonTei
++mtConstruireAPartirDeDOMXMLEleme
++ElementCreerNoeudXMLDocumeritdo
++DoubleGetDistanceDernierChariotDou
++DoubleGetDistanceProchainChariotDc
+==============
+
+************** End Class **************
+
+************** Class Start **************
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+
+==============
+LinkedLiskChariot>chariots
+LinkedList<Chernin>cherriins
+_Doubleciistancesecu
+LinkeclList<lntersection>intersections
+-DoublelambdaPoisson
+-DoublelargeurM
+-DoublelongueurM
+-Doublenb5agagesAGenerer
+LinkedList<Rail>rails
+LinkedList<TapisRoulant>tapisRoulards
+==============
++voidActualiserDoublejetonTenips_So_
++Aeroport
++it-itConstruireAPartirDeDoMXMLEIernei
++mtConstruireSimulAPartirDeDOMXMLE
++ElementCreerNoeudYMLDocumentdo_
++voidajoutersagageTapmsRoulanttapisF
++voidajouterChemmnATrajetChariotChar
++voidavancer
+-TapisRoulantchoisirAleaTR
+-SagagecreerSagageAlea
+==============
+
+************** End Class **************

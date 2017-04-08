@@ -1,0 +1,149 @@
+﻿
+************** Class Start **************
+Contato
+==============
++TelefoneFixo:String
++TelefoneCelular:String
+-i-Email:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Endereco
+==============
+aogradouro:String
++Numero:String
++Complemento:String
++Bairro:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Login
+==============
+-fJsuario:String
++Senha:String
+-t-Bloqueado:Boolean
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+
+==============
+-fNome:Sting
++Sgla:Sting
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+
+==============
++id:mnt
++nome:Sting
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Estado
+==============
+-fNome:Sting
++SigIa:Sting
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Cornprador
+==============
++Nasdmento:DateTime
++CPF:String
++Rg:String
++OrgaoErnissor:String
++FiliacaoPai:String
++FiliacaoMae:String
++RecebeEmailOferta:Boolean
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Anunciante
+==============
++CNPJ:String
+-INomeFantasia:String
++InscricaoMunidpal:String
++InscricaoEstadual:String
++WebSite:String
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Oferta
+==============
++Inicio:DateTime
++Fim:DateTime
++Titulo:String
++Descricao:String
++Imagem:Byte
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Cuporn
+==============
++Codigo:tnt
+_Emissao:DateTime
++Validade:DateTime
++IJtilizado:Booean
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<enumeration>>
+MeioPagamento
+==============
++CARTAO
++PAYPAL
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<<enumeration>>
+TipoOferta
+==============
++PRODUTO
++SERVICO
+==============
+
+==============
+
+************** End Class **************
