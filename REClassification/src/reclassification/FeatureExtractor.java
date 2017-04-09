@@ -31,6 +31,7 @@ import javax.swing.Action;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileFilter;
+import reclassification.util.XMIVersionExtractor;
 
 /**
  *
@@ -121,7 +122,7 @@ public class FeatureExtractor extends javax.swing.JFrame {
         textPanelLayout.setHorizontalGroup(
             textPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(textPanelLayout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(textPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(listMetrics)
                     .addComponent(fullClassnameText, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -165,7 +166,7 @@ public class FeatureExtractor extends javax.swing.JFrame {
             }
         });
 
-        csvFileName.setText("C:\\Users\\aisli_000\\Documents\\NetBeansProjects\\REClassification\\data_class.csv");
+        csvFileName.setText("/Users/truongh/Documents/TruongHQ-Projects/Non_shared/2017.REDvsFWD/XMIExtractor/REClassification/data_Class.csv");
         csvFileName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 csvFileNameActionPerformed(evt);
@@ -201,6 +202,7 @@ public class FeatureExtractor extends javax.swing.JFrame {
         });
 
         umlVersionSel.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "UML 1.x", "UML 2.x" }));
+        umlVersionSel.setEnabled(false);
         umlVersionSel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 umlVersionSelActionPerformed(evt);
@@ -208,6 +210,7 @@ public class FeatureExtractor extends javax.swing.JFrame {
         });
 
         xmiVerSel.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "XMI 1.0", "XMI 1.x", "XMI 2.0-2.1" }));
+        xmiVerSel.setEnabled(false);
 
         jLabel1.setText("UML version");
 
@@ -308,11 +311,11 @@ public class FeatureExtractor extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(xmiFilename)
-                    .addComponent(csvFileName))
+                    .addComponent(csvFileName, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(chooseFileBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(csvFile, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE))
+                    .addComponent(csvFile, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
                 .addGap(80, 80, 80))
         );
         layout.setVerticalGroup(
@@ -420,9 +423,10 @@ public class FeatureExtractor extends javax.swing.JFrame {
         int returnVal = fileChooser.showOpenDialog(this);
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             xmiFileStr = "";
-            File file = fileChooser.getSelectedFile();           
-            xmiFileStr = file.getAbsolutePath();
+            File xmiFile = fileChooser.getSelectedFile();           
+            xmiFileStr = xmiFile.getAbsolutePath();
             xmiFilename.setText(xmiFileStr);
+            System.out.println("File " + xmiFile.getName() + " is successfully loaded!");
         } else {
                 System.out.println("File access cancelled by user.");
                 }     
@@ -830,24 +834,28 @@ public class FeatureExtractor extends javax.swing.JFrame {
         float avgAttrClass = 0;     // average number of attribute per class
         
         metricsDisplay.setText(null);        
+        
+        
+        File xmiFile = new File(xmiFilename.getText());
         String metamodel = "";
         String modelTrans = "";
         
-        //UML metamodel selection
-        if (umlVersionSel.getSelectedItem().toString() == "UML 1.x"){
-           metamodel = "metamodel.xml";
-        } else if (umlVersionSel.getSelectedItem().toString() == "UML 2.x"){
-           metamodel = "metamodel2.xml"; 
-        }
-        
-        //XMI transformation selection
-        if (xmiVerSel.getSelectedItem().toString() == "XMI 1.0"){
-           modelTrans = "xmiTrans1_0.xml";
-        } else if (xmiVerSel.getSelectedItem().toString() == "XMI 1.1"){
-           modelTrans = "xmiTrans1_1.xml"; 
-        } else if (xmiVerSel.getSelectedItem().toString() == "XMI 2.0-2.1"){
-           modelTrans = "xmiTrans2_0.xml"; 
-        }
+        // UML and XMI transformation selection
+        XMIVersionExtractor ver = new XMIVersionExtractor(xmiFile);
+        System.out.println("xmiVersion = " + ver.getVersion());
+       
+        if (ver.getVersion().startsWith("1.")){
+            metamodel = "metamodel.xml";
+            // xmi ver = 1.0
+            if (ver.getVersion().equals("1.0")){
+                modelTrans = "xmiTrans1_0.xml";
+            } else // xmi ver = 1.x
+                modelTrans = "xmiTrans1_1.xml";
+        } else {
+            metamodel = "metamodel2.xml";
+            modelTrans = "xmiTrans2_0.xml";
+        }    
+        System.out.println("Using files " + metamodel + " and " + modelTrans);
                 
         // calculate number of classes
         element = "class";
@@ -861,7 +869,7 @@ public class FeatureExtractor extends javax.swing.JFrame {
         metricsDisplay.append("Number of " + element + " = " + noAttribute + "\n");
         System.out.println("Number of " + element + " = " + noAttribute + "\n");                        
         
-        // calculate average number of operation per class
+        // calculate average number of attribute per class
         element = "Average number of attribute per class";
         if (noAttribute > 0 && noClass > 0){
           avgAttrClass = (float)noAttribute/(float)noClass;    
