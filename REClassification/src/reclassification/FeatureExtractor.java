@@ -31,6 +31,7 @@ import javax.swing.Action;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileFilter;
+import reclassification.util.XMIMetricsExtractor;
 import reclassification.util.XMIVersionExtractor;
 
 /**
@@ -62,6 +63,7 @@ public class FeatureExtractor extends javax.swing.JFrame {
         extractAttributes = new javax.swing.JTextArea();
         listMetrics = new javax.swing.JButton();
         readCSV = new javax.swing.JButton();
+        btnListMetrics = new javax.swing.JButton();
         xmiFilename = new javax.swing.JTextField();
         chooseFileBtn = new javax.swing.JButton();
         readClassMetrics = new javax.swing.JButton();
@@ -111,9 +113,11 @@ public class FeatureExtractor extends javax.swing.JFrame {
         });
 
         readCSV.setText("Read CSV");
-        readCSV.addActionListener(new java.awt.event.ActionListener() {
+
+        btnListMetrics.setText("List Metrics");
+        btnListMetrics.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                readCSVActionPerformed(evt);
+                btnListMetricsActionPerformed(evt);
             }
         });
 
@@ -124,7 +128,10 @@ public class FeatureExtractor extends javax.swing.JFrame {
             .addGroup(textPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(textPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(listMetrics)
+                    .addGroup(textPanelLayout.createSequentialGroup()
+                        .addComponent(listMetrics)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnListMetrics))
                     .addComponent(fullClassnameText, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(textPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,7 +148,8 @@ public class FeatureExtractor extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(textPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(listMetrics)
-                    .addComponent(readCSV))
+                    .addComponent(readCSV)
+                    .addComponent(btnListMetrics))
                 .addContainerGap())
         );
 
@@ -432,23 +440,6 @@ public class FeatureExtractor extends javax.swing.JFrame {
                 }     
     }//GEN-LAST:event_chooseFileBtnActionPerformed
 
-    private void readClassMetricsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_readClassMetricsActionPerformed
-        String command = "java -jar SDMetrics.jar -xmi " +  xmiFilename.getText()  + " -filter #.java -filter #.javax -filter #.org.xml -f csv data";
-        Process process = null;
-        try {
-            String s;
-            process = Runtime.getRuntime().exec(command); 
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            while((s=bufferedReader.readLine()) != null)
-            System.out.println(s);
-            process.waitFor();
-        } catch (IOException ex) {
-            Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
-        }   catch (InterruptedException ex) {
-            Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_readClassMetricsActionPerformed
-
     private void csvFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_csvFileActionPerformed
         // TODO add your handling code here:
         String [] row = null;
@@ -469,195 +460,196 @@ public class FeatureExtractor extends javax.swing.JFrame {
                 }     
     }//GEN-LAST:event_csvFileActionPerformed
 
-    private void readCSVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_readCSVActionPerformed
-        
-        int count = 0;
-        int noClasses = 0;
-        int noAttr = 0;
-        int noOps = 0;
-        int noECPar = 0;
-        int noICPar = 0;
-        float avgAttrCls = 0;
-        float avgOpsCls = 0;
-        int noDepOut = 0;
-        int noDepIn = 0;
-        int maxNumOps = 0;
-        String xmiFile = "";
-        CSVReader csvReader = null;
-        metricsDisplay.setLineWrap(true);
-        extractAttributes.setText(null);
-        
-        String csvFilename = "";
-        xmiFile = xmiFilename.getText();
-        String [] row = null;
-        
-        classMetricsReader(xmiFile);        // generate class metrics csv
-        csvFilename = "data_class.csv";
-                
-        try {
-            List<String> classListLocal = new ArrayList<>();
-
-            if (csvFilename.isEmpty() == false) {
-                try {
-                    csvReader = new CSVReader (new FileReader(csvFilename));
-                    try {
-                        row = csvReader.readNext();
-                    } catch (IOException ex) {
-                        Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                } catch (FileNotFoundException ex) {
-                    Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
-                }
-      
-            while ((row = csvReader.readNext()) != null){
-              count++;
-              noAttr = noAttr + Integer.parseInt(row[1]);
-              noOps = noOps + Integer.parseInt(row[2]);
-              if (maxNumOps < Integer.parseInt(row[2])){
-                maxNumOps = Integer.parseInt(row[2]);    
-              }
-              noDepOut = noDepOut + + Integer.parseInt(row[15]);
-              noDepIn = noDepIn + + Integer.parseInt(row[15]);
-              }                    
-            noClasses = count;
-            }
-                             
-            try {
-                csvReader.close();
-            } catch (IOException ex) {
-                Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            } catch (IOException ex) {
-            Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            
-           if (noAttr > 0 && noClasses > 0){
-               avgAttrCls = Integer.valueOf(noAttr).floatValue() / Integer.valueOf(noClasses).floatValue();  // calculate average number of attribute per class 
-            }
-            
-            if (noClasses > 0 && noOps > 0){
-               avgOpsCls = Integer.valueOf(noOps).floatValue() / Integer.valueOf(noClasses).floatValue();  //calculate average number of operation per class
-            }
-            
-            extractAttributes.append(" Total Number of classes =  " + noClasses + "\n");
-            extractAttributes.append(" Total Number of attributes =  " + noAttr + "\n");
-            extractAttributes.append(" Average number of attribute per class =  " + avgAttrCls + "\n");
-            extractAttributes.append(" Total Number of operation =  " + noOps + "\n");
-            extractAttributes.append(" Maximum (Highest) Number of operation per class =  " + maxNumOps + "\n");
-            extractAttributes.append(" Average number of operation per class =  " + avgOpsCls + "\n");
-            extractAttributes.append(" \n Total Number of outgoing dependency =  " + noDepOut + "\n");
-            extractAttributes.append(" Total Number of incoming dependency =  " + noDepIn + "\n");
-            
-            relationshipMetrics (xmiFile);
-    }//GEN-LAST:event_readCSVActionPerformed
-
-   
-    private void relationshipMetrics (String xmiFileSend){
-        int count = 0;
-        int noClasses = 0;
-        int noAssociation = 0;
-        float avgAssocCls = 0;
-        boolean twoDirectedRel = false;
-        
-        String xmiFile = xmiFileSend;
-        CSVReader csvReader = null;
-        metricsDisplay.setLineWrap(true);
-        
-        String csvFilename = "";
-        //csvFilename = csvFileName.getText();
-        String [] row = null;
-        
-        relationshipReader (xmiFile);       // generate relationship metrics csv
-        csvFilename = "dataRM_Class_Assoc.csv";
-        
-        try {
-            List<String> relListLocal = new ArrayList<>();
-
-            if (csvFilename.isEmpty() == false) {
-                try {
-                    csvReader = new CSVReader (new FileReader(csvFilename));
-                    try {
-                        row = csvReader.readNext();
-                    } catch (IOException ex) {
-                        Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                } catch (FileNotFoundException ex) {
-                    Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
-                }
-      
-                while ((row = csvReader.readNext()) != null){
-                  for (int i = 1; i < row.length; i++){
-                      noAssociation = noAssociation + Integer.parseInt(row[i]); 
-                      if (Integer.parseInt(row[i]) > 1){
-                        twoDirectedRel = true;    
-                      } 
-                  } count++;
-                }
-                noClasses = count;
-                
-                if (noClasses > 0 && noAssociation > 0){
-                  avgAssocCls = Integer.valueOf(noAssociation).floatValue() / Integer.valueOf(noClasses).floatValue();;    
-                }
-                
-            }
-                             
-            try {
-                csvReader.close();
-            } catch (IOException ex) {
-                Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            } catch (IOException ex) {
-            Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
-            }
-                     
-            
-        extractAttributes.append(" Total Number of association =  " + noAssociation + "\n");
-        extractAttributes.append(" Average Number of association per class =  " + avgAssocCls + "\n");
-        extractAttributes.append(" Existence of two association directed to one class is " + twoDirectedRel + "\n");
+/* Read from .CSV file    
+//    private void readCSVActionPerformed(java.awt.event.ActionEvent evt) {                                        
+//   
+//        int count = 0;
+//        int noClasses = 0;
+//        int noAttr = 0;
+//        int noOps = 0;
+//        int noECPar = 0;
+//        int noICPar = 0;
+//        float avgAttrCls = 0;
+//        float avgOpsCls = 0;
+//        int noDepOut = 0;
+//        int noDepIn = 0;
+//        int maxNumOps = 0;
+//        String xmiFile = "";
+//        CSVReader csvReader = null;
+//        metricsDisplay.setLineWrap(true);
+//        extractAttributes.setText(null);
+//        
+//        String csvFilename = "";
+//        xmiFile = xmiFilename.getText();
+//        String [] row = null;
+//        
+//        classMetricsReader(xmiFile);        // generate class metrics csv
+//        csvFilename = "data_class.csv";
+//                
+//        try {
+//            List<String> classListLocal = new ArrayList<>();
+//
+//            if (csvFilename.isEmpty() == false) {
+//                try {
+//                    csvReader = new CSVReader (new FileReader(csvFilename));
+//                    try {
+//                        row = csvReader.readNext();
+//                    } catch (IOException ex) {
+//                        Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
+//                    }
+//                } catch (FileNotFoundException ex) {
+//                    Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//      
+//            while ((row = csvReader.readNext()) != null){
+//              count++;
+//              noAttr = noAttr + Integer.parseInt(row[1]);
+//              noOps = noOps + Integer.parseInt(row[2]);
+//              if (maxNumOps < Integer.parseInt(row[2])){
+//                maxNumOps = Integer.parseInt(row[2]);    
+//              }
+//              noDepOut = noDepOut + + Integer.parseInt(row[15]);
+//              noDepIn = noDepIn + + Integer.parseInt(row[15]);
+//              }                    
+//            noClasses = count;
+//            }
+//                             
+//            try {
+//                csvReader.close();
+//            } catch (IOException ex) {
+//                Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//            } catch (IOException ex) {
+//            Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//            
+//           if (noAttr > 0 && noClasses > 0){
+//               avgAttrCls = Integer.valueOf(noAttr).floatValue() / Integer.valueOf(noClasses).floatValue();  // calculate average number of attribute per class 
+//            }
+//            
+//            if (noClasses > 0 && noOps > 0){
+//               avgOpsCls = Integer.valueOf(noOps).floatValue() / Integer.valueOf(noClasses).floatValue();  //calculate average number of operation per class
+//            }
+//            
+//            extractAttributes.append(" Total Number of classes =  " + noClasses + "\n");
+//            extractAttributes.append(" Total Number of attributes =  " + noAttr + "\n");
+//            extractAttributes.append(" Average number of attribute per class =  " + avgAttrCls + "\n");
 //            extractAttributes.append(" Total Number of operation =  " + noOps + "\n");
 //            extractAttributes.append(" Maximum (Highest) Number of operation per class =  " + maxNumOps + "\n");
 //            extractAttributes.append(" Average number of operation per class =  " + avgOpsCls + "\n");
-//            extractAttributes.append(" Total Number of outgoing dependency =  " + noDepOut + "\n");
+//            extractAttributes.append(" \n Total Number of outgoing dependency =  " + noDepOut + "\n");
 //            extractAttributes.append(" Total Number of incoming dependency =  " + noDepIn + "\n");
-}
-    
-    private void relationshipReader (String xmiFileSend){
-        String xmiFile = xmiFileSend;    
-        String command = "java -jar SDMetrics.jar -xmi " +  xmiFile  + " -relmat -f csv data";
-        Process process = null;
-
-        try {
-                String s;
-                process = Runtime.getRuntime().exec(command); 
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-                while((s=bufferedReader.readLine()) != null)
-                    System.out.println(s);
-                process.waitFor();
-            } catch (IOException ex) {
-                Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
-            }   catch (InterruptedException ex) {
-                    Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
-            }   
-    }
-    
-    private void classMetricsReader (String xmiFileSend){
-        
-        String command = "java -jar SDMetrics.jar -xmi " +  xmiFilename.getText()  + " -filter #.java -filter #.javax -filter #.org.xml -f csv data";
-        Process process = null;
-        try {
-            String s;
-            process = Runtime.getRuntime().exec(command); 
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            while((s=bufferedReader.readLine()) != null)
-            System.out.println(s);
-            process.waitFor();
-        } catch (IOException ex) {
-            Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
-        }   catch (InterruptedException ex) {
-            Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-    
+//            
+//            relationshipMetrics (xmiFile);
+//    }                                       
+//
+//   
+//    private void relationshipMetrics (String xmiFileSend){
+//        int count = 0;
+//        int noClasses = 0;
+//        int noAssociation = 0;
+//        float avgAssocCls = 0;
+//        boolean twoDirectedRel = false;
+//        
+//        String xmiFile = xmiFileSend;
+//        CSVReader csvReader = null;
+//        metricsDisplay.setLineWrap(true);
+//        
+//        String csvFilename = "";
+//        //csvFilename = csvFileName.getText();
+//        String [] row = null;
+//        
+//        relationshipReader (xmiFile);       // generate relationship metrics csv
+//        csvFilename = "dataRM_Class_Assoc.csv";
+//        
+//        try {
+//            List<String> relListLocal = new ArrayList<>();
+//
+//            if (csvFilename.isEmpty() == false) {
+//                try {
+//                    csvReader = new CSVReader (new FileReader(csvFilename));
+//                    try {
+//                        row = csvReader.readNext();
+//                    } catch (IOException ex) {
+//                        Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
+//                    }
+//                } catch (FileNotFoundException ex) {
+//                    Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//      
+//                while ((row = csvReader.readNext()) != null){
+//                  for (int i = 1; i < row.length; i++){
+//                      noAssociation = noAssociation + Integer.parseInt(row[i]); 
+//                      if (Integer.parseInt(row[i]) > 1){
+//                        twoDirectedRel = true;    
+//                      } 
+//                  } count++;
+//                }
+//                noClasses = count;
+//                
+//                if (noClasses > 0 && noAssociation > 0){
+//                  avgAssocCls = Integer.valueOf(noAssociation).floatValue() / Integer.valueOf(noClasses).floatValue();;    
+//                }
+//                
+//            }
+//                             
+//            try {
+//                csvReader.close();
+//            } catch (IOException ex) {
+//                Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//            } catch (IOException ex) {
+//            Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//                     
+//            
+//        extractAttributes.append(" Total Number of association =  " + noAssociation + "\n");
+//        extractAttributes.append(" Average Number of association per class =  " + avgAssocCls + "\n");
+//        extractAttributes.append(" Existence of two association directed to one class is " + twoDirectedRel + "\n");
+////            extractAttributes.append(" Total Number of operation =  " + noOps + "\n");
+////            extractAttributes.append(" Maximum (Highest) Number of operation per class =  " + maxNumOps + "\n");
+////            extractAttributes.append(" Average number of operation per class =  " + avgOpsCls + "\n");
+////            extractAttributes.append(" Total Number of outgoing dependency =  " + noDepOut + "\n");
+////            extractAttributes.append(" Total Number of incoming dependency =  " + noDepIn + "\n");
+//}
+//    
+//    private void relationshipReader (String xmiFileSend){
+//        String xmiFile = xmiFileSend;    
+//        String command = "java -jar SDMetrics.jar -xmi " +  xmiFile  + " -relmat -f csv data";
+//        Process process = null;
+//
+//        try {
+//                String s;
+//                process = Runtime.getRuntime().exec(command); 
+//                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+//                while((s=bufferedReader.readLine()) != null)
+//                    System.out.println(s);
+//                process.waitFor();
+//            } catch (IOException ex) {
+//                Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
+//            }   catch (InterruptedException ex) {
+//                    Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
+//            }   
+//    }
+//    
+//    private void classMetricsReader (String xmiFileSend){
+//        
+//        String command = "java -jar SDMetrics.jar -xmi " +  xmiFilename.getText()  + " -filter #.java -filter #.javax -filter #.org.xml -f csv data";
+//        Process process = null;
+//        try {
+//            String s;
+//            process = Runtime.getRuntime().exec(command); 
+//            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+//            while((s=bufferedReader.readLine()) != null)
+//            System.out.println(s);
+//            process.waitFor();
+//        } catch (IOException ex) {
+//            Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
+//        }   catch (InterruptedException ex) {
+//            Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//    }
+ */   
     
     private void saveTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveTextActionPerformed
         // TODO add your handling code here:
@@ -817,6 +809,23 @@ public class FeatureExtractor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_xmiFilenameActionPerformed
 
+    private void readClassMetricsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_readClassMetricsActionPerformed
+        String command = "java -jar SDMetrics.jar -xmi " +  xmiFilename.getText()  + " -filter #.java -filter #.javax -filter #.org.xml -f csv data";
+        Process process = null;
+        try {
+            String s;
+            process = Runtime.getRuntime().exec(command);
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            while((s=bufferedReader.readLine()) != null)
+            System.out.println(s);
+            process.waitFor();
+        } catch (IOException ex) {
+            Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
+        }   catch (InterruptedException ex) {
+            Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_readClassMetricsActionPerformed
+
     private void listMetricsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listMetricsActionPerformed
         String element = "";
         int noClass = 0;            // number of classes
@@ -832,116 +841,160 @@ public class FeatureExtractor extends javax.swing.JFrame {
         float avgAssocCls = 0;      // average number of association per class
         int noAggregation = 0;      // number of aggregation
         float avgAttrClass = 0;     // average number of attribute per class
-        
-        metricsDisplay.setText(null);        
-        
-        
+
+        metricsDisplay.setText(null);
+
         File xmiFile = new File(xmiFilename.getText());
         String metamodel = "";
         String modelTrans = "";
-        
+
         // UML and XMI transformation selection
         XMIVersionExtractor ver = new XMIVersionExtractor(xmiFile);
         System.out.println("xmiVersion = " + ver.getVersion());
-       
+
         if (ver.getVersion().startsWith("1.")){
             metamodel = "metamodel.xml";
             // xmi ver = 1.0
             if (ver.getVersion().equals("1.0")){
                 modelTrans = "xmiTrans1_0.xml";
             } else // xmi ver = 1.x
-                modelTrans = "xmiTrans1_1.xml";
+            modelTrans = "xmiTrans1_1.xml";
         } else {
             metamodel = "metamodel2.xml";
             modelTrans = "xmiTrans2_0.xml";
-        }    
+        }
         System.out.println("Using files " + metamodel + " and " + modelTrans);
-                
-        // calculate number of classes
+
+        XMIMetricsExtractor oper = new XMIMetricsExtractor(xmiFile, metamodel, modelTrans);
+        int noCL = oper.getNoCls();
+        System.out.println("Number of class = " + noCL + "\n");
+
+        // No. Class - calculate number of classes
         element = "class";
         noClass = metricsCollector (xmiFilename.getText(), metamodel, modelTrans, element);
         metricsDisplay.append("Number of " + element + " = " + noClass + "\n");
-        System.out.println("Number of " + element + " = " + noClass + "\n");                
-        
-        // calculate number of attributes
+        System.out.println("Number of " + element + " = " + noClass + "\n");
+
+        // No. Attribute - calculate number of attributes
         element = "ownedattributes";
         noAttribute = numAttr (xmiFilename.getText(), metamodel, modelTrans, element);
         metricsDisplay.append("Number of " + element + " = " + noAttribute + "\n");
-        System.out.println("Number of " + element + " = " + noAttribute + "\n");                        
-        
+        System.out.println("Number of " + element + " = " + noAttribute + "\n");
+
         // calculate average number of attribute per class
         element = "Average number of attribute per class";
         if (noAttribute > 0 && noClass > 0){
-          avgAttrClass = (float)noAttribute/(float)noClass;    
-        }    
+            avgAttrClass = (float)noAttribute/(float)noClass;
+        }
         metricsDisplay.append(element + " = " + avgAttrClass + "\n");
-        System.out.println(element + " = " + avgAttrClass + "\n");                
-        
-        // calculate number of operation
+        System.out.println(element + " = " + avgAttrClass + "\n");
+
+        // No. Operation - calculate number of operation
         element = "operation";
         noOps = metricsCollector (xmiFilename.getText(), metamodel, modelTrans, element);
         metricsDisplay.append("Number of " + element + " = " + noOps + "\n");
-        System.out.println("Number of " + element + " = " + noOps + "\n");                
-        
+        System.out.println("Number of " + element + " = " + noOps + "\n");
+
         // calculate average number of operation per class
         element = "Average number of operation per class";
         if (noOps > 0 && noClass > 0){
-          avgOpsClass = (float)noOps/(float)noClass;    
-        }    
+            avgOpsClass = (float)noOps/(float)noClass;
+        }
         metricsDisplay.append(element + " = " + avgOpsClass + "\n");
-        System.out.println(element + " = " + avgOpsClass + "\n");                
-        
-        //calculate maximum (highest) number of attribute per class
-        element = "ownedattributes";
+        System.out.println(element + " = " + avgOpsClass + "\n");
+
+        // F14 = maximum (highest) number of attribute per class
+        //element = "ownedattributes"; // for XMI 2.x
+        element = "attribute";
         maxAttribute = maxAttrOps (xmiFilename.getText(), metamodel, modelTrans, element);
         metricsDisplay.append("Maximum number of attributes per class = " + maxAttribute + "\n");
-        System.out.println("Maximum number of attributes per class = " + maxAttribute + "\n");                    
-        
-        //calculate maximum (highest) number of operation per class
-        element = "ownedoperations";
+        System.out.println("Maximum number of attributes per class = " + maxAttribute + "\n");
+
+        // F15 = calculate maximum (highest) number of operation per class
+        //element = "ownedoperations"; // for xmi 2.x
+        element = "operation"; // for xmi 1.x
         maxOperation = maxAttrOps (xmiFilename.getText(), metamodel, modelTrans, element);
         metricsDisplay.append("Maximum number of operation per class = " + maxOperation + "\n");
-        System.out.println("Maximum number of operation per class = " + maxOperation + "\n");                    
-        
+        System.out.println("Maximum number of operation per class = " + maxOperation + "\n");
+
         //calculate number of parameter
+        //element = "ownedparameters"; // for xmi 2.x
         element = "parameter";
         noParameter = metricsCollector (xmiFilename.getText(), metamodel, modelTrans, element);
         metricsDisplay.append("Number of " + element + " = " + noParameter + "\n\n");
-        System.out.println("Number of " + element + " = " + noParameter + "\n");                    
-        
-        //calculate number of association        
+        System.out.println("Number of " + element + " = " + noParameter + "\n");
+
+        //calculate number of association
         element = "association";
         noAssoc = metricsCollector (xmiFilename.getText(), metamodel, modelTrans, element);
         metricsDisplay.append("Number of " + element + " = " + noAssoc + "\n");
-        System.out.println("Number of " + element + " = " + noAssoc + "\n");                
-        
+        System.out.println("Number of " + element + " = " + noAssoc + "\n");
+
         // calculate average number of association per class
         element = "Average number of association per class";
         if (noAssoc > 0 && noClass > 0){
-          avgAssocCls = (float)noAssoc/(float)noClass;    
-        }    
+            avgAssocCls = (float)noAssoc/(float)noClass;
+        }
         metricsDisplay.append(element + " = " + avgAssocCls + "\n");
-        System.out.println(element + " = " + avgAssocCls + "\n");                
-        
-        //calculate number of generalization 
+        System.out.println(element + " = " + avgAssocCls + "\n");
+
+        //calculate number of generalization
         element = "generalization";
         noGeneralization = metricsCollector (xmiFilename.getText(), metamodel, modelTrans, element);
         metricsDisplay.append("Number of " + element + " = " + noGeneralization + "\n");
-        System.out.println("Number of " + element + " = " + noGeneralization + "\n");                
-        
-        //calculate number of realization 
+        System.out.println("Number of " + element + " = " + noGeneralization + "\n");
+
+        //calculate number of realization
         element = "realization";
         noRealization = metricsCollector (xmiFilename.getText(), metamodel, modelTrans, element);
         metricsDisplay.append("Number of " + element + " = " + noRealization + "\n");
-        System.out.println("Number of " + element + " = " + noRealization + "\n");                    
-          
+        System.out.println("Number of " + element + " = " + noRealization + "\n");
 
         //calculate number of aggregation
         element = "property";
         noAggregation = countAggregation (xmiFilename.getText(), metamodel, modelTrans, element);
         metricsDisplay.append("Number of Aggregation = " + noAggregation + "\n");
-        System.out.println("Number of Aggregation = " + noAggregation + "\n");                    
+        System.out.println("Number of Aggregation = " + noAggregation + "\n");
     }//GEN-LAST:event_listMetricsActionPerformed
+
+    private void btnListMetricsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListMetricsActionPerformed
+        File xmiFile = new File(xmiFilename.getText());
+        String metamodel = "";
+        String modelTrans = "";
+
+        // UML and XMI transformation selection
+        XMIVersionExtractor ver = new XMIVersionExtractor(xmiFile);
+        System.out.println("xmiVersion = " + ver.getVersion());
+
+        if (ver.getVersion().startsWith("1.")){
+            metamodel = "metamodel.xml";
+            // xmi ver = 1.0
+            if (ver.getVersion().equals("1.0")){
+                modelTrans = "xmiTrans1_0.xml";
+            } else // xmi ver = 1.x
+            modelTrans = "xmiTrans1_1.xml";
+        } else {
+            metamodel = "metamodel2.xml";
+            modelTrans = "xmiTrans2_0.xml";
+        }
+        System.out.println("Using files " + metamodel + " and " + modelTrans);
+
+        XMIMetricsExtractor xmiExtractor = new XMIMetricsExtractor(xmiFile, metamodel, modelTrans);
+
+        System.out.println("F01 = Number of class = " + xmiExtractor.getNoCls());
+        System.out.println("F02 = Number of operation = " + xmiExtractor.getNoOper());
+        System.out.println("F03 = Number of attribute = " + xmiExtractor.getNoAttr());
+        System.out.println("F04 = Number of parameter = " + xmiExtractor.getNoPara());
+        System.out.println("F05 = Existence of parameter = " + xmiExtractor.isExtOperPara());
+        System.out.println("F06 = Number of association = " + xmiExtractor.getNoAssociation());
+        System.out.println("F07 = Existence of different association type = " + xmiExtractor.getNoAssocType());
+        System.out.println("F08 = Average number of attribute per class = " + xmiExtractor.getAvgAttrCls());
+        System.out.println("F09 = Average number of operations per class = " + xmiExtractor.getAvgOperCls());
+        System.out.println("F10 = Average number of associations per class = " + xmiExtractor.getAvgAssocCls());
+        System.out.println("F11 = Average number of parameters per operations = " + xmiExtractor.getAvgParaOper());
+        System.out.println("F12 = Maximum number of attributes per class = " + xmiExtractor.getMaxAttrCls());
+        System.out.println("F13 = Maximum number of operations per class = " + xmiExtractor.getMaxOperCls());
+    }//GEN-LAST:event_btnListMetricsActionPerformed
 
     private void umlVersionSelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_umlVersionSelActionPerformed
         // TODO add your handling code here:
@@ -972,46 +1025,34 @@ public class FeatureExtractor extends javax.swing.JFrame {
             XMLParser parser = null;
             try {
                 parser = new XMLParser();
-            } catch (Exception ex) {
-                Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            MetaModel metaModel = new MetaModel();
-            try {
+                MetaModel metaModel = new MetaModel();
+                
                 parser.parse(metaModelURL, metaModel.getSAXParserHandler());
-            } catch (Exception ex) {
-                Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-            XMITransformations trans=new XMITransformations(metaModel);
-            try {
+                
+                XMITransformations trans=new XMITransformations(metaModel);
                 parser.parse(xmiTransURL, trans.getSAXParserHandler());
-            } catch (Exception ex) {
-                Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-            Model model = new Model(metaModel);
-            XMIReader xmiReader = new XMIReader(trans, model);
-            try {
+                
+                Model model = new Model(metaModel);
+                XMIReader xmiReader = new XMIReader(trans, model);
                 parser.parse(xmiFile, xmiReader);
-            } catch (Exception ex) {
-                Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
-            }
+                
+                String[] filters = { "#.java", "#.javax", "#.org.xml" };
+                model.setFilter(filters, false, true);
 
-            String[] filters = { "#.java", "#.javax", "#.org.xml" };
-            model.setFilter(filters, false, true);
-
-            //iterate over all model element types in the metamodel
-            for (MetaModelElement type : metaModel) {
-                System.out.println("Elements of type: " + type.getName());
-
-            // iterate over all model elements of the current type
-                List<ModelElement> elements = model.getAcceptedElements(type);
+                //iterate over all model element types in the metamodel
+                for (MetaModelElement type : metaModel) {
+                    //System.out.println("Elements of type: " + type.getName());
+                    // iterate over all model elements of the current type
+                    List<ModelElement> elements = model.getAcceptedElements(type);
                     for (ModelElement me : elements) {
-                        int keywordCount = 0;
-                        if (type.getName().matches(reqMetrics)){
+                        if (me.getType().getName().matches(reqMetrics)){
                           elementCount++;    
                         }
                     }
+                }
+            } catch (Exception ex) {
+                Logger.getLogger(FeatureExtractor.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("Error occured when parsing the file " + xmiFile);
             }
         }
         return elementCount;
@@ -1021,7 +1062,6 @@ public class FeatureExtractor extends javax.swing.JFrame {
         String metaModelURL = metamodelURLfile;//sdmetrics";  // metamodel definition to use
 	String xmiTransURL = xmiTransURLfile;   // XMI tranformations to use
 	String xmiFile = xmiFileName; // XMI file with the UML model
-        int elementMax = 0;
            
         extractAttributes.setLineWrap(true);
 
@@ -1056,25 +1096,28 @@ public class FeatureExtractor extends javax.swing.JFrame {
         String[] filters = { "#.java", "#.javax", "#.org.xml" };
         model.setFilter(filters, false, true);
 
+        int elementMax =0;
+        int count = 0;
         //iterate over all model element types in the metamodel
         for (MetaModelElement type : metaModel) {
-                System.out.println("Elements of type: " + type.getName());
-                if (type.getName().matches("class")){        
+            //System.out.println("Elements of type: " + type.getName());
+            if (type.getName().matches("class")){        
                 // iterate over all model elements of the current type
                 List<ModelElement> elements = model.getAcceptedElements(type);
                 for (ModelElement me : elements) {
-                        System.out.println("  Element: " + me.getFullName() + " ");
-
-                        // write out the value of each attribute of the element
-                        Collection<String> attributeNames = type.getAttributeNames();
-                        for (String attr : attributeNames) {
-                            if (attr.matches(reqAttrOps)){
-                                System.out.println("     Attribute '" + me.getSetAttribute(attr).size());
-                                if (elementMax < me.getSetAttribute(attr).size()){
-                                    elementMax = me.getSetAttribute(attr).size();
-                                }
+                    //System.out.println("  Class: " + me.getFullName() + " ");
+                    Collection<ModelElement> ownedElements = me.getOwnedElements();
+                    if (ownedElements != null){
+                        for (ModelElement modelE:ownedElements){
+                            if (modelE.getType().getName().matches(reqAttrOps)){
+                                count ++;
+                                //System.out.println(reqAttrOps + ":" + modelE.getName());
                             }
                         }
+                        if (count != 0 && elementMax < count)
+                            elementMax = count;
+                        count =0;
+                    }    
                 }
             }	
         }
@@ -1123,20 +1166,20 @@ public class FeatureExtractor extends javax.swing.JFrame {
         //iterate over all model element types in the metamodel
         for (MetaModelElement type : metaModel) {
                 System.out.println("Elements of type: " + type.getName());
-                if (type.getName().matches("class")){        
+                if (type.getName().matches("attribute")){        
                 // iterate over all model elements of the current type
                 List<ModelElement> elements = model.getAcceptedElements(type);
                 for (ModelElement me : elements) {
                         System.out.println("  Element: " + me.getFullName() + " ");
-
+                        elementCount++;
                         // write out the value of each attribute of the element
-                        Collection<String> attributeNames = type.getAttributeNames();
-                        for (String attr : attributeNames) {
-                            if (attr.matches("ownedattributes")){
-                                System.out.println("     Attribute '" + me.getSetAttribute(attr).size());
-                                elementCount = elementCount + me.getSetAttribute(attr).size();
-                                }
-                            }
+//                        Collection<String> attributeNames = type.getAttributeNames();
+//                        for (String attr : attributeNames) {
+//                            if (attr.matches("ownedattributes")){
+//                                System.out.println("     Attribute '" + me.getSetAttribute(attr).size());
+//                                elementCount = elementCount + me.getSetAttribute(attr).size();
+//                                }
+//                            }
                         }
                 }
             }	
@@ -1196,7 +1239,7 @@ public class FeatureExtractor extends javax.swing.JFrame {
                         for (String attr : attributeNames) {
                             if (attr.matches("aggregation")){
                                 if (me.getPlainAttribute(attr).matches("shared")){
-                                numAggregation++;
+                                    numAggregation++;
                                 }
                                 //System.out.println("     Attribute '" + me.getPlainAttribute(attr));
                                 //System.out.println("test");
@@ -1260,6 +1303,7 @@ public class FeatureExtractor extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem aboutMenuItem;
+    private javax.swing.JButton btnListMetrics;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton chooseFileBtn;
     private javax.swing.JButton clearBtn;
