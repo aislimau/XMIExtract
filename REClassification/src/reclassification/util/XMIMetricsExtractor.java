@@ -36,9 +36,10 @@ public class XMIMetricsExtractor {
     private boolean ext2SameDir = false;
     
     // orphan classes
-    private int extOrpCls = 0;
+    private boolean extOrpCls = false;
     private int noOrpCls = 0;
-    
+    private double avgOrpCls = 0.0;
+
     // cardinality
     private boolean extCard = false;
     
@@ -84,7 +85,7 @@ public class XMIMetricsExtractor {
         return ext2SameDir;
     }
 
-    public int getExtOrpCls() {
+    public boolean isExtOrpCls() {
         return extOrpCls;
     }
 
@@ -144,6 +145,10 @@ public class XMIMetricsExtractor {
         return noPara;
     }
     
+    public double getAvgOrpCls() {
+        return avgOrpCls;
+    }
+    
     public XMIMetricsExtractor(File xmiFile, String metaModelURL, String xmiTransURL){
         try { 
             parser = new XMLParser(); 
@@ -184,18 +189,25 @@ public class XMIMetricsExtractor {
             
         // calculate number of association
         noAssociation = getNoElements("association");
+        
+        // orphan classes
+        noOrpCls = getOrphanClasses();
+        extOrpCls = (noOrpCls > 0);
 
         if (noCls > 0) {
             // average number of attribute
-            avgAttrCls = noAttr/noCls;
+            avgAttrCls = noAttr / (1.0 * noCls);
             // average number of operation
-            avgOperCls = noOper/noCls;
-            //average number of association per class
-            avgAssocCls = noAssociation/noCls;
-        } 
+            avgOperCls = noOper / (1.0 * noCls);
+            // average number of association per class
+            avgAssocCls = noAssociation / (1.0 * noCls);
+            // average number of orphan class over all classes
+            avgOrpCls = noOrpCls / (1.0 * noCls);
+        }
         // average number of parameters per operation
-        if (noOper > 0)
-            avgParaOper = noPara/noOper;
+        if (noOper > 0) {
+            avgParaOper = noPara / (1.0 * noOper);
+        }
         
         // calculate max number of attribute per class
         maxAttrCls = getMaxNoElementPerClass("attribute");  
@@ -218,6 +230,28 @@ public class XMIMetricsExtractor {
         if (noAggregation > 0) {
             noAssocType++;
         }
+    }
+    
+    private int getOrphanClasses(){
+        int noOrphanCls =0;
+        //iterate over all model element types in the metamodel
+        for (MetaModelElement type : metaModel) {
+            //System.out.println("Elements of type: " + type.getName());
+            if (type.getName().matches("class")){        
+                // iterate over all model elements of the current type
+                List<ModelElement> elements = model.getAcceptedElements(type);
+                for (ModelElement me : elements) {
+                    Collection<ModelElement> assoc = me.getRelations("associationendtype");
+                    if (assoc != null){
+                        System.out.println("Class: " + me.getFullName() + " contains " + assoc.size() + " association");
+                    } else {
+                        noOrphanCls++;
+                        System.out.println("Class: " + me.getFullName() + " is an island class");
+                    }
+                }
+            }	
+        }
+        return noOrphanCls;
     }
     
     private int getNoElements(String elementType) {

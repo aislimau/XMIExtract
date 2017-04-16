@@ -1,6 +1,238 @@
 ﻿
 ************** Class Start **************
-com_github_joakimpersson_tda367
+_rinterface
+IBombermanModel
+==============
++updateGamepIayer:PIayeraction:PlayerAction
++startGameO:void
++endGameO:void
++upgradePlayerplayer:Player_attr:Attributevoid
+==============
+
+************** End Class **************
+
+************** Class Start **************
+BornbermanModel
+==============
+-players:List<Player>
+_updatePlayerScore(playerPlayer_tiles:ListczTile>:void
+-handleFireO:void
++updateGame(player:Player_action:PlayerAction
+_move(player:Player_action:PlayerAction
+-placeBomb(player:Player
+-matchEnd()
+-roundEnd()
++startGameO:void
++endGameO:void
++upgradePlayerplayer:Player_attr:Attribute:void
++getlnstanceO:Bomberman
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Abstract
+GameField
+_Tilejj__map:Tile
+==============
++createWorldO
++resetField()
++setTile(tile:Tile_p05:Position
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<interface>
+Tile
+==============
++getToughnessO:mt
++isWalkableO:boolean
++onFire()Tile
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<dnterface>_
+WalkabieTile
+==============
++playerEnterplayer:Player:Tile
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Floor
+==============
+-toughness:int
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Fire
+==============
+-toughness:int
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<abstract>
+Powerupitem
+==============
+_toughness:mt
+==============
+_getAttrO:Attribute
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Wall
+==============
+_toughness
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Player
+==============
+-name:String
+_pos:Position
+_attribute:PlayerAttribute
+_lives:mt
+_health:mt
+-bombStack:mt
+_initialPosition:Position
+==============
++placeBombO:Bomb
++move(action:Action:void
++roundResetO:void
++matchResetO:void
++playerHitO:void
++isAliveO:boolean
++upgradeAttr(attr:Attribute_type:UpgradeType:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+<Abstract>
+Bomb
+==============
+_player:Player
+_timer:Timer
+_actionListener_ActionLisener
+_player:Player
+==============
+-notifyObserver(List<Position)pos:void
++explodeO:void
++getPlayerO:Player
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Pillar
+==============
+_toughness:int
+==============
+--getRandomNbrO:booIea
+==============
+
+************** End Class **************
+
+************** Class Start **************
+Box
+==============
+_toughness
+==============
+-getRandomNbro:booIe_
+==============
+
+************** End Class **************
+
+************** Class Start **************
+SpeedUpdateltem
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+BombStackUpdateltem
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+RangeUpdateltem
+==============
+
+==============
+
+************** End Class **************
+
+************** Class Start **************
+AreaBomb
+==============
+
+************** End Class **************
+
+************** Class Start **************
+NormalBomb
+==============
+
+************** End Class **************
+
+************** Class Start **************
+PlayerAttribute
+==============
+_matchAttr:Map<Attribute_Integer>
+-roundAttrMap<Attribute_Integer>
+==============
++getAttrValueattr:Attribute:mt
+-t-upgradeAttr(
++resetMatchAttrO:void
++resetRoundAttr():void
++resetAllAttr():void
++upgradeAttr(attr:Attribute_type:UpgradeType:void
+-upgradeMatchAttr(attr:Attribute
+_upgradeTurnAttr(attr:Attribute
+==============
+
+************** End Class **************
+
+************** Class Start **************
+PlayerPoints
+==============
+_totaiScore:mt
+_credits:mt
+-destroyedObj:List<Tiles>
+_killedPlayers:mt
+==============
++updateLiSt<PointGivers:Enurn>
++getScoreO:mt
++getCredits():int
++reduceCredits(cost:int
++resetO:void
+==============
+
+************** End Class **************
+
+************** Class Start **************
+SingeIton>
+Parameters
 ==============
 
 ==============

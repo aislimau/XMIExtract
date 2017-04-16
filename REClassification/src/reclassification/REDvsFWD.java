@@ -122,9 +122,7 @@ public class REDvsFWD extends javax.swing.JFrame {
                     //log("Using files " + metamodel + " and " + modelTrans);
 
                     XMIMetricsExtractor xmiExtractor = new XMIMetricsExtractor(xmiFile, metamodel, modelTrans);
-
-                    //String fmText = "%s, %d , %d , %d , %d , %d , %d , %d , %f , %f , %f , %f , %d , %d ";
-                    String fmText = "%s, %d , %d , %d , %d , %b , %d , %d, %.3f, %.3f, %.3f, %.3f, %d, %d, %d";
+                    String fmText = "%s, %d , %d , %d , %d , %b , %d , %d, %b , %d , %.3f, %.3f, %.3f, %.3f, %.3f, %d, %d, %d";
                     String content = String.format(fmText, xmiFile.getName() // name of the xmi file
                             , xmiExtractor.getNoCls() // F01 = Number of class
                             , xmiExtractor.getNoOper() // F02 = Number of operation
@@ -133,12 +131,15 @@ public class REDvsFWD extends javax.swing.JFrame {
                             , xmiExtractor.isExtOperPara() // F05 = Existence of parameter
                             , xmiExtractor.getNoAssociation() // F06 = Number of association
                             , xmiExtractor.getNoAssocType() // F07 = Existence of different association type
-                            , xmiExtractor.getAvgAttrCls() // F08 = Average number of attribute per class
-                            , xmiExtractor.getAvgOperCls() // F09 = Average number of operations per class
-                            , xmiExtractor.getAvgAssocCls() // F10 = Average number of associations per class
-                            , xmiExtractor.getAvgParaOper() // F11 = Average number of parameters per operations
-                            , xmiExtractor.getMaxAttrCls() // F12 = Maximum number of attributes per class
-                            , xmiExtractor.getMaxOperCls() // F13 = Maximum number of operations per class
+                            , xmiExtractor.isExtOrpCls() // F08 = Existence of orphan classes
+                            , xmiExtractor.getNoOrpCls() // F09 = Number of orphan classes
+                            , xmiExtractor.getAvgAttrCls() // F10 = Average number of attribute per class
+                            , xmiExtractor.getAvgOperCls() // F11 = Average number of operations per class
+                            , xmiExtractor.getAvgAssocCls() // F12 = Average number of associations per class
+                            , xmiExtractor.getAvgParaOper() // F13 = Average number of parameters per operations
+                            , xmiExtractor.getAvgOrpCls()// F14 = Average number of orphan class over all classes
+                            , xmiExtractor.getMaxAttrCls() // F15 = Maximum number of attributes per class
+                            , xmiExtractor.getMaxOperCls() // F16 = Maximum number of operations per class
                             , isFWD
                     );
                     result+=content+"\n";
@@ -223,29 +224,26 @@ public class REDvsFWD extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 684, Short.MAX_VALUE)
-                        .addComponent(btnClean)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnExecute)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtFolderFWD)
-                            .addComponent(txtFolderREV))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnChooseFWD)
-                                .addGap(8, 8, 8))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(btnChooseREV, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1)
+                                .addGap(0, 684, Short.MAX_VALUE)
+                                .addComponent(btnClean)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnExecute))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtFolderFWD)
+                                    .addComponent(txtFolderREV))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(btnChooseREV, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnChooseFWD, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -313,7 +311,7 @@ public class REDvsFWD extends javax.swing.JFrame {
             String rev = proceed(txtFolderREV.getText(), 0);
             
             log("Saving metrics to file");
-            String header =  "Name, noCls, noOper, noAttr, noPara, extOperPara, noAssociation, noAssocType, avgAttrCls, avgOperCls, avgAssocCls, avgParaOper, maxAttrCls, maxOperCls,isFWD";
+            String header =  "Name, noCls, noOper, noAttr, noPara, extOperPara, noAssociation, noAssocType, extOrpCls, noOrpCls, avgAttrCls, avgOperCls, avgAssocCls, avgParaOper, avgOrpCls, maxAttrCls, maxOperCls,isFWD";
             
             String currentDir = Paths.get(".").toAbsolutePath().normalize().toString();
             Path fileName = Paths.get(currentDir, "metrics.csv");
